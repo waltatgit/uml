@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><XMI xmlns:UML="href://org.omg/UML/1.3" xmi.version="1.1">
+    <XMI.header>
+        <XMI.documentation>
+            <XMI.exporter>PlantUML</XMI.exporter>
+            <XMI.exporterVersion>1.2024.5</XMI.exporterVersion>
+        </XMI.documentation>
+        <XMI.metamodel xmi.name="UML" xmi.version="1.4"/>
+    </XMI.header>
+    <XMI.content>
+        <UML:Model name="PlantUML" xmi.id="model1">
+            <UML:Namespace.ownedElement>
+                <UML:Class name="OCR" xmi.id="cl0002">
+                    <UML:Classifier.feature/>
+                </UML:Class>
+                <UML:Class name="Regim" xmi.id="cl0003">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="x1: int" xmi.id="att7"/>
+                        <UML:Attribute name="y1: int" xmi.id="att8"/>
+                        <UML:Attribute name="x2: int" xmi.id="att9"/>
+                        <UML:Attribute name="y2: int" xmi.id="att10"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Content" xmi.id="cl0004">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="text: String" xmi.id="att11"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Association name="regions / regions" xmi.id="ass12">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass12" name="1" type="cl0002" xmi.id="end13">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass12" name="0..*" type="cl0003" xmi.id="end14">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association name="content" xmi.id="ass15">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass15" name="1" type="cl0003" xmi.id="end16">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass15" name="0..*" type="cl0004" xmi.id="end17">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+            </UML:Namespace.ownedElement>
+        </UML:Model>
+    </XMI.content>
+</XMI>

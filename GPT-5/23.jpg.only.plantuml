@@ -1,0 +1,11 @@
+@startuml
+
+class Person {
+    name: String
+    age: double
+}
+
+Person "1" -- "*" Person : parents
+Person "1" -- "*" Person : children
+
+@enduml

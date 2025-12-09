@@ -1,0 +1,27 @@
+```plantuml
+@startuml
+
+class Customer {
+    name
+    address
+}
+
+class Order {
+    date
+    status
+}
+
+class Detail {
+    quality
+}
+
+class Item {
+    description
+}
+
+Customer "1" -- "1..*" Order
+Order "1" -- "*" Detail
+Detail "0..1" -- "1" Item
+
+@enduml
+```

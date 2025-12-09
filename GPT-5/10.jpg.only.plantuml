@@ -1,0 +1,11 @@
+@startuml
+
+class Member
+
+class Lecturer
+class Student
+
+Member <|-- Lecturer
+Member <|-- Student
+
+@enduml

@@ -1,0 +1,25 @@
+@startuml
+
+class Student {
+    id : String
+    name : String
+    year : int
+}
+
+class Course {
+    code : String
+    credits : int
+}
+
+Student "1" -- "*" Course : attends
+
+class BScStudent {
+}
+
+class MScStudent {
+}
+
+Student <|-- BScStudent
+Student <|-- MScStudent
+
+@enduml

@@ -1,0 +1,38 @@
+@startuml
+
+class Customer {
+  +name
+  +address
+}
+
+class Order {
+  +date
+  +status
+}
+
+class Payment {
+  +amount
+}
+
+class Credit {
+  +number
+  +type
+  +expDate
+}
+
+class Cash {
+  +cashTendered
+}
+
+class Check {
+  +name
+  +bank
+}
+
+Customer "1" -- "0..*" Order
+Order "1" -- "1..*" Payment
+Payment <|-- Credit
+Payment <|-- Cash
+Payment <|-- Check
+
+@enduml

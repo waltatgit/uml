@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><XMI xmlns:UML="href://org.omg/UML/1.3" xmi.version="1.1">
+    <XMI.header>
+        <XMI.documentation>
+            <XMI.exporter>PlantUML</XMI.exporter>
+            <XMI.exporterVersion>1.2024.5</XMI.exporterVersion>
+        </XMI.documentation>
+        <XMI.metamodel xmi.name="UML" xmi.version="1.4"/>
+    </XMI.header>
+    <XMI.content>
+        <UML:Model name="PlantUML" xmi.id="model1">
+            <UML:Namespace.ownedElement>
+                <UML:Class name="Investor" xmi.id="cl0002">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="name: String" visibility="public" xmi.id="att9"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Investment" xmi.id="cl0003">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="price: double" visibility="public" xmi.id="att10"/>
+                        <UML:Attribute name="term: double" visibility="public" xmi.id="att11"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Equity" xmi.id="cl0004">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="symbol: String" visibility="public" xmi.id="att12"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Bond" xmi.id="cl0005">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="issuer: String" visibility="public" xmi.id="att13"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Association name="investment" xmi.id="ass14">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass14" name="1" type="cl0002" xmi.id="end15">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass14" name="*" type="cl0003" xmi.id="end16">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Generalization name="" xmi.id="ass17">
+                    <UML:Generalization.child>
+                        <UML:Class xmi.idref="cl0004"/>
+                    </UML:Generalization.child>
+                    <UML:Generalization.parent>
+                        <UML:Class xmi.idref="cl0003"/>
+                    </UML:Generalization.parent>
+                </UML:Generalization>
+                <UML:Generalization name="" xmi.id="ass18">
+                    <UML:Generalization.child>
+                        <UML:Class xmi.idref="cl0005"/>
+                    </UML:Generalization.child>
+                    <UML:Generalization.parent>
+                        <UML:Class xmi.idref="cl0003"/>
+                    </UML:Generalization.parent>
+                </UML:Generalization>
+            </UML:Namespace.ownedElement>
+        </UML:Model>
+    </XMI.content>
+</XMI>

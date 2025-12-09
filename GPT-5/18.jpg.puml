@@ -1,0 +1,16 @@
+```plantuml
+@startuml
+
+class GUILayout {
+    width : double
+    height : double
+}
+
+class PortraitLayout
+class LandscapeLayout
+
+GUILayout <|-- PortraitLayout
+GUILayout <|-- LandscapeLayout
+
+@enduml
+```

@@ -1,0 +1,28 @@
+Here's the PlantUML code for the UML class diagram:
+
+```plantuml
+@startuml
+
+class SystemUser {
+  code: integer
+}
+
+class Customer {
+  customerNo: String
+  loyaltyCard: Boolean
+}
+
+class Administrator
+
+class Staff {
+  staffId: String
+}
+
+SystemUser <|-- Customer
+SystemUser <|-- Administrator
+SystemUser <|-- Staff
+
+@enduml
+```
+
+This code accurately represents the original diagram with the generalization relationship shown.

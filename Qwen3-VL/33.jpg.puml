@@ -1,0 +1,31 @@
+Here's the PlantUML code based on the provided UML class diagram:
+
+```plantuml
+@startuml
+
+class Student {
+    id : String
+    name : String
+    year : int
+}
+
+class Course {
+    code : String
+    credits : int
+}
+
+Student "1" -- "*" Course : attends
+
+class BScStudent {
+}
+
+class MScStudent {
+}
+
+Student <|-- BScStudent
+Student <|-- MScStudent
+
+@enduml
+```
+
+You can use this code to generate the diagram in a PlantUML tool.

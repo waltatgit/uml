@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><XMI xmlns:UML="href://org.omg/UML/1.3" xmi.version="1.1">
+    <XMI.header>
+        <XMI.documentation>
+            <XMI.exporter>PlantUML</XMI.exporter>
+            <XMI.exporterVersion>1.2024.5</XMI.exporterVersion>
+        </XMI.documentation>
+        <XMI.metamodel xmi.name="UML" xmi.version="1.4"/>
+    </XMI.header>
+    <XMI.content>
+        <UML:Model name="PlantUML" xmi.id="model1">
+            <UML:Namespace.ownedElement>
+                <UML:Class name="Order" xmi.id="cl0002">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="dateReceived" xmi.id="att15"/>
+                        <UML:Attribute name="isPrepaid" xmi.id="att16"/>
+                        <UML:Attribute name="number" xmi.id="att17"/>
+                        <UML:Attribute name="price" xmi.id="att18"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Customer" xmi.id="cl0003">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="name" xmi.id="att19"/>
+                        <UML:Attribute name="address" xmi.id="att20"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="OrderLine" xmi.id="cl0004">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="quantity" xmi.id="att21"/>
+                        <UML:Attribute name="price" xmi.id="att22"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Product" xmi.id="cl0005">
+                    <UML:Classifier.feature/>
+                </UML:Class>
+                <UML:Class name="CorporateCustomer" xmi.id="cl0006">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="contact" xmi.id="att23"/>
+                        <UML:Attribute name="creditRate" xmi.id="att24"/>
+                        <UML:Attribute name="creditLimit" xmi.id="att25"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="PersonalCustomer" xmi.id="cl0007">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="creditCard" xmi.id="att26"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Employee" xmi.id="cl0008">
+                    <UML:Classifier.feature/>
+                </UML:Class>
+                <UML:Association xmi.id="ass27">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass27" name="1" type="cl0002" xmi.id="end28">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass27" name="*" type="cl0004" xmi.id="end29">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association xmi.id="ass30">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass30" name="1" type="cl0004" xmi.id="end31">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass30" name="1" type="cl0005" xmi.id="end32">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Generalization name="" xmi.id="ass33">
+                    <UML:Generalization.child>
+                        <UML:Class xmi.idref="cl0006"/>
+                    </UML:Generalization.child>
+                    <UML:Generalization.parent>
+                        <UML:Class xmi.idref="cl0003"/>
+                    </UML:Generalization.parent>
+                </UML:Generalization>
+                <UML:Generalization name="" xmi.id="ass34">
+                    <UML:Generalization.child>
+                        <UML:Class xmi.idref="cl0007"/>
+                    </UML:Generalization.child>
+                    <UML:Generalization.parent>
+                        <UML:Class xmi.idref="cl0003"/>
+                    </UML:Generalization.parent>
+                </UML:Generalization>
+                <UML:Association xmi.id="ass35">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass35" name="1" type="cl0002" xmi.id="end36">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass35" name="1" type="cl0003" xmi.id="end37">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association xmi.id="ass38">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass38" name="*" type="cl0006" xmi.id="end39">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass38" name="0..1" type="cl0008" xmi.id="end40">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+            </UML:Namespace.ownedElement>
+        </UML:Model>
+    </XMI.content>
+</XMI>

@@ -1,0 +1,8 @@
+@startuml
+
+class Student
+
+class MScStudent extends Student
+class BScStudent extends Student
+
+@enduml

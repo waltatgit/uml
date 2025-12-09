@@ -1,0 +1,15 @@
+Here is the PlantUML code representation of the diagram:
+
+```plantuml
+@startuml
+
+class Member
+
+class Lecturer
+class Student
+
+Member <|-- Lecturer
+Member <|-- Student
+
+@enduml
+```

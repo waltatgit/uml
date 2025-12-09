@@ -1,0 +1,21 @@
+```plantuml
+@startuml
+
+class CustomerID
+class CustomerRecord
+class Accounts
+class AccountID
+class Balance
+class Bank
+class BankStaff
+
+CustomerID "1" -- "1..*" Accounts
+CustomerID "1" -- "0..1" CustomerRecord
+CustomerRecord "1..*" -- "1" Bank
+Accounts "0..1" -- "1" AccountID
+Accounts "0..*" -- "1" Balance
+Accounts "1" -- "1" Bank
+Bank "1" -- "1..*" BankStaff
+
+@enduml
+```

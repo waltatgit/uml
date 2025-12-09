@@ -1,0 +1,19 @@
+@startuml
+
+class BankAccount {
+    owner : string
+    balance : float
+}
+
+class CheckingAccount {
+    fee : double
+}
+
+class SavingsAccount {
+    rate : float
+}
+
+BankAccount <|-- CheckingAccount
+BankAccount <|-- SavingsAccount
+
+@enduml

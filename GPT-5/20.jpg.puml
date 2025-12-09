@@ -1,0 +1,8 @@
+Here's the PlantUML code for the diagram:
+
+```plantuml
+@startuml
+class Doctor
+class GP extends Doctor
+@enduml
+```

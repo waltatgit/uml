@@ -1,0 +1,25 @@
+@startuml
+
+class User {
+  id: str
+}
+
+class Role {
+  name
+}
+
+class Permission
+
+class Session
+
+class Object
+
+class Operation
+
+User -- Role
+Role -- Permission
+Permission -- Object
+Permission -- Operation
+User -- Session
+
+@enduml

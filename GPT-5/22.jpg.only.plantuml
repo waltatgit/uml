@@ -1,0 +1,22 @@
+@startuml
+
+class SystemUser {
+  code: integer
+}
+
+class Customer {
+  customerNo: String
+  loyaltyCard: Boolean
+}
+
+class Administrator
+
+class Staff {
+  staffId: String
+}
+
+SystemUser <|-- Customer
+SystemUser <|-- Administrator
+SystemUser <|-- Staff
+
+@enduml

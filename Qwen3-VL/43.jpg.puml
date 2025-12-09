@@ -1,0 +1,23 @@
+```plantuml
+@startuml
+
+class StockManager
+
+class Part {
+    name
+}
+
+class BasicPart {
+    unitPrice
+}
+
+class CompoundPart {
+    cost
+}
+
+StockManager "0..1" -- "*" Part
+BasicPart --|> Part
+CompoundPart --|> Part
+
+@enduml
+```

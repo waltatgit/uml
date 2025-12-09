@@ -1,0 +1,33 @@
+@startuml
+
+class Document {
+    title: String
+    author: String
+    url: String
+}
+
+class Part {
+    name: String
+    number: String
+}
+
+class Chapter {
+    name: String
+    number: int
+}
+
+class Section {
+    title: String
+    number: String
+}
+
+class Paragraph {
+    text: String
+}
+
+Document "1" --> "*" Part : parts
+Document "1" --> "*" Chapter : chapters
+Chapter "1" --> "*" Section : sections
+Section "1" --> "*" Paragraph : paragraphs
+
+@enduml

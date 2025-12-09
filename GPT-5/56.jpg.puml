@@ -1,0 +1,45 @@
+```plantuml
+@startuml
+
+class Order {
+    dateReceived
+    isPrepaid
+    number
+    price
+}
+
+class Customer {
+    name
+    address
+}
+
+class OrderLine {
+    quantity
+    price
+}
+
+class Product
+
+class CorporateCustomer {
+    contact
+    creditRate
+    creditLimit
+}
+
+class PersonalCustomer {
+    creditCard
+}
+
+class Employee
+
+Order "1" --> "*" OrderLine
+OrderLine "1" --> "1" Product
+
+Customer <|-- CorporateCustomer
+Customer <|-- PersonalCustomer
+
+Order "1" --> "1" Customer
+CorporateCustomer "*" --> "0..1" Employee
+
+@enduml
+```

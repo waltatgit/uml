@@ -1,0 +1,19 @@
+@startuml
+
+class Student {
+}
+
+class Module {
+  name: String
+  weight: int
+}
+
+class DegreeProgramme {
+  title: String
+}
+
+Student "1" -- "*" DegreeProgramme : programme
+Student "*" -- "*" Module : attending
+DegreeProgramme "*" -- "*" Module : modules
+
+@enduml

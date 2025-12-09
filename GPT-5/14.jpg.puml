@@ -1,0 +1,13 @@
+```plantuml
+@startuml
+class Task {
+    name: String
+}
+
+class PeriodicTask {
+    periodicity: String
+}
+
+PeriodicTask --|> Task
+@enduml
+```

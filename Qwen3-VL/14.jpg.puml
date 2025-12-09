@@ -1,0 +1,19 @@
+Here's the PlantUML code for the given UML class diagram:
+
+```plantuml
+@startuml
+
+class Task {
+    name: String
+}
+
+class PeriodicTask {
+    - periodicity: String
+}
+
+PeriodicTask --|> Task
+
+@enduml
+```
+
+This code captures the class inheritance from `PeriodicTask` to `Task`, along with their respective attributes.

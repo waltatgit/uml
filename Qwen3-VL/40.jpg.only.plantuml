@@ -1,0 +1,50 @@
+@startuml
+
+class Bank {
+    code
+    address
+}
+
+class ATM {
+    location
+    manager
+}
+
+class Customer {
+    name
+    address
+    dob
+    card_number
+    pin
+}
+
+class Account {
+    number
+    balance
+}
+
+class Transactions {
+    id
+    date
+    type
+    amount
+    balance
+}
+
+class CurrentAccount {
+    number
+    balance
+}
+
+class SavingsAccount {
+    account_number
+    balance
+}
+
+Bank --> ATM
+Customer --> Account
+Account o-- Transactions
+Account <|-- CurrentAccount
+Account <|-- SavingsAccount
+
+@enduml

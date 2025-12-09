@@ -1,0 +1,13 @@
+```plantuml
+@startuml
+
+class Location {
+  x: double
+  y: double
+  label: String
+}
+
+Location "1" -- "*" Location : neighbours
+
+@enduml
+```

@@ -1,0 +1,69 @@
+Here is the PlantUML code for the given UML class diagram:
+
+```plantuml
+@startuml
+
+class WebUser {
+    - id: string
+    - password: string
+    - state: UserState
+}
+
+class Customer {
+    - id: string
+    - address: string
+    - phone: Phone
+    - email: string
+}
+
+class ShoppingCart {
+    - date: string
+}
+
+class Account {
+    - id: string
+    - address
+    - isClosed: boolean
+    - openDate
+    - closedDate
+}
+
+class Payment {
+    - id: string
+    - paidDate
+    - total
+    - details
+}
+
+class LineItem {
+    - quantity
+    - price
+}
+
+class Order {
+    - number
+    - date
+    - shippedDate
+    - address
+    - status
+    - total
+}
+
+class Product {
+    - id
+    - name
+    - supplier
+}
+
+WebUser "0..1" -- "1" ShoppingCart
+ShoppingCart "*" -- "*" LineItem
+LineItem "*" -- "1" Product
+ShoppingCart "0..1" -- "*" Order
+Order "*" -- "0..1" Payment
+Order "*" -- "0..1" Account
+Account "1" -- "0..1" Customer
+
+@enduml
+```
+
+This PlantUML code represents the classes, their attributes, and relationships as seen in the image you provided.

@@ -1,0 +1,15 @@
+@startuml
+
+class State {
+    +name: String
+}
+
+class Transition {
+    +trigger: String
+}
+
+State "1" --> "*" Transition : source
+State "1" --> "*" Transition : target
+State "1" --> "*" Transition : outgoing
+
+@enduml

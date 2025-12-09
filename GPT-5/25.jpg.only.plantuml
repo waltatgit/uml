@@ -1,0 +1,9 @@
+@startuml
+class Company {
+}
+
+class Division {
+}
+
+Company "1" -- "*" Division : divisions
+@enduml

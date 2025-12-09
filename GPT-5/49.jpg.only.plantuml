@@ -1,0 +1,47 @@
+@startuml
+
+class Firm {
+    - name: string
+}
+
+class Admin {
+    - name: string
+    - address: string
+}
+
+class Shareholder {
+    - shares: int
+    - id: string
+    - name: string
+}
+
+class Assembly {
+    - startTime
+    - endTime
+    - percShares
+    - maxNoDeleg
+}
+
+class Delegation {
+}
+
+class Voting {
+    - name: string
+    - choiceA: string
+    - choiceB: string
+}
+
+class Vote {
+    - choice: string
+}
+
+Firm "1" -- "0..*" Admin
+Admin "0..*" -- "0..1" Assembly
+Firm "1..*" -- "0..*" Shareholder
+Shareholder "0..*" -- "0..*" Assembly
+Shareholder "0..*" -- "0..*" Delegation
+Delegation "0..*" -- "0..*" Assembly
+Assembly "0..1" -- "1" Voting
+Voting "0..1" -- "0..1" Vote
+
+@enduml

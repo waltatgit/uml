@@ -1,0 +1,25 @@
+```plantuml
+@startuml
+
+class User {
+  - id: str
+}
+
+class Role {
+  - name
+}
+
+class Permission
+class Session
+class Object
+class Operation
+
+User --> Role
+Role --> Permission
+User --> Session
+Session --> Object
+Permission --> Object
+Permission --> Operation
+
+@enduml
+```

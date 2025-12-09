@@ -1,0 +1,18 @@
+```plantuml
+@startuml
+class Component {
+}
+
+class Leaf {
+}
+
+class Composite {
+}
+
+Component <|-- Leaf
+Component <|-- Composite
+
+Composite "1" -- "0..*" Component : parent
+Component "0..*" --> "1" Composite : child
+@enduml
+```

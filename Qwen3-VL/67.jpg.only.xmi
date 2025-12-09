@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><XMI xmlns:UML="href://org.omg/UML/1.3" xmi.version="1.1">
+    <XMI.header>
+        <XMI.documentation>
+            <XMI.exporter>PlantUML</XMI.exporter>
+            <XMI.exporterVersion>1.2024.5</XMI.exporterVersion>
+        </XMI.documentation>
+        <XMI.metamodel xmi.name="UML" xmi.version="1.4"/>
+    </XMI.header>
+    <XMI.content>
+        <UML:Model name="PlantUML" xmi.id="model1">
+            <UML:Namespace.ownedElement>
+                <UML:Class name="Bank" xmi.id="cl0002">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="name: String" xmi.id="att11"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="BankBranch" xmi.id="cl0003">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="sortCode: int" xmi.id="att12"/>
+                        <UML:Attribute name="address: String" xmi.id="att13"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Customer" xmi.id="cl0004">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="name: String" xmi.id="att14"/>
+                        <UML:Attribute name="cId: int" xmi.id="att15"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Account" xmi.id="cl0005">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="number: int" xmi.id="att16"/>
+                        <UML:Attribute name="balance: double" xmi.id="att17"/>
+                        <UML:Attribute name="overdrawn: boolean" xmi.id="att18"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Association name="branches" xmi.id="ass19">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass19" name="1" type="cl0002" xmi.id="end20">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass19" name="0..*" type="cl0003" xmi.id="end21">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association name="customers" xmi.id="ass22">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass22" name="1" type="cl0002" xmi.id="end23">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass22" name="0..*" type="cl0004" xmi.id="end24">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association name="owners" xmi.id="ass25">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass25" name="1..*" type="cl0004" xmi.id="end26">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass25" name="0..*" type="cl0005" xmi.id="end27">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association name="atBranch" xmi.id="ass28">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass28" name="1" type="cl0003" xmi.id="end29">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass28" name="0..*" type="cl0005" xmi.id="end30">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association name="accounts" xmi.id="ass31">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass31" name="0..*" type="cl0004" xmi.id="end32">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass31" name="0..*" type="cl0005" xmi.id="end33">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+            </UML:Namespace.ownedElement>
+        </UML:Model>
+    </XMI.content>
+</XMI>

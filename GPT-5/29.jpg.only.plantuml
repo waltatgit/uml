@@ -1,0 +1,26 @@
+@startuml
+
+class Interaction {
+    processId : String
+}
+
+class LifeLine {
+    terminates : boolean
+}
+
+class Object {
+    name : String
+    class : String
+}
+
+class Message {
+    operation : String
+    sequenceNumber : String
+}
+
+Interaction "1" -- "*" LifeLine : instances
+LifeLine "0..1" -- "1" Object : object
+LifeLine "1" --> "*" Message : from
+LifeLine "1" --> "*" Message : to
+
+@enduml

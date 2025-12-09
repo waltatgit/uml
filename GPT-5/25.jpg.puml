@@ -1,0 +1,13 @@
+Here is the PlantUML notation for the provided diagram:
+
+```plantuml
+@startuml
+class Company {
+}
+
+class Division {
+}
+
+Company "1" -- "*" Division : divisions
+@enduml
+```

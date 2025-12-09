@@ -1,0 +1,65 @@
+```plantuml
+@startuml
+
+class Manager {
+    - name: string
+    - id: int
+    - phone: int
+    - location: string
+}
+
+class Guest {
+    - name: string
+    - id: int
+    - phone: string
+    - address: string
+    - room: int
+}
+
+class Inventory {
+    - type: string
+    - status: string
+}
+
+class Rooms {
+    - number: int
+    - location: string
+}
+
+class Food {
+    - id
+    - name
+}
+
+class Receptionist {
+    - name: string
+    - id: int
+    - number: string
+    - location: string
+}
+
+class Chef {
+    - name: string
+    - id: int
+    - location: string
+}
+
+class Housekeeping {
+    - name: string
+    - id: int
+}
+
+class Bill {
+    - number: int
+    - guestName: string
+}
+
+Manager "1" -- "0..*" Guest
+Manager "1" -- "1..*" Inventory
+Guest "0..*" -- "1" Rooms
+Receptionist "1" -- "0..*" Bill
+Chef "1..*" -- "1..*" Food
+Housekeeping "1" -- "1" Rooms
+
+@enduml
+```

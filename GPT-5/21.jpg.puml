@@ -1,0 +1,14 @@
+```plantuml
+@startuml
+class Person {
+    name: String
+}
+
+class User {
+    userName: String
+    password: String
+}
+
+Person <|-- User
+@enduml
+```

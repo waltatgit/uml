@@ -1,0 +1,4 @@
+@startuml
+class Doctor
+class GP extends Doctor
+@enduml

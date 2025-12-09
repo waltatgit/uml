@@ -1,0 +1,22 @@
+```plantuml
+@startuml
+
+class LivingBeing
+class Mammal
+class Plant
+class Tiger
+class Human
+class Dog
+class Address
+class Car
+
+LivingBeing <|-- Mammal
+LivingBeing <|-- Plant
+Mammal <|-- Tiger
+Mammal <|-- Human
+Mammal <|-- Dog
+Human *-- Address
+Human *-- Car
+
+@enduml
+```

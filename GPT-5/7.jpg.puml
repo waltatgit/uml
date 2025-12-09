@@ -1,0 +1,15 @@
+```plantuml
+@startuml
+
+class Box
+
+class BoxMaximumWeight {
+}
+
+class Item
+
+BoxMaximumWeight --|> Box
+BoxMaximumWeight "1" o-- "*" Item
+
+@enduml
+```

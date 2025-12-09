@@ -1,0 +1,20 @@
+```plantuml
+@startuml
+
+class Language {
+    name: String
+    numberOfSpeakers: int
+}
+
+class UKEnglish
+class USEnglish
+class French {
+    dialect: String
+}
+
+Language <|-- UKEnglish
+Language <|-- USEnglish
+Language <|-- French
+
+@enduml
+```

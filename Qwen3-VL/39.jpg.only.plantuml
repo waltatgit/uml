@@ -1,0 +1,20 @@
+@startuml
+
+class Document {
+    authors: String
+    date: String
+}
+
+class Book {
+    title: String
+}
+
+class Email {
+    subject: String
+    to: String
+}
+
+Document <|-- Book
+Document <|-- Email
+
+@enduml

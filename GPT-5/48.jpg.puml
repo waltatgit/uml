@@ -1,0 +1,27 @@
+```plantuml
+@startuml
+
+class AccountHolder {
+    +id: int
+    +address: str
+}
+
+class Account {
+    +balance: float
+}
+
+class IndividualHolder {
+    +name: string
+    +SSN: string
+}
+
+class CorporateHolder {
+    +contact: string
+}
+
+AccountHolder "1" -- "1..*" Account : accounts
+AccountHolder <|-- IndividualHolder
+AccountHolder <|-- CorporateHolder
+
+@enduml
+```

@@ -1,0 +1,16 @@
+Here's the PlantUML code for the given UML class diagram:
+
+```plantuml
+@startuml
+
+class Habitante
+class Aldeano
+class Guerrero
+
+Habitante <|-- Aldeano
+Habitante <|-- Guerrero
+
+@enduml
+```
+
+This code represents a generalization relationship where `Aldeano` and `Guerrero` are subclasses of `Habitante`.

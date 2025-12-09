@@ -1,0 +1,34 @@
+```plantuml
+@startuml
+
+class Order {
+    date
+    status
+}
+
+class Payment {
+    amount
+}
+
+class Cash {
+    cash
+}
+
+class Check {
+    name
+    id
+}
+
+class Credit {
+    number
+    type
+    date
+}
+
+Order "1" --o "*" Payment
+Payment <|-- Cash
+Payment <|-- Check
+Payment <|-- Credit
+
+@enduml
+```

@@ -1,0 +1,28 @@
+Sure! Here's the PlantUML code based on the diagram:
+
+```plantuml
+@startuml
+
+class Customer {
+    -customerId : String
+}
+
+class Order {
+    -orderNo : int
+    -total : double
+}
+
+class OrderItem {
+    -productCode : int
+    -product : String
+    -price : int
+    -quantity : int
+}
+
+Customer "1" -- "0..*" Order : orders
+Order "1" -- "0..*" OrderItem : items
+
+@enduml
+```
+
+This code preserves all the relationships and attributes from the UML class diagram provided.

@@ -1,0 +1,25 @@
+Sure, here's the PlantUML code based on the provided UML diagram:
+
+```plantuml
+@startuml
+
+class Student {
+  id : String
+  name : String
+  year : int
+}
+
+class Course {
+  code : String
+  credits : int
+}
+
+Student "1" -- "*" Course : attends
+
+class BScStudent extends Student
+class MScStudent extends Student
+
+@enduml
+```
+
+This code defines the `Student` and `Course` classes, including their attributes, and establishes a relationship between them. It also includes inheritance for `BScStudent` and `MScStudent`.

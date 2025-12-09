@@ -1,0 +1,51 @@
+@startuml
+
+class Person {
+    name: string
+    address: string
+    phone: string
+}
+
+class Restaurant {
+    name: string
+    address: string
+    phone: string
+    website: string
+}
+
+class Customer {
+    name: string
+    reservation: string
+    allergies: string
+}
+
+class Staff {
+    name: string
+    address: string
+    phone: string
+}
+
+class WaitingStaff
+class CleaningStaff
+class CookingStaff
+
+class Waiter
+class Sommelier
+class Cleaner
+class Sous-chef
+
+Person <|-- Customer
+Person "1" -- "0..*" Restaurant
+Restaurant "1" *-- "0..*" Staff
+Customer "1" *-- "0..*" Restaurant
+
+Staff <|-- WaitingStaff
+Staff <|-- CleaningStaff
+Staff <|-- CookingStaff
+
+WaitingStaff <|-- Waiter
+WaitingStaff <|-- Sommelier
+CleaningStaff <|-- Cleaner
+CookingStaff <|-- Sous-chef
+
+@enduml

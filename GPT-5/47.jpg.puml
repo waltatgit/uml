@@ -1,0 +1,31 @@
+Here's the PlantUML code based on the provided UML diagram:
+
+```plantuml
+@startuml
+
+class User {
+  id: str
+}
+
+class Role {
+  name
+}
+
+class Permission
+
+class Session
+
+class Object
+
+class Operation
+
+User -- Role
+Role -- Permission
+Permission -- Object
+Permission -- Operation
+User -- Session
+
+@enduml
+```
+
+This code replicates the relationships and classes as depicted in the diagram.

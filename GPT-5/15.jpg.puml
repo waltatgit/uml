@@ -1,0 +1,20 @@
+```plantuml
+@startuml
+
+class Component {
+  - attrA
+}
+
+class ConcreteComponent {
+  - attrB
+}
+
+class Decorator {
+  - component
+}
+
+Component <|-- ConcreteComponent
+Component <|-- Decorator
+
+@enduml
+```

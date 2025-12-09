@@ -1,0 +1,14 @@
+@startuml
+
+class MaintenanceAgency
+class Tenant
+class House
+class RealEstateAgency
+class Landlord
+
+Tenant "0..1" -- "1" House : lease
+House "*" -- "1" RealEstateAgency
+House "*" -- "1" Landlord
+House "*" -- "0..1" MaintenanceAgency : maintain
+
+@enduml

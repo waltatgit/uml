@@ -1,0 +1,15 @@
+@startuml
+
+class Engine {
+    rpm: int
+}
+
+class TemperatureSensor
+
+class Display
+
+Engine "1" -- "1" TemperatureSensor : sensor
+Engine "1" -- "1" Display : owner
+Display "1" -- "1" TemperatureSensor : sensor
+
+@enduml

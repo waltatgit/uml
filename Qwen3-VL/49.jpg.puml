@@ -1,0 +1,48 @@
+```plantuml
+@startuml
+
+class Firm {
+    name: string
+}
+
+class Admin {
+    name: string
+    address: string
+}
+
+class Shareholder {
+    shares: int
+    id: string
+    name: string
+}
+
+class Assembly {
+    startTime
+    endTime
+    percShares
+    maxNoDeleg
+}
+
+class Delegation {
+
+}
+
+class Voting {
+    name: string
+    choiceA: string
+    choiceB: string
+}
+
+class Vote {
+    choice: string
+}
+
+Firm "1" -- "0..*" Shareholder
+Firm "1" -- "0..1" Admin
+Assembly "1" -- "0..*" Shareholder
+Assembly "0..*" -- "0..*" Delegation
+Assembly "1" -- "0..*" Voting
+Voting "1" -- "0..1" Vote
+
+@enduml
+```

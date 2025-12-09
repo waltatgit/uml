@@ -1,0 +1,23 @@
+@startuml
+
+class Property {
+    price: double
+    postcode: String
+}
+
+class Vendor {
+    name: String
+}
+
+class EstateAgent {
+    name: String
+    email: String
+}
+
+Property "0..1" --* "1" EstateAgent : agent
+
+Property "1" --* "1..*" Vendor : sells
+
+Vendor "1" --* "1..*" Property : vendors
+
+@enduml

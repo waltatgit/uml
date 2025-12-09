@@ -1,0 +1,8 @@
+```plantuml
+@startuml
+class Product
+
+class ConcreteProduct
+ConcreteProduct --|> Product
+@enduml
+```

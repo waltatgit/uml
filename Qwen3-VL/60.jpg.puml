@@ -1,0 +1,24 @@
+```plantuml
+@startuml
+
+class Property {
+    price: double
+    postcode: String
+}
+
+class Vendor {
+    name: String
+}
+
+class EstateAgent {
+    name: String
+    email: String
+}
+
+Property "1" -> "*" Vendor : sells
+Vendor "1" -> "*" Property : vendors
+Property "*" -> "0..1" EstateAgent : listings
+EstateAgent "*" -> "0..1" Property : agent
+
+@enduml
+```

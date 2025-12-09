@@ -1,0 +1,10 @@
+@startuml
+
+class Habitante
+class Aldeano
+class Guerrero
+
+Habitante <|-- Aldeano
+Habitante <|-- Guerrero
+
+@enduml

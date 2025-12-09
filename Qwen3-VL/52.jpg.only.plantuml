@@ -1,0 +1,17 @@
+@startuml
+
+class Component {
+}
+
+class Leaf {
+}
+
+class Composite {
+}
+
+Component <|-- Leaf
+Component <|-- Composite
+
+Component "0..*" --o "parent" Composite : child
+
+@enduml

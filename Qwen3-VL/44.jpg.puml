@@ -1,0 +1,43 @@
+```plantuml
+@startuml
+
+class User {
+    +id
+    +name
+    +surname
+    +phone
+    +email
+    +passwd
+}
+
+class Admin {
+}
+
+class Reservation {
+    +id: int
+    +payment: int
+    +seat: int
+}
+
+class TicketList {
+    +time: str
+    +isActive: bool
+}
+
+class City {
+    +name: str
+}
+
+class Airport {
+    +name: str
+    +phone: str
+    +address: str
+}
+
+User "1" -- "0..*" Reservation
+Reservation "1" -- "0..*" TicketList
+Airport "1" -- "0..*" City
+Admin --|> User
+
+@enduml
+```

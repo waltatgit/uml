@@ -1,0 +1,28 @@
+@startuml
+
+class Journey {
+    +id: String
+}
+
+class Route {
+    +id: String
+}
+
+class Place {
+    +id: String
+    +name: String
+    +x: double
+    +y: double
+}
+
+class TransportMode {
+    +name: String
+    +emissions: double
+}
+
+Journey "1" --> "*" Route : possibleRoutes
+Route "*" --> "1" Place : from
+Route "*" --> "1" Place : to
+Route "*" --> "*" TransportMode
+
+@enduml

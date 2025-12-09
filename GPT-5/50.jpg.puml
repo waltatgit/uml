@@ -1,0 +1,20 @@
+```plantuml
+@startuml
+
+class Worker {
+    - name: string
+}
+
+class Task {
+    - name: string
+}
+
+class PeriodicTask {
+    - periodicity: string
+}
+
+Worker "0..1" *-- "1" PeriodicTask
+PeriodicTask --|> Task
+
+@enduml
+```

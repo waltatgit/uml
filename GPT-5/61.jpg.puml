@@ -1,0 +1,24 @@
+```plantuml
+@startuml
+
+class Cattery {
+    name : String
+    address : String
+}
+
+class Cat {
+    breed : String
+    age : double
+    id : String
+}
+
+class Person {
+    name : String
+}
+
+Cattery "0..1" -- "*" Cat : resides
+Cattery "1" -- "*" Person : manages
+Cat "*" -- "1" Person : owner
+
+@enduml
+```

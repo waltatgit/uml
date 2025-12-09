@@ -1,0 +1,38 @@
+@startuml
+
+class Order {
+    +date
+    +prepaid
+    +number
+    +price
+}
+
+class Customer {
+    +name
+    +address
+    +ratings
+}
+
+class OrderLine {
+    +Product
+    +price
+    +Quantity
+}
+
+class Corporate {
+    +name
+    +rating
+    +limit
+}
+
+class Personal {
+    +id
+    +contact
+}
+
+Order "1" -- "n" OrderLine
+Order "n" -- "1" Customer
+Customer <|-- Corporate
+Customer <|-- Personal
+
+@enduml

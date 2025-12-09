@@ -1,0 +1,41 @@
+@startuml
+
+class City {
+    name: str
+}
+
+class Airport {
+    name: str
+    phone: str
+    address: str
+}
+
+class User {
+    Id
+    name
+    surname
+    phone
+    email
+    paswd
+}
+
+class Reservation {
+    Id: int
+    payment: int
+    seat: int
+}
+
+class TicketList {
+    time: str
+    isActive: bool
+}
+
+class Admin {
+}
+
+City --> Airport
+User "1" --> "0..*" Reservation
+Reservation --> TicketList
+User <|-- Admin
+
+@enduml

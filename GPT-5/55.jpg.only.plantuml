@@ -1,0 +1,36 @@
+@startuml
+
+class Account {
+    creationDate: Date
+    profilePicture: String
+}
+
+class User {
+    name: String
+    surname: String
+    dateOfBirth: Date
+    sex: String
+    email: String
+    phone: String
+    address: String
+}
+
+Account "1" -- "1" User
+
+class Admin
+class Staff
+class Patient
+class Nurse
+class Assistant
+class Doctor
+class Transport
+
+User <|-- Admin
+User <|-- Staff
+User <|-- Patient
+User <|-- Nurse
+User <|-- Assistant
+User <|-- Doctor
+User <|-- Transport
+
+@enduml

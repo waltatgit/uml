@@ -1,0 +1,16 @@
+@startuml
+
+class Program {
+    - language: String
+}
+
+class Procedure {
+    - sequential: boolean
+}
+
+class Statement
+
+Program "1" o-- "0..*" Procedure : procedures
+Procedure "1" o-- "0..*" Statement : statement
+
+@enduml

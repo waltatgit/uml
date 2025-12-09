@@ -1,0 +1,16 @@
+@startuml
+
+class Family {
+    familyName: String
+}
+
+class FamilyMember {
+    memberName: String
+}
+
+Family "1" -- "father" FamilyMember
+Family "1" -- "mother" FamilyMember
+Family "*" -- "sons" FamilyMember
+Family "0..1" -- "daughters" FamilyMember
+
+@enduml

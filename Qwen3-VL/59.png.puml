@@ -1,0 +1,26 @@
+```plantuml
+@startuml
+
+class Investor {
+    +name : String
+}
+
+class Investment {
+    +price : double
+    +term : double
+}
+
+class Equity {
+    +symbol : String
+}
+
+class Bond {
+    +issuer : String
+}
+
+Investor "1" -- "*" Investment : investment
+Investment <|-- Equity
+Investment <|-- Bond
+
+@enduml
+```

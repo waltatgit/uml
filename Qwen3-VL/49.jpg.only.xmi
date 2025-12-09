@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><XMI xmlns:UML="href://org.omg/UML/1.3" xmi.version="1.1">
+    <XMI.header>
+        <XMI.documentation>
+            <XMI.exporter>PlantUML</XMI.exporter>
+            <XMI.exporterVersion>1.2024.5</XMI.exporterVersion>
+        </XMI.documentation>
+        <XMI.metamodel xmi.name="UML" xmi.version="1.4"/>
+    </XMI.header>
+    <XMI.content>
+        <UML:Model name="PlantUML" xmi.id="model1">
+            <UML:Namespace.ownedElement>
+                <UML:Class name="Firm" xmi.id="cl0002">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="name: string" xmi.id="att15"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Admin" xmi.id="cl0003">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="name: string" xmi.id="att16"/>
+                        <UML:Attribute name="address: string" xmi.id="att17"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Shareholder" xmi.id="cl0004">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="shares: int" xmi.id="att18"/>
+                        <UML:Attribute name="id: string" xmi.id="att19"/>
+                        <UML:Attribute name="name: string" xmi.id="att20"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Assembly" xmi.id="cl0005">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="startTime" xmi.id="att21"/>
+                        <UML:Attribute name="endTime" xmi.id="att22"/>
+                        <UML:Attribute name="percShares" xmi.id="att23"/>
+                        <UML:Attribute name="maxNoDeleg" xmi.id="att24"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Delegation" xmi.id="cl0006">
+                    <UML:Classifier.feature/>
+                </UML:Class>
+                <UML:Class name="Voting" xmi.id="cl0007">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="name: string" xmi.id="att25"/>
+                        <UML:Attribute name="choiceA: string" xmi.id="att26"/>
+                        <UML:Attribute name="choiceB: string" xmi.id="att27"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Vote" xmi.id="cl0008">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="choice: string" xmi.id="att28"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Association xmi.id="ass29">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass29" name="1" type="cl0002" xmi.id="end30">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass29" name="0..*" type="cl0004" xmi.id="end31">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association xmi.id="ass32">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass32" name="1" type="cl0002" xmi.id="end33">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass32" name="0..1" type="cl0003" xmi.id="end34">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association xmi.id="ass35">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass35" name="1" type="cl0005" xmi.id="end36">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass35" name="0..*" type="cl0004" xmi.id="end37">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association xmi.id="ass38">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass38" name="0..*" type="cl0005" xmi.id="end39">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass38" name="0..*" type="cl0006" xmi.id="end40">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association xmi.id="ass41">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass41" name="1" type="cl0005" xmi.id="end42">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass41" name="0..*" type="cl0007" xmi.id="end43">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association xmi.id="ass44">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass44" name="1" type="cl0007" xmi.id="end45">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass44" name="0..1" type="cl0008" xmi.id="end46">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+            </UML:Namespace.ownedElement>
+        </UML:Model>
+    </XMI.content>
+</XMI>

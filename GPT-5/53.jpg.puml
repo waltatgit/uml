@@ -1,0 +1,36 @@
+```plantuml
+@startuml
+
+class Student {
+    name
+    address
+    phone
+    id
+    mark
+}
+
+class Enrollment {
+    marks
+}
+
+class Seminar {
+    name
+    id
+    fees
+}
+
+class Professor {
+    name
+    address
+    phone
+    email
+    salary
+}
+
+Student "1" -- "0..*" Enrollment : enrolled
+Enrollment "1..*" -- "1" Seminar : in
+Seminar "0..*" -- "0..*" Student : on waiting list
+Professor "1" -- "0..*" Seminar : instructs
+
+@enduml
+```
