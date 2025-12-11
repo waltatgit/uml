@@ -1,18 +1,21 @@
 @startuml
+' Assumption: The Worker–PeriodicTask link is an undirected association with multiplicities "0..1" on Worker side and "*" on PeriodicTask side.
+' Assumption: PeriodicTask is a subclass of Task (generalization); no interfaces or packages are indicated.
 
-class Worker {
-    - name: string
-}
+left to right direction
 
 class Task {
-    - name: string
+  name: string
 }
 
 class PeriodicTask {
-    - periodicity: string
+  periodicity: string
 }
 
-Worker "0..1" *-- "1" PeriodicTask
-PeriodicTask --|> Task
+class Worker {
+  name: string
+}
 
+PeriodicTask --|> Task
+Worker "0..1" -- "*" PeriodicTask
 @enduml

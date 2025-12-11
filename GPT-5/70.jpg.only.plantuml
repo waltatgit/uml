@@ -1,33 +1,38 @@
 @startuml
+' Assumptions:
+' - Associations are undirected (no navigability arrows were shown).
+' - Multiplicity "*" means many; labels near links are role names on the "*" side.
+' - No inheritance or composition was indicated; all links are plain associations.
+
+left to right direction
 
 class Document {
-    title: String
-    author: String
-    url: String
+  +title: String
+  +author: String
+  +url: String
 }
 
 class Part {
-    name: String
-    number: String
+  +name: String
+  +number: String
 }
 
 class Chapter {
-    name: String
-    number: int
+  +name: String
+  +number: int
 }
 
 class Section {
-    title: String
-    number: String
+  +title: String
+  +number: String
 }
 
 class Paragraph {
-    text: String
+  +text: String
 }
 
-Document "1" --> "*" Part : parts
-Document "1" --> "*" Chapter : chapters
-Chapter "1" --> "*" Section : sections
-Section "1" --> "*" Paragraph : paragraphs
-
+Document "1" -- "*" Part : parts
+Part "1" -- "*" Chapter : chapters
+Chapter "1" -- "*" Section : sections
+Section "1" -- "*" Paragraph : paragraphs
 @enduml

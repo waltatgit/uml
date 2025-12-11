@@ -11,12 +11,12 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Program" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="language: String" visibility="private" xmi.id="att7"/>
+                        <UML:Attribute name="language: String" xmi.id="att7"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Procedure" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="sequential: boolean" visibility="private" xmi.id="att8"/>
+                        <UML:Attribute name="sequential: boolean" xmi.id="att8"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Statement" xmi.id="cl0004">
@@ -24,20 +24,20 @@
                 </UML:Class>
                 <UML:Association name="procedures" xmi.id="ass9">
                     <UML:Association.connection>
-                        <UML:AssociationEnd aggregation="aggregate" association="ass9" name="1" type="cl0002" xmi.id="end10">
+                        <UML:AssociationEnd aggregation="composite" association="ass9" name="1" type="cl0002" xmi.id="end10">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass9" name="0..*" type="cl0003" xmi.id="end11">
+                        <UML:AssociationEnd association="ass9" name="*" type="cl0003" xmi.id="end11">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
                 <UML:Association name="statement" xmi.id="ass12">
                     <UML:Association.connection>
-                        <UML:AssociationEnd aggregation="aggregate" association="ass12" name="1" type="cl0003" xmi.id="end13">
+                        <UML:AssociationEnd aggregation="composite" association="ass12" name="1" type="cl0003" xmi.id="end13">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass12" name="0..*" type="cl0004" xmi.id="end14">
+                        <UML:AssociationEnd association="ass12" name="*" type="cl0004" xmi.id="end14">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

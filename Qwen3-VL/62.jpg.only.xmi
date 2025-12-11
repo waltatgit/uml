@@ -36,7 +36,7 @@
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
-                <UML:Association name="squares" xmi.id="ass15">
+                <UML:Association name="Squares" xmi.id="ass15">
                     <UML:Association.connection>
                         <UML:AssociationEnd association="ass15" name="1" type="cl0003" xmi.id="end16">
                             <UML:AssociationEnd.participant/>
@@ -48,10 +48,10 @@
                 </UML:Association>
                 <UML:Association xmi.id="ass18">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass18" name="0..1" type="cl0004" xmi.id="end19">
+                        <UML:AssociationEnd association="ass18" name="0..1" type="cl0005" xmi.id="end19">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass18" name="0..1" type="cl0005" xmi.id="end20">
+                        <UML:AssociationEnd association="ass18" name="0..1" type="cl0004" xmi.id="end20">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

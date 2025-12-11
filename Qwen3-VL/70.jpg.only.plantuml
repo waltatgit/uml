@@ -1,28 +1,31 @@
 @startuml
+' TODO: Assuming all associations are undirected unless explicitly shown with arrowheads.
+' TODO: Assuming "parts", "chapters", "sections", "paragraphs" are role names for associations.
+' TODO: Assuming multiplicities "1" and "*" are exact as drawn; no aggregation/composition implied by star alone.
 
 class Document {
-    title: String
-    author: String
-    url: String
+  -title: String
+  -author: String
+  -url: String
 }
 
 class Part {
-    name: String
-    number: String
+  -name: String
+  -number: String
 }
 
 class Chapter {
-    name: String
-    number: int
+  -name: String
+  -number: int
 }
 
 class Section {
-    title: String
-    number: String
+  -title: String
+  -number: String
 }
 
 class Paragraph {
-    text: String
+  -text: String
 }
 
 Document "1" -- "*" Part : parts

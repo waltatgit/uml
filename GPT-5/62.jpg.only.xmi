@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><XMI xmlns:UML="href://org.omg/UML/1.3" xmi.version="1.1">
+    <XMI.header>
+        <XMI.documentation>
+            <XMI.exporter>PlantUML</XMI.exporter>
+            <XMI.exporterVersion>1.2024.5</XMI.exporterVersion>
+        </XMI.documentation>
+        <XMI.metamodel xmi.name="UML" xmi.version="1.4"/>
+    </XMI.header>
+    <XMI.content>
+        <UML:Model name="PlantUML" xmi.id="model1">
+            <UML:Namespace.ownedElement>
+                <UML:Class name="Game" xmi.id="cl0002">
+                    <UML:Classifier.feature/>
+                </UML:Class>
+                <UML:Class name="Board" xmi.id="cl0003">
+                    <UML:Classifier.feature/>
+                </UML:Class>
+                <UML:Class name="Square" xmi.id="cl0004">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="x: int" xmi.id="att9"/>
+                        <UML:Attribute name="y: int" xmi.id="att10"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Piece" xmi.id="cl0005">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="label: String" xmi.id="att11"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Association xmi.id="ass12">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass12" name="1" type="cl0002" xmi.id="end13">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass12" name="1" type="cl0003" xmi.id="end14">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association name="squares" xmi.id="ass15">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass15" name="1" type="cl0003" xmi.id="end16">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass15" name="*" type="cl0004" xmi.id="end17">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association xmi.id="ass18">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass18" type="cl0005" xmi.id="end19">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass18" name="0..1" type="cl0004" xmi.id="end20">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+            </UML:Namespace.ownedElement>
+        </UML:Model>
+    </XMI.content>
+</XMI>

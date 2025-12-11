@@ -1,18 +1,20 @@
 @startuml
+' TODO: Assuming "name: string" and "periodicity: string" are public attributes since no visibility is shown.
+' TODO: Assuming the association between Worker and PeriodicTask is bidirectional since no arrowhead is shown.
 
 class Task {
-    name: string
-}
-
-class Worker {
-    name: string
+  +name: string
 }
 
 class PeriodicTask {
-    periodicity: string
+  +periodicity: string
 }
 
-Worker "0..1" --o "1" PeriodicTask
-PeriodicTask --|> Task
+class Worker {
+  +name: string
+}
+
+Task <|-- PeriodicTask
+Worker "0..1" -- "*" PeriodicTask
 
 @enduml

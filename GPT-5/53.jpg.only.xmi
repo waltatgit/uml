@@ -44,7 +44,7 @@
                         <UML:AssociationEnd association="ass24" name="1" type="cl0002" xmi.id="end25">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass24" name="0..*" type="cl0003" xmi.id="end26">
+                        <UML:AssociationEnd association="ass24" name="1..*" type="cl0003" xmi.id="end26">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
@@ -61,20 +61,20 @@
                 </UML:Association>
                 <UML:Association name="on waiting list" xmi.id="ass30">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass30" name="0..*" type="cl0004" xmi.id="end31">
+                        <UML:AssociationEnd association="ass30" name="0..*" type="cl0002" xmi.id="end31">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass30" name="0..*" type="cl0002" xmi.id="end32">
+                        <UML:AssociationEnd association="ass30" name="0..*" type="cl0004" xmi.id="end32">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
                 <UML:Association name="instructs" xmi.id="ass33">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass33" name="1" type="cl0005" xmi.id="end34">
+                        <UML:AssociationEnd association="ass33" name="0..*" type="cl0004" xmi.id="end34">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass33" name="0..*" type="cl0004" xmi.id="end35">
+                        <UML:AssociationEnd association="ass33" name="1" type="cl0005" xmi.id="end35">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

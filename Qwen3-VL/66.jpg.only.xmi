@@ -20,12 +20,12 @@
                 <UML:Class name="Aisle" xmi.id="cl0004">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Class name="Choir" xmi.id="cl0005">
+                <UML:Class name="Chair" xmi.id="cl0005">
                     <UML:Classifier.feature/>
                 </UML:Class>
                 <UML:Association xmi.id="ass10">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass10" name="1" type="cl0002" xmi.id="end11">
+                        <UML:AssociationEnd aggregation="composite" association="ass10" name="1" type="cl0002" xmi.id="end11">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                         <UML:AssociationEnd association="ass10" name="1" type="cl0003" xmi.id="end12">
@@ -33,22 +33,22 @@
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
-                <UML:Association xmi.id="ass13">
+                <UML:Association name="aisles" xmi.id="ass13">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass13" name="1" type="cl0002" xmi.id="end14">
+                        <UML:AssociationEnd aggregation="composite" association="ass13" name="1" type="cl0002" xmi.id="end14">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass13" name="1" type="cl0005" xmi.id="end15">
+                        <UML:AssociationEnd association="ass13" name="*" type="cl0004" xmi.id="end15">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
-                <UML:Association name="aisles" xmi.id="ass16">
+                <UML:Association xmi.id="ass16">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass16" name="1" type="cl0002" xmi.id="end17">
+                        <UML:AssociationEnd aggregation="composite" association="ass16" name="1" type="cl0002" xmi.id="end17">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass16" name="*" type="cl0004" xmi.id="end18">
+                        <UML:AssociationEnd association="ass16" name="1" type="cl0005" xmi.id="end18">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

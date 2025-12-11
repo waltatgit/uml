@@ -9,39 +9,39 @@
     <XMI.content>
         <UML:Model name="PlantUML" xmi.id="model1">
             <UML:Namespace.ownedElement>
-                <UML:Class name="Worker" xmi.id="cl0002">
+                <UML:Class name="Task" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name: string" visibility="private" xmi.id="att7"/>
+                        <UML:Attribute name="name: string" xmi.id="att7"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Class name="Task" xmi.id="cl0003">
+                <UML:Class name="PeriodicTask" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name: string" visibility="private" xmi.id="att8"/>
+                        <UML:Attribute name="periodicity: string" xmi.id="att8"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Class name="PeriodicTask" xmi.id="cl0004">
+                <UML:Class name="Worker" xmi.id="cl0004">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="periodicity: string" visibility="private" xmi.id="att9"/>
+                        <UML:Attribute name="name: string" xmi.id="att9"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Association xmi.id="ass10">
+                <UML:Generalization name="" xmi.id="ass10">
+                    <UML:Generalization.child>
+                        <UML:Class xmi.idref="cl0003"/>
+                    </UML:Generalization.child>
+                    <UML:Generalization.parent>
+                        <UML:Class xmi.idref="cl0002"/>
+                    </UML:Generalization.parent>
+                </UML:Generalization>
+                <UML:Association xmi.id="ass11">
                     <UML:Association.connection>
-                        <UML:AssociationEnd aggregation="composite" association="ass10" name="0..1" type="cl0002" xmi.id="end11">
+                        <UML:AssociationEnd association="ass11" name="0..1" type="cl0004" xmi.id="end12">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass10" name="1" type="cl0004" xmi.id="end12">
+                        <UML:AssociationEnd association="ass11" name="*" type="cl0003" xmi.id="end13">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
-                <UML:Generalization name="" xmi.id="ass13">
-                    <UML:Generalization.child>
-                        <UML:Class xmi.idref="cl0004"/>
-                    </UML:Generalization.child>
-                    <UML:Generalization.parent>
-                        <UML:Class xmi.idref="cl0003"/>
-                    </UML:Generalization.parent>
-                </UML:Generalization>
             </UML:Namespace.ownedElement>
         </UML:Model>
     </XMI.content>

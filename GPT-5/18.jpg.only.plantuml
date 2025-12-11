@@ -1,14 +1,17 @@
 @startuml
+' Assumptions: GUILayout is a concrete class; no operations are shown in the diagram.
+' TODO: If GUILayout is intended to be abstract, change to "abstract class GUILayout".
+
+left to right direction
 
 class GUILayout {
-    width : double
-    height : double
+  width: double
+  height: double
 }
 
-class PortraitLayout
-class LandscapeLayout
+class "Portrait Layout"
+class "Landscape Layout"
 
-GUILayout <|-- PortraitLayout
-GUILayout <|-- LandscapeLayout
-
+"Portrait Layout" --|> GUILayout
+"Landscape Layout" --|> GUILayout
 @enduml

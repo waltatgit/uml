@@ -1,25 +1,28 @@
 @startuml
+' TODO: Assumed "str" is String and "Float" is float/double; corrected for standard UML notation.
+' TODO: Assumed "1..*" multiplicity for Account means one or more accounts per holder.
 
 class AccountHolder {
-    - id: int
-    - address: str
-}
-
-class Account {
-    - balance: float
+  -id: int
+  -address: String
 }
 
 class IndividualHolder {
-    - name: string
-    - SSN: string
+  -name: String
+  -SSN: String
 }
 
 class CorporateHolder {
-    - contact: string
+  -contact: String
 }
 
-AccountHolder "1" -- "1..*" Account : accounts
+class Account {
+  -balance: float
+}
+
 AccountHolder <|-- IndividualHolder
 AccountHolder <|-- CorporateHolder
+
+AccountHolder "1" --> "1..*" Account : holder / accounts
 
 @enduml

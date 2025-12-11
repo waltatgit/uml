@@ -1,17 +1,21 @@
 @startuml
+' Assumption: Associations are plain (no aggregation/composition diamonds visible in the drawing).
+' Assumption: Attribute visibilities are not specified; using default.
+' Assumption: The label near Procedure-Statement reads "statement" (singular) and is preserved as-is.
+
+left to right direction
 
 class Program {
-    -language: String
+  language: String
 }
 
 class Procedure {
-    -sequential: boolean
+  sequential: boolean
 }
 
-class Statement {
-}
+class Statement
 
-Program "1" -- "0..*" Procedure : procedures
-Procedure "1" -- "0..*" Statement : statement
+Program "1" -- "*" Procedure : procedures
+Procedure "1" -- "*" Statement : statement
 
 @enduml

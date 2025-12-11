@@ -11,24 +11,24 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Customer" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="customerId : String" visibility="private" xmi.id="att7"/>
+                        <UML:Attribute name="customerId: String" xmi.id="att7"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Order" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="orderNo : int" visibility="private" xmi.id="att8"/>
-                        <UML:Attribute name="total : double" visibility="private" xmi.id="att9"/>
+                        <UML:Attribute name="orderNo: int" xmi.id="att8"/>
+                        <UML:Attribute name="total: double" xmi.id="att9"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Class name="OrderItem" xmi.id="cl0004">
+                <UML:Class name="Order Item" xmi.id="cl0004">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="productCode : int" visibility="private" xmi.id="att10"/>
-                        <UML:Attribute name="product : String" visibility="private" xmi.id="att11"/>
-                        <UML:Attribute name="price : int" visibility="private" xmi.id="att12"/>
-                        <UML:Attribute name="quantity : int" visibility="private" xmi.id="att13"/>
+                        <UML:Attribute name="productCode: int" xmi.id="att10"/>
+                        <UML:Attribute name="product: String" xmi.id="att11"/>
+                        <UML:Attribute name="price: int" xmi.id="att12"/>
+                        <UML:Attribute name="quantity: int" xmi.id="att13"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Association name="orders" xmi.id="ass14">
+                <UML:Association name="orders/purchaser" xmi.id="ass14">
                     <UML:Association.connection>
                         <UML:AssociationEnd association="ass14" name="1" type="cl0002" xmi.id="end15">
                             <UML:AssociationEnd.participant/>

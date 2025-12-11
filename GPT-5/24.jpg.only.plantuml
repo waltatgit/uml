@@ -1,27 +1,32 @@
 @startuml
+' Assumptions: All links are undirected associations (no composition/aggregation indicated).
+' The role name "presenter" is shown only on the Speaker–Talk association; added as the association label.
+' Visibility modifiers are not shown in the sketch, so they are omitted.
+
+left to right direction
 
 class Conference {
-  - location: String
-  - name: String
-  - date: Date
+  location: String
+  name: String
+  date: Date
 }
 
 class Session {
-  - time: int
-  - title: String
+  time: int
+  title: String
 }
 
 class Talk {
-  - title: String
-  - length: int
+  title: String
+  length: int
 }
 
 class Speaker {
-  - name: String
+  name: String
 }
 
-Conference "1" --> "*" Session : sessions
-Session "1" --> "*" Talk : talks
-Talk "*" --> "1" Speaker : presenter
+Conference "1" -- "*" Session : sessions
+Session "1" -- "*" Talk : talks
+Speaker "1" -- "*" Talk : presenter
 
 @enduml

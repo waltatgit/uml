@@ -40,10 +40,10 @@
                 </UML:Class>
                 <UML:Association xmi.id="ass20">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass20" name="1" type="cl0002" xmi.id="end21">
+                        <UML:AssociationEnd aggregation="aggregate" association="ass20" name="1" type="cl0002" xmi.id="end21">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd aggregation="aggregate" association="ass20" name="*" type="cl0003" xmi.id="end22">
+                        <UML:AssociationEnd association="ass20" name="*" type="cl0003" xmi.id="end22">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

@@ -1,20 +1,23 @@
 @startuml
+' TODO: Assuming "Regim" is a typo for "Region", but preserving as written per requirement.
+' TODO: Assuming association roles are meant to be displayed as labels on the association lines.
+' TODO: Multiplicity '*' is used for many, and '1' for one, as shown.
 
 class OCR {
 }
 
-class Region {
-    x1 : int
-    y1 : int
-    x2 : int
-    y2 : int
+class Regim {
+  x1 : int
+  y1 : int
+  x2 : int
+  y2 : int
 }
 
 class Content {
-    text : String
+  text : String
 }
 
-OCR "1" -- "0..*" Region : regions
-Region "1" -- "0..*" Content : content
+OCR "1" -- "*" Regim : recognizes regions
+Regim "1" -- "*" Content : content
 
 @enduml

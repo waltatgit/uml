@@ -1,13 +1,14 @@
 @startuml
+' No assumptions needed; diagram is clear.
 
 class Task {
-    name: String
+  name: String
 }
 
 class PeriodicTask {
-    - periodicity: String
+  periodicity: String
 }
 
-PeriodicTask --|> Task
+Task <|-- PeriodicTask
 
 @enduml

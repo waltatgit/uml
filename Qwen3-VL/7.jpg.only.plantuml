@@ -1,0 +1,12 @@
+@startuml
+class Box {}
+
+class "Box Maximum weight" {
+  weight
+}
+
+class Item {}
+
+Box <|-- "Box Maximum weight"
+"Box Maximum weight" "1" o-- "*" Item
+@enduml

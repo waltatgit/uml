@@ -1,15 +1,20 @@
 @startuml
+' TODO: Visibility of attributes is not indicated; kept without explicit visibility.
+' TODO: The diagram shows two undirected associations between State and Transition.
+' TODO: "outgoing" appears near one link; assumed to be the role name for the source association.
+' TODO: "incoming" for the target association is inferred for clarity.
+
+left to right direction
 
 class State {
-    +name: String
+  name: String
 }
 
 class Transition {
-    +trigger: String
+  trigger: String
 }
 
-State "1" --> "*" Transition : source
-State "1" --> "*" Transition : target
-State "1" --> "*" Transition : outgoing
+Transition "*" -- "1" State : source/outgoing
+Transition "*" -- "1" State : target/incoming
 
 @enduml

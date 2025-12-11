@@ -11,18 +11,18 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="BankAccount" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="owner : string" xmi.id="att7"/>
-                        <UML:Attribute name="balance : float" xmi.id="att8"/>
+                        <UML:Attribute name="owner: string" xmi.id="att7"/>
+                        <UML:Attribute name="balance: float" xmi.id="att8"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Class name="CheckingAccount" xmi.id="cl0003">
+                <UML:Class name="Checking Account" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="fee : double" xmi.id="att9"/>
+                        <UML:Attribute name="fee: double" xmi.id="att9"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Class name="SavingsAccount" xmi.id="cl0004">
+                <UML:Class name="Savings Account" xmi.id="cl0004">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="rate : float" xmi.id="att10"/>
+                        <UML:Attribute name="rate: float" xmi.id="att10"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Generalization name="" xmi.id="ass11">

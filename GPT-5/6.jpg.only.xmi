@@ -30,17 +30,7 @@
                         <UML:Attribute name="mark" xmi.id="att15"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Association xmi.id="ass16">
-                    <UML:Association.connection>
-                        <UML:AssociationEnd association="ass16" name="0..1" type="cl0002" xmi.id="end17">
-                            <UML:AssociationEnd.participant/>
-                        </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass16" name="1" type="cl0003" xmi.id="end18">
-                            <UML:AssociationEnd.participant/>
-                        </UML:AssociationEnd>
-                    </UML:Association.connection>
-                </UML:Association>
-                <UML:Generalization name="" xmi.id="ass19">
+                <UML:Generalization name="" xmi.id="ass16">
                     <UML:Generalization.child>
                         <UML:Class xmi.idref="cl0004"/>
                     </UML:Generalization.child>
@@ -48,6 +38,16 @@
                         <UML:Class xmi.idref="cl0002"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
+                <UML:Association xmi.id="ass17">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass17" name="0..1" type="cl0002" xmi.id="end18">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass17" name="1" type="cl0003" xmi.id="end19">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
             </UML:Namespace.ownedElement>
         </UML:Model>
     </XMI.content>

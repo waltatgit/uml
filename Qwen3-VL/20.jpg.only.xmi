@@ -9,10 +9,10 @@
     <XMI.content>
         <UML:Model name="PlantUML" xmi.id="model1">
             <UML:Namespace.ownedElement>
-                <UML:Class name="Doctor" xmi.id="cl0002">
+                <UML:Class name="GP" xmi.id="cl0002">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Class name="GP" xmi.id="cl0003">
+                <UML:Class name="Doctor" xmi.id="cl0003">
                     <UML:Classifier.feature/>
                 </UML:Class>
                 <UML:Generalization name="" xmi.id="ass5">

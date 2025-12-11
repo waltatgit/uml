@@ -1,16 +1,15 @@
 @startuml
-
 class SystemUser {
-    - code : integer
+  -code : integer
 }
 
 class Customer {
-    - customerNo : String
-    - loyaltyCard : Boolean
+  -customerNo : String
+  -loyaltyCard : Boolean
 }
 
 class Staff {
-    - staffId : String
+  -staffId : String
 }
 
 class Administrator {

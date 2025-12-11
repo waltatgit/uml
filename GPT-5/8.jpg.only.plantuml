@@ -1,24 +1,27 @@
 @startuml
+' TODO: Attribute names/types are not specified; kept exactly as drawn.
+' TODO: The multiplicity between Detail and Item is unclear; assumed Detail "0..1" -- "1" Item.
+left to right direction
 
 class Customer {
-    name
-    address
+  name
+  adres
 }
 
 class Order {
-    date
-    status
+  date
+  status
 }
 
 class Detail {
-    quality
+  quality
 }
 
 class Item {
-    description
+  description
 }
 
-Customer "1" -- "1..*" Order
+Customer "1" -- "*" Order
 Order "1" -- "*" Detail
 Detail "0..1" -- "1" Item
 

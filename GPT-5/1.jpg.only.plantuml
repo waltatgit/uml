@@ -1,38 +1,45 @@
 @startuml
+' Assumptions:
+' - Multiplicity "n" in the sketch is mapped to "*" as per instructions.
+' - No attribute types were shown; attributes are included without explicit types.
+' - Associations are undirected as drawn (no navigability arrows).
+left to right direction
 
 class Order {
-    +date
-    +prepaid
-    +number
-    +price
+  date
+  prepaid
+  number
+  price
 }
 
 class Customer {
-    +name
-    +address
-    +ratings
+  name
+  address
+  ratings
 }
 
-class OrderLine {
-    +Product
-    +price
-    +Quantity
+class "Order Line" {
+  product
+  price
+  quantity
 }
 
 class Corporate {
-    +name
-    +rating
-    +limit
+  name
+  rating
+  limit
 }
 
 class Personal {
-    +id
-    +contact
+  id
+  contact
 }
 
-Order "1" -- "n" OrderLine
-Order "n" -- "1" Customer
-Customer <|-- Corporate
-Customer <|-- Personal
+' Relationships
+Order "*" -- "1" Customer
+Order "1" -- "*" "Order Line"
+
+Corporate --|> Customer
+Personal --|> Customer
 
 @enduml

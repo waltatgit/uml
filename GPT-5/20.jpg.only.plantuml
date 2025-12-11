@@ -1,4 +1,12 @@
 @startuml
+' TODO: The triangle arrowhead is drawn at GP, which would usually indicate GP is the superclass.
+' Assumption: In the domain, GP (General Practitioner) specializes Doctor; modeling GP --|> Doctor.
+
+left to right direction
+
 class Doctor
-class GP extends Doctor
+class GP
+
+GP --|> Doctor
+
 @enduml

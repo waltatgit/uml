@@ -1,24 +1,23 @@
 @startuml
-
 class SecuritySystem {
-    location : string
+  location: String
 }
 
 class Monitor {
-    location : int
-    mode : int
+  location: int
+  mode: int
 }
 
 class Alarm {
-    on : boolean
+  on: Boolean
 }
 
 class Controller {
-    active : boolean
+  active: Boolean
 }
 
-SecuritySystem "1" -- "1..*" Monitor : monitors
-SecuritySystem "1" -- "1..*" Alarm : alarms
+SecuritySystem "1" *-- "*" Monitor : monitors
+SecuritySystem "1" *-- "*" Alarm : alarms
 SecuritySystem "1" -- "1" Controller
 
 @enduml

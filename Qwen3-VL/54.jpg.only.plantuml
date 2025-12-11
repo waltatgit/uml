@@ -1,32 +1,34 @@
 @startuml
+' TODO: Assuming all classes are concrete; no abstract indicators visible.
+' TODO: Assuming "coshtender" in Cash class is a typo for "cashTender".
 
 class Customer {
-    name
-    address
+  name
+  address
 }
 
 class Order {
-    date
-    status
+  date
+  status
 }
 
 class Payment {
-    amount
+  amount
 }
 
 class Credit {
-    number
-    type
-    expDate
+  number
+  type
+  expDate
 }
 
 class Cash {
-    cashTendered
+  cashTender
 }
 
 class Check {
-    name
-    bank
+  name
+  bank
 }
 
 Customer "1" -- "0..*" Order

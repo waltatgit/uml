@@ -1,6 +1,12 @@
 @startuml
-class Product
+' Assumptions:
+' - The base type "Product" is a regular class (not explicitly shown as abstract or interface).
+' - No attributes or operations are visible in the diagram.
 
-class ConcreteProduct
-ConcreteProduct --|> Product
+left to right direction
+
+class Product
+class "Concrete Product"
+
+"Concrete Product" --|> Product
 @enduml

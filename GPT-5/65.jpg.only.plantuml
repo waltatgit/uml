@@ -1,20 +1,22 @@
 @startuml
+' TODO: The class name appears as "Regim" in the sketch; assuming it is intentional (not "Region").
+' TODO: No navigability arrows shown; associations are modeled as undirected.
+' left to right direction
 
-class OCR {
-}
+class OCR
 
 class Regim {
-    x1: int
-    y1: int
-    x2: int
-    y2: int
+  x1: int
+  y1: int
+  x2: int
+  y2: int
 }
 
 class Content {
-    text: String
+  text: String
 }
 
-OCR "1" -- "0..*" Regim : regions / regions
-Regim "1" -- "0..*" Content : content
+OCR "1" -- "*" Regim : regions
+Regim "1" -- "*" Content : content
 
 @enduml

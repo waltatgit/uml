@@ -1,19 +1,22 @@
 @startuml
+' Assuming all associations are bidirectional as no arrows are shown.
+' Assuming "students", "programme", "attending", "modules", "inProgramme" are role names.
+' Assuming multiplicity '*' means 0..* (many), and '1' means exactly one.
 
 class Student {
 }
 
 class Module {
-  name: String
-  weight: int
+  name : String
+  weight : int
 }
 
 class DegreeProgramme {
-  title: String
+  title : String
 }
 
-Student "1" -- "*" DegreeProgramme : programme
-Student "*" -- "*" Module : attending
-DegreeProgramme "*" -- "*" Module : modules
+Student "1" -- "*" DegreeProgramme : programme / students
+Student "1" -- "*" Module : attending / modules
+Module "1" -- "*" DegreeProgramme : inProgramme / modules
 
 @enduml

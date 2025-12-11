@@ -1,28 +1,31 @@
 @startuml
+' Assumed class name: "Bank Branch"
+' Attribute "sortCode" assumed as "sortCode: int"
+left to right direction
 
 class Bank {
-    - name: String
+  name: String
+}
+
+class "Bank Branch" {
+  sortCode: int
+  address: String
 }
 
 class Customer {
-    - name: String
-    - cId: int
+  name: String
+  cId: int
 }
 
 class Account {
-    - number: int
-    - balance: double
-    - overdrawn: boolean
+  number: int
+  balance: double
+  overdrawn: boolean
 }
 
-class BankBranch {
-    - sortCode: int
-    - address: String
-}
-
-Bank "1" -- "*" BankBranch : branches
+Bank "1" -- "*" "Bank Branch" : branches
 Bank "*" -- "*" Customer : customers
-Customer "1..*" -- "*" Account : owners
-Account "*" -- "1" BankBranch : atBranch
+Customer "1..*" -- "*" Account : owners/accounts
+"Bank Branch" "1" -- "*" Account : atBranch/hosted
 
 @enduml

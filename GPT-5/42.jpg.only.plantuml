@@ -1,14 +1,22 @@
 @startuml
+' Assumptions:
+' - Asterisks near association ends indicate multiplicity *.
+' - "0..1" shown next to Tenant and Maintenance Agency indicate those end multiplicities.
+' - Relationship labels visible: "lease" (Tenant—House) and "maintain" (Maintenance Agency—House). The "maintain" label was hard to read; interpreted as maintain.
+' - Class names with spaces are quoted to preserve exact names.
+' - No attributes or operations were specified in the diagram.
 
-class MaintenanceAgency
+left to right direction
+
 class Tenant
 class House
-class RealEstateAgency
+class "Real Estate Agency"
+class "Maintenance Agency"
 class Landlord
 
-Tenant "0..1" -- "1" House : lease
-House "*" -- "1" RealEstateAgency
-House "*" -- "1" Landlord
-House "*" -- "0..1" MaintenanceAgency : maintain
+Tenant "0..1" -- "*" House : lease
+"Maintenance Agency" "0..1" -- "*" House : maintain
+"Real Estate Agency" "*" -- "*" House
+Landlord "*" -- "*" House
 
 @enduml

@@ -1,4 +1,7 @@
 @startuml
+' TODO: The diagram shows a self-association on Location with role "neighbor" and multiplicity * on both ends.
+'       This is interpreted as a many-to-many association with the role name "neighbor" on both ends.
+'       No direction is indicated, so undirected association is used.
 
 class Location {
   x: double
@@ -6,6 +9,5 @@ class Location {
   label: String
 }
 
-Location "1" -- "*" Location : neighbours
-
+Location " *" -- " * " Location : neighbor
 @enduml

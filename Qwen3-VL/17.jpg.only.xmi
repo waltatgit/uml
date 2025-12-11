@@ -9,10 +9,10 @@
     <XMI.content>
         <UML:Model name="PlantUML" xmi.id="model1">
             <UML:Namespace.ownedElement>
-                <UML:Class name="Language" xmi.id="cl0002">
+                <UML:Class isAbstract="true" name="Language" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name: String" visibility="public" xmi.id="att9"/>
-                        <UML:Attribute name="numberOfSpeakers: int" visibility="public" xmi.id="att10"/>
+                        <UML:Attribute name="name: String" visibility="private" xmi.id="att9"/>
+                        <UML:Attribute name="numberOfSpeakers: int" visibility="private" xmi.id="att10"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="UKEnglish" xmi.id="cl0003">
@@ -23,7 +23,7 @@
                 </UML:Class>
                 <UML:Class name="French" xmi.id="cl0005">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="dialect: String" visibility="public" xmi.id="att11"/>
+                        <UML:Attribute name="dialect: String" visibility="private" xmi.id="att11"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Generalization name="" xmi.id="ass12">

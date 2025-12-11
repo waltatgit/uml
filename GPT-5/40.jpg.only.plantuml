@@ -1,51 +1,61 @@
 @startuml
+' Assumptions based on the hand-drawn diagram:
+' - Relationships appear undirected unless an inheritance arrowhead is drawn.
+' - Multiplicity "*" is clearly shown on both ends between Account and Transactions (many-to-many).
+' - A short link exists between "Current Account" and "Savings Account" with a "1" near the Savings side; the other end is unclear, assumed "*" (many-to-one). TODO: verify this association and multiplicities.
+' - Attribute names are taken verbatim; unclear spellings (e.g., "card number"/"cord number", "account n") are preserved. TODO: confirm exact spellings and intended types.
+
+left to right direction
 
 class Bank {
-    code
-    address
+  code
+  address
 }
 
 class ATM {
-    location
-    manager
+  location
+  manager
 }
 
 class Customer {
-    name
-    address
-    dob
-    cardNumber
-    pin
+  name
+  address
+  dob
+  card number
+  pin
 }
 
 class Account {
-    number
-    balance
+  number
+  balance
+}
+
+class "Current Account" {
+  number
+  balance
+}
+
+class "Savings Account" {
+  account n
+  balance
 }
 
 class Transactions {
-    id
-    date
-    type
-    amount
-    balance
+  id
+  date
+  type
+  amount
+  balance
 }
 
-class CurrentAccount {
-    number
-    balance
-}
+' Inheritance
+"Current Account" --|> Account
+"Savings Account" --|> Account
 
-class SavingsAccount {
-    accountNumber
-    balance
-}
-
-Bank "1" -- "*" ATM
-Bank "1" -- "*" Account
-Customer "1" -- "*" Account
-Account "1" -- "*" Transactions
-Account <|-- CurrentAccount
-Account <|-- SavingsAccount
-
+' Associations
+Bank -- ATM
+Bank -- Account
+Customer -- Account
+Account "*" -- "*" Transactions
+"Current Account" "*" -- "1" "Savings Account"
 @enduml

@@ -1,4 +1,7 @@
 @startuml
+' TODO: No attributes or operations shown; assuming empty classes.
+' TODO: Association between Human and Dog is shown with * on Dog end — interpreted as Human has many Dogs.
+' TODO: Associations from Human to Address and Car are undirected; preserved as such.
 
 class LivingBeing
 class Mammal
@@ -14,7 +17,9 @@ LivingBeing <|-- Plant
 Mammal <|-- Tiger
 Mammal <|-- Human
 Mammal <|-- Dog
-Human *-- Address
-Human *-- Car
+
+Human "1" -- "*" Dog : owns
+Human -- Address
+Human -- Car
 
 @enduml

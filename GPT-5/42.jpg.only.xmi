@@ -9,16 +9,16 @@
     <XMI.content>
         <UML:Model name="PlantUML" xmi.id="model1">
             <UML:Namespace.ownedElement>
-                <UML:Class name="MaintenanceAgency" xmi.id="cl0002">
+                <UML:Class name="Tenant" xmi.id="cl0002">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Class name="Tenant" xmi.id="cl0003">
+                <UML:Class name="House" xmi.id="cl0003">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Class name="House" xmi.id="cl0004">
+                <UML:Class name="Real Estate Agency" xmi.id="cl0004">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Class name="RealEstateAgency" xmi.id="cl0005">
+                <UML:Class name="Maintenance Agency" xmi.id="cl0005">
                     <UML:Classifier.feature/>
                 </UML:Class>
                 <UML:Class name="Landlord" xmi.id="cl0006">
@@ -26,20 +26,20 @@
                 </UML:Class>
                 <UML:Association name="lease" xmi.id="ass11">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass11" name="0..1" type="cl0003" xmi.id="end12">
+                        <UML:AssociationEnd association="ass11" name="0..1" type="cl0002" xmi.id="end12">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass11" name="1" type="cl0004" xmi.id="end13">
+                        <UML:AssociationEnd association="ass11" name="*" type="cl0003" xmi.id="end13">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
-                <UML:Association xmi.id="ass14">
+                <UML:Association name="maintain" xmi.id="ass14">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass14" name="*" type="cl0004" xmi.id="end15">
+                        <UML:AssociationEnd association="ass14" name="0..1" type="cl0005" xmi.id="end15">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass14" name="1" type="cl0005" xmi.id="end16">
+                        <UML:AssociationEnd association="ass14" name="*" type="cl0003" xmi.id="end16">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
@@ -49,17 +49,17 @@
                         <UML:AssociationEnd association="ass17" name="*" type="cl0004" xmi.id="end18">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass17" name="1" type="cl0006" xmi.id="end19">
+                        <UML:AssociationEnd association="ass17" name="*" type="cl0003" xmi.id="end19">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
-                <UML:Association name="maintain" xmi.id="ass20">
+                <UML:Association xmi.id="ass20">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass20" name="*" type="cl0004" xmi.id="end21">
+                        <UML:AssociationEnd association="ass20" name="*" type="cl0006" xmi.id="end21">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass20" name="0..1" type="cl0002" xmi.id="end22">
+                        <UML:AssociationEnd association="ass20" name="*" type="cl0003" xmi.id="end22">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

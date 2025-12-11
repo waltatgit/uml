@@ -1,4 +1,6 @@
 @startuml
+' Assuming 'n' on associations means '*' (many) as per UML convention for unspecified multiplicity.
+' No visibility specified for attributes; defaulting to public (no prefix).
 
 class Order {
   date
@@ -14,9 +16,9 @@ class Customer {
 }
 
 class OrderLine {
-  Product
-  Price
-  Quantity
+  product
+  price
+  quantity
 }
 
 class Corporate {
@@ -30,8 +32,8 @@ class Personal {
   contact
 }
 
-Order "1" --> "n" Customer
-Order "1" --> "n" OrderLine
+Order "1" -- "n" Customer
+Order "1" -- "n" OrderLine
 Customer <|-- Corporate
 Customer <|-- Personal
 

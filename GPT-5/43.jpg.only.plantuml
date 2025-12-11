@@ -1,21 +1,25 @@
 @startuml
-
-class StockManager
+' Assumed undirected association between StockManager and Part with multiplicities "0..1" at StockManager end and "*" at Part end.
+' Attributes are shown without types in the diagram; kept untyped.
+' The diagram does not indicate abstract classes; Part is modeled as a regular class.
+left to right direction
 
 class Part {
-    -name
+  name
 }
 
 class BasicPart {
-    -unitPrice
+  unitprice
 }
 
 class CompoundPart {
-    -cost
+  cost
 }
 
-StockManager "0..1" -- "*" Part
-Part <|-- BasicPart
-Part <|-- CompoundPart
+class StockManager
 
+BasicPart --|> Part
+CompoundPart --|> Part
+
+StockManager "0..1" -- "*" Part
 @enduml

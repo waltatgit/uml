@@ -1,14 +1,13 @@
 @startuml
+' Assumption: the triangle indicates generalization (inheritance); Person is the superclass.
+' No attributes or operations are shown in the diagram, so classes are empty.
+
+left to right direction
 
 class Person
-
-class Citizen {
-}
-
-class Foreigner {
-}
+class Citizen
+class Foreigner
 
 Citizen --|> Person
 Foreigner --|> Person
-
 @enduml

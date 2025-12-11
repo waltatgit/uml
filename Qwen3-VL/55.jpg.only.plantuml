@@ -1,14 +1,17 @@
 @startuml
+' TODO: Assuming all attributes are public; no visibility indicators shown.
+' TODO: Assuming "str" means String type.
+' TODO: "Transport" class name appears handwritten and possibly misread; kept as-is.
 
 class Account {
-  creationDate: Date
-  profilePicture: Image
+  creationDate
+  profilePicture
 }
 
 class User {
   name: str
   surname: str
-  dateOfBirth: str
+  dateOfBirth
   sex: str
   email: str
   phone: str
@@ -23,14 +26,15 @@ class Nurse
 class Assistant
 class Doctor
 
+Account "1" -- "1" User
+
 User <|-- Admin
 User <|-- Staff
 User <|-- Patient
 User <|-- Transport
+
 Staff <|-- Nurse
 Staff <|-- Assistant
 Staff <|-- Doctor
-
-Account --> User
 
 @enduml

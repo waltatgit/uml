@@ -1,22 +1,28 @@
 @startuml
+' Assumption: The line between Investor and Investment shows "*" at both ends; modeled as many-to-many undirected association.
+' Assumption: The label "investment" on the association is kept as the association name.
+' No operations shown; only attributes are included.
+left to right direction
+
 class Investor {
-    +name: String
+  name: String
 }
 
 class Investment {
-    +price: double
-    +term: double
+  price: double
+  term: double
 }
 
 class Equity {
-    +symbol: String
+  symbol: String
 }
 
 class Bond {
-    +issuer: String
+  issuer: String
 }
 
-Investor "1" -- "*" Investment : investment
-Investment <|-- Equity
-Investment <|-- Bond
+Investor "*" -- "*" Investment : investment
+Equity --|> Investment
+Bond --|> Investment
+
 @enduml

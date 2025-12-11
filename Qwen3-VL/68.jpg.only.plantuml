@@ -1,16 +1,19 @@
 @startuml
+' TODO: Assuming "Program" contains multiple "Procedure" instances (composition) based on * and role "procedures"
+' TODO: Assuming "Procedure" contains multiple "Statement" instances (composition) based on * and role "statement"
 
 class Program {
-    - language: String
+  language: String
 }
 
 class Procedure {
-    - sequential: boolean
+  sequential: boolean
 }
 
-class Statement
+class Statement {
+}
 
-Program "1" o-- "0..*" Procedure : procedures
-Procedure "1" o-- "0..*" Statement : statement
+Program "1" *-- "*" Procedure : procedures
+Procedure "1" *-- "*" Statement : statement
 
 @enduml

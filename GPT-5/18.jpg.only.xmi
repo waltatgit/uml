@@ -11,14 +11,14 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="GUILayout" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="width : double" xmi.id="att7"/>
-                        <UML:Attribute name="height : double" xmi.id="att8"/>
+                        <UML:Attribute name="width: double" xmi.id="att7"/>
+                        <UML:Attribute name="height: double" xmi.id="att8"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Class name="PortraitLayout" xmi.id="cl0003">
+                <UML:Class name="Portrait Layout" xmi.id="cl0003">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Class name="LandscapeLayout" xmi.id="cl0004">
+                <UML:Class name="Landscape Layout" xmi.id="cl0004">
                     <UML:Classifier.feature/>
                 </UML:Class>
                 <UML:Generalization name="" xmi.id="ass9">

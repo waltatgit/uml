@@ -1,16 +1,20 @@
 @startuml
+' Assumptions:
+' - No visibility modifiers were indicated; attributes are shown without visibility.
+' - Association appears undirected; kept undirected with multiplicities "1" and "*".
+' - Label "items" is treated as the association role name on the Order side.
+left to right direction
 
 class Order {
-    orderNumber: String
-    total: double
+  orderNumber: String
+  total: double
 }
 
-class OrderItem {
-    item: String
-    quantity: int
-    price: double
+class "Order Item" {
+  item: String
+  quantity: int
+  price: double
 }
 
-Order "1" -- "0..*" OrderItem: items
-
+Order "1" -- "*" "Order Item" : items
 @enduml

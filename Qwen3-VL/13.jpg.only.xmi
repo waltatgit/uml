@@ -9,7 +9,7 @@
     <XMI.content>
         <UML:Model name="PlantUML" xmi.id="model1">
             <UML:Namespace.ownedElement>
-                <UML:Class name="Product" xmi.id="cl0002">
+                <UML:Class isAbstract="true" name="Product" xmi.id="cl0002">
                     <UML:Classifier.feature/>
                 </UML:Class>
                 <UML:Class name="ConcreteProduct" xmi.id="cl0003">

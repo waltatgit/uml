@@ -16,12 +16,12 @@
                 </UML:Class>
                 <UML:Class name="ConcreteComponent" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="attrB" visibility="private" xmi.id="att8"/>
+                        <UML:Attribute name="attB" visibility="private" xmi.id="att8"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Decorator" xmi.id="cl0004">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="component" visibility="private" xmi.id="att9"/>
+                        <UML:Attribute name="component: Component" visibility="private" xmi.id="att9"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Generalization name="" xmi.id="ass10">

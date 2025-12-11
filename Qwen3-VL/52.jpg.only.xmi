@@ -9,7 +9,7 @@
     <XMI.content>
         <UML:Model name="PlantUML" xmi.id="model1">
             <UML:Namespace.ownedElement>
-                <UML:Class name="Component" xmi.id="cl0002">
+                <UML:Class isAbstract="true" name="Component" xmi.id="cl0002">
                     <UML:Classifier.feature/>
                 </UML:Class>
                 <UML:Class name="Leaf" xmi.id="cl0003">
@@ -34,12 +34,12 @@
                         <UML:Class xmi.idref="cl0002"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
-                <UML:Association name="child" xmi.id="ass10">
+                <UML:Association name="parent / child" xmi.id="ass10">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass10" name="0..*" type="cl0002" xmi.id="end11">
+                        <UML:AssociationEnd association="ass10" name="1" type="cl0004" xmi.id="end11">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd aggregation="aggregate" association="ass10" name="parent" type="cl0004" xmi.id="end12">
+                        <UML:AssociationEnd association="ass10" name="0..*" type="cl0002" xmi.id="end12">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

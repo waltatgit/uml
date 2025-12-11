@@ -1,28 +1,31 @@
 @startuml
+' TODO: Assumed all associations are bidirectional unless explicitly directed.
+' TODO: Multiplicity 'n' or '*' are treated as '*' per requirement.
+' TODO: No visibility specified, assumed public for all attributes.
 
 class Journey {
-    +id: String
+  jId: String
 }
 
 class Route {
-    +id: String
+  rId: String
 }
 
 class Place {
-    +id: String
-    +name: String
-    +x: double
-    +y: double
+  pId: String
+  name: String
+  x: double
+  y: double
 }
 
 class TransportMode {
-    +name: String
-    +emissions: double
+  name: String
+  emission: double
 }
 
-Journey "1" --> "*" Route : possibleRoutes
-Route "*" --> "1" Place : from
-Route "*" --> "1" Place : to
-Route "*" --> "*" TransportMode
+Journey "1" -- "*" Route : possibleRoutes
+Route "1" -- "*" Place : locations
+Place "1" -- "*" TransportMode : from
+Place "1" -- "*" TransportMode : to
 
 @enduml

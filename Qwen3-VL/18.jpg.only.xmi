@@ -9,10 +9,10 @@
     <XMI.content>
         <UML:Model name="PlantUML" xmi.id="model1">
             <UML:Namespace.ownedElement>
-                <UML:Class name="GUILayout" xmi.id="cl0002">
+                <UML:Class isAbstract="true" name="GUILayout" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="width : double" visibility="public" xmi.id="att7"/>
-                        <UML:Attribute name="height : double" visibility="public" xmi.id="att8"/>
+                        <UML:Attribute name="width: double" visibility="private" xmi.id="att7"/>
+                        <UML:Attribute name="height: double" visibility="private" xmi.id="att8"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="PortraitLayout" xmi.id="cl0003">

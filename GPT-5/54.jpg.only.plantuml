@@ -1,39 +1,46 @@
 @startuml
+' Assumptions:
+' - Diagram shows undirected associations with multiplicities; no roles or types are specified.
+' - Each Customer has 0..* Orders; each Order belongs to exactly 1 Customer.
+' - Each Order is associated with 1..* Payments.
+' - Credit, Cash, and Check specialize Payment (generalization).
+' TODO: Attribute types were not indicated; left untyped.
+
+left to right direction
 
 class Customer {
-    -name
-    -address
+  name
+  address
 }
 
 class Order {
-    -date
-    -status
+  date
+  status
 }
 
 class Payment {
-    -amount
+  amount
 }
 
 class Credit {
-    -number
-    -type
-    -expDate
+  number
+  type
+  expDate
 }
 
 class Cash {
-    -cashTendered
+  cashTendered
 }
 
 class Check {
-    -name
-    -bank
+  name
+  bank
 }
 
 Customer "1" -- "0..*" Order
-Order "1..*" -- "1" Payment
+Order "1" -- "1..*" Payment
 
-Payment <|-- Credit
-Payment <|-- Cash
-Payment <|-- Check
-
+Credit --|> Payment
+Cash --|> Payment
+Check --|> Payment
 @enduml

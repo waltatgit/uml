@@ -1,4 +1,8 @@
 @startuml
+' Assumptions: visibility is not indicated, so none is specified.
+' TODO: "Administrator" shows no attributes; modeled as an empty class.
+
+left to right direction
 
 class SystemUser {
   code: integer
@@ -9,14 +13,13 @@ class Customer {
   loyaltyCard: Boolean
 }
 
-class Administrator
-
 class Staff {
   staffId: String
 }
 
-SystemUser <|-- Customer
-SystemUser <|-- Administrator
-SystemUser <|-- Staff
+class Administrator
 
+Customer --|> SystemUser
+Staff --|> SystemUser
+Administrator --|> SystemUser
 @enduml

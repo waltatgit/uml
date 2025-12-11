@@ -11,70 +11,70 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Student" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name" xmi.id="att11"/>
-                        <UML:Attribute name="address" xmi.id="att12"/>
-                        <UML:Attribute name="phone" xmi.id="att13"/>
-                        <UML:Attribute name="id" xmi.id="att14"/>
-                        <UML:Attribute name="mark" xmi.id="att15"/>
+                        <UML:Attribute name="name" xmi.id="att10"/>
+                        <UML:Attribute name="address" xmi.id="att11"/>
+                        <UML:Attribute name="phone" xmi.id="att12"/>
+                        <UML:Attribute name="id" xmi.id="att13"/>
+                        <UML:Attribute name="mark" xmi.id="att14"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Enrollment" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="marks" xmi.id="att16"/>
+                        <UML:Attribute name="marks" xmi.id="att15"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Seminar" xmi.id="cl0004">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name" xmi.id="att17"/>
-                        <UML:Attribute name="id" xmi.id="att18"/>
-                        <UML:Attribute name="fees" xmi.id="att19"/>
+                        <UML:Attribute name="name" xmi.id="att16"/>
+                        <UML:Attribute name="id" xmi.id="att17"/>
+                        <UML:Attribute name="fees" xmi.id="att18"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Professor" xmi.id="cl0005">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name" xmi.id="att20"/>
-                        <UML:Attribute name="address" xmi.id="att21"/>
-                        <UML:Attribute name="phone" xmi.id="att22"/>
-                        <UML:Attribute name="email" xmi.id="att23"/>
-                        <UML:Attribute name="salary" xmi.id="att24"/>
+                        <UML:Attribute name="name" xmi.id="att19"/>
+                        <UML:Attribute name="address" xmi.id="att20"/>
+                        <UML:Attribute name="phone" xmi.id="att21"/>
+                        <UML:Attribute name="email" xmi.id="att22"/>
+                        <UML:Attribute name="salary" xmi.id="att23"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Association name="enrolled" xmi.id="ass25">
+                <UML:Association name="enrolled" xmi.id="ass24">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass25" name="1..*" type="cl0003" xmi.id="end26">
+                        <UML:AssociationEnd association="ass24" name="1" type="cl0002" xmi.id="end25">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass25" name="1" type="cl0002" xmi.id="end27">
+                        <UML:AssociationEnd association="ass24" name="1..*" type="cl0003" xmi.id="end26">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
-                <UML:Association name="on waiting list" xmi.id="ass28">
+                <UML:Association name="in" xmi.id="ass27">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass28" name="0..*" type="cl0002" xmi.id="end29">
+                        <UML:AssociationEnd association="ass27" name="1..*" type="cl0003" xmi.id="end28">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass28" name="1..*" type="cl0004" xmi.id="end30">
+                        <UML:AssociationEnd association="ass27" name="1" type="cl0004" xmi.id="end29">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
-                <UML:Association name="in" xmi.id="ass31">
+                <UML:Association name="instructs" xmi.id="ass30">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass31" name="1..*" type="cl0003" xmi.id="end32">
+                        <UML:AssociationEnd association="ass30" name="0..*" type="cl0004" xmi.id="end31">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass31" name="1" type="cl0004" xmi.id="end33">
+                        <UML:AssociationEnd association="ass30" name="1" type="cl0005" xmi.id="end32">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
-                <UML:Association name="instructs" xmi.id="ass34">
+                <UML:Association name="on waiting list" xmi.id="ass33">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass34" name="0..*" type="cl0005" xmi.id="end35">
+                        <UML:AssociationEnd association="ass33" name="0..*" type="cl0002" xmi.id="end34">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass34" type="cl0004" xmi.id="end36">
+                        <UML:AssociationEnd association="ass33" name="0..*" type="cl0004" xmi.id="end35">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

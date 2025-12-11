@@ -1,22 +1,27 @@
 @startuml
+' TODO: Role names interpreted from diagram: Customer end labeled "purchaser" and Order end labeled "orders"; combined as "orders/purchaser".
+' TODO: Association between Order and Order Item labeled "items" (only one role name visible).
+' TODO: Attribute types taken as shown; visibility not indicated in the diagram.
+
+left to right direction
 
 class Customer {
-    - customerId : String
+  customerId: String
 }
 
 class Order {
-    - orderNo : int
-    - total : double
+  orderNo: int
+  total: double
 }
 
-class OrderItem {
-    - productCode : int
-    - product : String
-    - price : int
-    - quantity : int
+class "Order Item" {
+  productCode: int
+  product: String
+  price: int
+  quantity: int
 }
 
-Customer "1" -- "*" Order : orders
-Order "1" -- "*" OrderItem : items
+Customer "1" -- "*" Order : orders/purchaser
+Order "1" -- "*" "Order Item" : items
 
 @enduml

@@ -1,11 +1,13 @@
 @startuml
+' Assumptions: No attributes or operations are shown in the diagram.
+' Member is not explicitly marked as abstract, so it is modeled as a regular class.
+' Relationships: Lecturer and Student generalize (inherit from) Member.
+left to right direction
 
 class Member
-
 class Lecturer
 class Student
 
-Member <|-- Lecturer
-Member <|-- Student
-
+Lecturer --|> Member
+Student --|> Member
 @enduml

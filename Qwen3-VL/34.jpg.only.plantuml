@@ -1,22 +1,25 @@
 @startuml
+' TODO: Assuming all associations are bidirectional as no arrows are shown.
+' TODO: Assuming "purchaser" and "orders" are role names on the Customer-Order association.
+' TODO: Assuming "items" is the role name on the Order-OrderItem association.
 
 class Customer {
-    -customerId : String
+  -custmorId : String
 }
 
 class Order {
-    -orderNo : int
-    -total : double
+  -orderNo : int
+  -total : double
 }
 
 class OrderItem {
-    -productCode : int
-    -product : String
-    -price : int
-    -quantity : int
+  -productCode : int
+  -product : String
+  -price : int
+  -quantity : int
 }
 
-Customer "1" -- "0..*" Order : orders
-Order "1" -- "0..*" OrderItem : items
+Customer "1" -- "*" Order : purchaser / orders
+Order "1" -- "*" OrderItem : items
 
 @enduml

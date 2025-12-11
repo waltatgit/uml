@@ -27,17 +27,7 @@
                         <UML:Attribute name="cost" xmi.id="att11"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Association xmi.id="ass12">
-                    <UML:Association.connection>
-                        <UML:AssociationEnd association="ass12" name="0..1" type="cl0002" xmi.id="end13">
-                            <UML:AssociationEnd.participant/>
-                        </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass12" name="*" type="cl0003" xmi.id="end14">
-                            <UML:AssociationEnd.participant/>
-                        </UML:AssociationEnd>
-                    </UML:Association.connection>
-                </UML:Association>
-                <UML:Generalization name="" xmi.id="ass15">
+                <UML:Generalization name="" xmi.id="ass12">
                     <UML:Generalization.child>
                         <UML:Class xmi.idref="cl0004"/>
                     </UML:Generalization.child>
@@ -45,7 +35,7 @@
                         <UML:Class xmi.idref="cl0003"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
-                <UML:Generalization name="" xmi.id="ass16">
+                <UML:Generalization name="" xmi.id="ass13">
                     <UML:Generalization.child>
                         <UML:Class xmi.idref="cl0005"/>
                     </UML:Generalization.child>
@@ -53,6 +43,16 @@
                         <UML:Class xmi.idref="cl0003"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
+                <UML:Association xmi.id="ass14">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass14" name="0..1" type="cl0002" xmi.id="end15">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass14" name="*" type="cl0003" xmi.id="end16">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
             </UML:Namespace.ownedElement>
         </UML:Model>
     </XMI.content>

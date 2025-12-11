@@ -1,11 +1,12 @@
 @startuml
+' TODO: No attributes or operations shown; assuming empty classes.
+' TODO: Arrow direction indicates MScStudent and BScStudent inherit from Student.
 
 class Student
+class MScStudent
+class BScStudent
 
-class MScStudent extends Student
-class BScStudent extends Student
-
-MScStudent --|> Student
-BScStudent --|> Student
+Student <|-- MScStudent
+Student <|-- BScStudent
 
 @enduml

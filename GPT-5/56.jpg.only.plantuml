@@ -1,43 +1,51 @@
 @startuml
+' Assumptions:
+' - Types are not shown in the diagram; attributes are left untyped.
+' - Order–OrderLine multiplicities are slightly unclear; assumed a single Order has many OrderLines (1 to *) and each OrderLine belongs to exactly one Order.
+' - The Corporate Customer–Employee association shows "*" near Corporate Customer and "0..1" near Employee; modeled as many Corporate Customers may be assigned to zero or one Employee.
+' - No operations or stereotypes were indicated.
+
+left to right direction
 
 class Order {
-    dateReceived
-    isPrepaid
-    number
-    price
+  dateReceived
+  isPrepaid
+  number
+  price
 }
 
 class Customer {
-    name
-    address
+  name
+  address
+}
+
+class "Corporate Customer" {
+  contact
+  creditRate
+  creditLimit
+}
+
+class "Personal Customer" {
+  "Credit Card"
 }
 
 class OrderLine {
-    quantity
-    price
+  quantity
+  price
 }
 
-class Product
-
-class CorporateCustomer {
-    contact
-    creditRate
-    creditLimit
+class Product {
 }
 
-class PersonalCustomer {
-    creditCard
+class Employee {
 }
 
-class Employee
+"Corporate Customer" --|> Customer
+"Personal Customer" --|> Customer
 
-Order "1" --> "*" OrderLine
-OrderLine "1" --> "1" Product
+Order "*" -- "1" Customer
+Order "1" -- "*" OrderLine
+OrderLine "*" -- "1" Product
 
-Customer <|-- CorporateCustomer
-Customer <|-- PersonalCustomer
-
-Order "1" --> "1" Customer
-CorporateCustomer "*" --> "0..1" Employee
-
+"Corporate Customer" "*" -- "0..1" Employee
 @enduml

@@ -1,22 +1,23 @@
 @startuml
+' Assuming all classes are concrete; no abstract or interface indicators visible.
+' Assuming association between Game and Board is bidirectional without specific roles.
+' Assuming "Squares" is a role name for the Board-to-Square association.
 
-class Game {
-}
+class Game {}
 
-class Board {
-}
+class Board {}
 
 class Square {
-    x: int
-    y: int
+  x: int
+  y: int
 }
 
 class Piece {
-    label: String
+  label: String
 }
 
 Game "1" -- "1" Board
-Board "1" -- "*" Square : squares
-Square "0..1" -- "0..1" Piece
+Board "1" -- "*" Square : Squares
+Piece "0..1" -- "0..1" Square
 
 @enduml

@@ -1,11 +1,15 @@
 @startuml
+' Assumptions:
+' - Visibility for Task.name is not shown; included without visibility.
+' - Attribute types shown as "String"; if original used lowercase "string", adjust if needed.
+
 class Task {
-    name: String
+  name: String
 }
 
-class PeriodicTask {
-    periodicity: String
+class "Periodic Task" {
+  - periodicity: String
 }
 
-PeriodicTask --|> Task
+"Periodic Task" --|> Task
 @enduml

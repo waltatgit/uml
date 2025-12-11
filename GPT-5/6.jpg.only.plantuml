@@ -1,24 +1,28 @@
 @startuml
+' Assumptions: The association between Person and Address is undirected.
+' Multiplicities read as Person "0..1" linked to Address "1" (a person may have 0 or 1 address).
+' Inheritance: Student is a subclass of Person.
+
+left to right direction
 
 class Person {
-    name
-    number
-    email
+  name
+  number
+  email
 }
 
 class Address {
-    street
-    city
-    state
-    postcode
+  street
+  city
+  state
+  postcode
 }
 
 class Student {
-    number
-    mark
+  number
+  mark
 }
 
-Person "0..1" -- "1" Address
 Student --|> Person
-
+Person "0..1" -- "1" Address
 @enduml

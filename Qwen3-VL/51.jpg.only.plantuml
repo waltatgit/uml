@@ -1,36 +1,40 @@
 @startuml
+' TODO: Assuming all attributes are public; no visibility indicators shown.
+' TODO: Assuming "coshtender" in Cash is a typo for "cashTender" or similar; preserved as written.
+' TODO: No explicit aggregation/composition shown; using plain association for Customer-Order and Order-Payment.
 
 class Customer {
-  +name
-  +address
+  name
+  address
 }
 
 class Order {
-  +date
-  +status
+  date
+  status
 }
 
 class Payment {
-  +amount
+  amount
 }
 
 class Credit {
-  +number
-  +type
-  +expDate
+  number
+  type
+  ExpDate
 }
 
 class Cash {
-  +cashTendered
+  coshtender
 }
 
 class Check {
-  +name
-  +bank
+  name
+  bank
 }
 
 Customer "1" -- "0..*" Order
 Order "1" -- "1..*" Payment
+
 Payment <|-- Credit
 Payment <|-- Cash
 Payment <|-- Check

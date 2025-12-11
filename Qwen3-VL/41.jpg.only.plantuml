@@ -1,29 +1,32 @@
 @startuml
+' TODO: Assumed "n" multiplicity on Publication-Hardcover association means "many", mapped to "*"
+' TODO: Assumed all classes are concrete unless indicated otherwise; no abstract markers visible.
+' TODO: Assumed "id: int" and similar are public attributes; no visibility specified in diagram.
 
 class Publication {
-    title: string
+  title: string
 }
 
 class Paperback {
-    id: int
+  id: int
 }
 
 class Hardcover {
-    id: int
+  id: int
 }
 
 class Compilation {
-    id: int
-    pages: int
+  id: int
+  pages: int
 }
 
 class Sweeping {
-    id: int
-    pages: int
+  id: int
+  pages: int
 }
 
-Publication "1" -- "1" Paperback
-Publication "1" -- "n" Hardcover
+Publication -- "n" Hardcover
+Publication -- Paperback
 
 Paperback <|-- Compilation
 Paperback <|-- Sweeping

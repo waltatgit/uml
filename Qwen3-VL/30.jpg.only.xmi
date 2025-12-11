@@ -11,15 +11,15 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Order" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="orderNumber: String" xmi.id="att5"/>
-                        <UML:Attribute name="total: double" xmi.id="att6"/>
+                        <UML:Attribute name="orderNumber: String" visibility="private" xmi.id="att5"/>
+                        <UML:Attribute name="total: double" visibility="private" xmi.id="att6"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="OrderItem" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="item: String" xmi.id="att7"/>
-                        <UML:Attribute name="quantity: int" xmi.id="att8"/>
-                        <UML:Attribute name="price: double" xmi.id="att9"/>
+                        <UML:Attribute name="item: String" visibility="private" xmi.id="att7"/>
+                        <UML:Attribute name="quantity: int" visibility="private" xmi.id="att8"/>
+                        <UML:Attribute name="price: double" visibility="private" xmi.id="att9"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Association name="items" xmi.id="ass10">
@@ -27,7 +27,7 @@
                         <UML:AssociationEnd association="ass10" name="1" type="cl0002" xmi.id="end11">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass10" name="0..*" type="cl0003" xmi.id="end12">
+                        <UML:AssociationEnd association="ass10" name="*" type="cl0003" xmi.id="end12">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

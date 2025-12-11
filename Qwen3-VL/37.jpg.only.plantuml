@@ -1,14 +1,19 @@
 @startuml
+' Assuming all associations are bidirectional unless explicitly directed.
+' Assuming "owner" and "sensor" are role names for the associations.
+' Assuming "rpm: int" is an attribute of Engine.
 
 class Engine {
-    - rpm: int
+  rpm: int
 }
 
-class Display
+class TemperatureSensor {
+}
 
-class TemperatureSensor
+class Display {
+}
 
-Engine "1" -- "1" Display: owner
-Engine "1" -- "1" TemperatureSensor: sensor
+Engine "1" -- "1" TemperatureSensor : owner / sensor
+Engine "1" -- "1" Display : owner
 
 @enduml

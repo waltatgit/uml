@@ -11,16 +11,16 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Engine" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="rpm: int" visibility="private" xmi.id="att7"/>
+                        <UML:Attribute name="rpm: int" xmi.id="att7"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Class name="Display" xmi.id="cl0003">
+                <UML:Class name="TemperatureSensor" xmi.id="cl0003">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Class name="TemperatureSensor" xmi.id="cl0004">
+                <UML:Class name="Display" xmi.id="cl0004">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Association name="owner" xmi.id="ass8">
+                <UML:Association name="owner / sensor" xmi.id="ass8">
                     <UML:Association.connection>
                         <UML:AssociationEnd association="ass8" name="1" type="cl0002" xmi.id="end9">
                             <UML:AssociationEnd.participant/>
@@ -30,7 +30,7 @@
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
-                <UML:Association name="sensor" xmi.id="ass11">
+                <UML:Association name="owner" xmi.id="ass11">
                     <UML:Association.connection>
                         <UML:AssociationEnd association="ass11" name="1" type="cl0002" xmi.id="end12">
                             <UML:AssociationEnd.participant/>

@@ -11,15 +11,15 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Account" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="creationDate: Date" xmi.id="att19"/>
-                        <UML:Attribute name="profilePicture: Image" xmi.id="att20"/>
+                        <UML:Attribute name="creationDate" xmi.id="att19"/>
+                        <UML:Attribute name="profilePicture" xmi.id="att20"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="User" xmi.id="cl0003">
                     <UML:Classifier.feature>
                         <UML:Attribute name="name: str" xmi.id="att21"/>
                         <UML:Attribute name="surname: str" xmi.id="att22"/>
-                        <UML:Attribute name="dateOfBirth: str" xmi.id="att23"/>
+                        <UML:Attribute name="dateOfBirth" xmi.id="att23"/>
                         <UML:Attribute name="sex: str" xmi.id="att24"/>
                         <UML:Attribute name="email: str" xmi.id="att25"/>
                         <UML:Attribute name="phone: str" xmi.id="att26"/>
@@ -47,7 +47,17 @@
                 <UML:Class name="Doctor" xmi.id="cl0010">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Generalization name="" xmi.id="ass28">
+                <UML:Association xmi.id="ass28">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass28" name="1" type="cl0002" xmi.id="end29">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass28" name="1" type="cl0003" xmi.id="end30">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Generalization name="" xmi.id="ass31">
                     <UML:Generalization.child>
                         <UML:Class xmi.idref="cl0004"/>
                     </UML:Generalization.child>
@@ -55,7 +65,7 @@
                         <UML:Class xmi.idref="cl0003"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
-                <UML:Generalization name="" xmi.id="ass29">
+                <UML:Generalization name="" xmi.id="ass32">
                     <UML:Generalization.child>
                         <UML:Class xmi.idref="cl0005"/>
                     </UML:Generalization.child>
@@ -63,7 +73,7 @@
                         <UML:Class xmi.idref="cl0003"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
-                <UML:Generalization name="" xmi.id="ass30">
+                <UML:Generalization name="" xmi.id="ass33">
                     <UML:Generalization.child>
                         <UML:Class xmi.idref="cl0006"/>
                     </UML:Generalization.child>
@@ -71,7 +81,7 @@
                         <UML:Class xmi.idref="cl0003"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
-                <UML:Generalization name="" xmi.id="ass31">
+                <UML:Generalization name="" xmi.id="ass34">
                     <UML:Generalization.child>
                         <UML:Class xmi.idref="cl0007"/>
                     </UML:Generalization.child>
@@ -79,7 +89,7 @@
                         <UML:Class xmi.idref="cl0003"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
-                <UML:Generalization name="" xmi.id="ass32">
+                <UML:Generalization name="" xmi.id="ass35">
                     <UML:Generalization.child>
                         <UML:Class xmi.idref="cl0008"/>
                     </UML:Generalization.child>
@@ -87,7 +97,7 @@
                         <UML:Class xmi.idref="cl0005"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
-                <UML:Generalization name="" xmi.id="ass33">
+                <UML:Generalization name="" xmi.id="ass36">
                     <UML:Generalization.child>
                         <UML:Class xmi.idref="cl0009"/>
                     </UML:Generalization.child>
@@ -95,7 +105,7 @@
                         <UML:Class xmi.idref="cl0005"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
-                <UML:Generalization name="" xmi.id="ass34">
+                <UML:Generalization name="" xmi.id="ass37">
                     <UML:Generalization.child>
                         <UML:Class xmi.idref="cl0010"/>
                     </UML:Generalization.child>
@@ -103,16 +113,6 @@
                         <UML:Class xmi.idref="cl0005"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
-                <UML:Association xmi.id="ass35">
-                    <UML:Association.connection>
-                        <UML:AssociationEnd association="ass35" type="cl0002" xmi.id="end36">
-                            <UML:AssociationEnd.participant/>
-                        </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass35" type="cl0003" xmi.id="end37">
-                            <UML:AssociationEnd.participant/>
-                        </UML:AssociationEnd>
-                    </UML:Association.connection>
-                </UML:Association>
             </UML:Namespace.ownedElement>
         </UML:Model>
     </XMI.content>

@@ -1,22 +1,28 @@
 @startuml
+' Assumptions:
+' - Multiplicities read from ends near each class in the sketch.
+' - Associations are undirected as drawn; no navigability arrows added.
+' - Role names: "residents" on Cattery–Cat; "manages" at Cattery end and "manager" at Person end; "owner" on Person–Cat.
+
+left to right direction
 
 class Cattery {
-    name : String
-    address : String
+  name: String
+  address: String
 }
 
 class Cat {
-    breed : String
-    age : double
-    id : String
+  breed: String
+  age: double
+  id: String
 }
 
 class Person {
-    name : String
+  name: String
 }
 
-Cattery "0..1" -- "*" Cat : resides
-Cattery "1" -- "*" Person : manages
-Cat "*" -- "1" Person : owner
+Cattery "0..1" -- "*" Cat : residents
+Cattery "*" -- "1" Person : manages/manager
+Person "1" -- "*" Cat : owner
 
 @enduml

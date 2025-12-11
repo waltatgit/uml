@@ -1,18 +1,21 @@
 @startuml
+' NOTE: No types were shown for attributes; left untyped.
+' The Decorator holds a reference to Component.
+
+left to right direction
 
 class Component {
-  - attrA
+  -attrA
 }
 
 class ConcreteComponent {
-  - attrB
+  -attB
 }
 
 class Decorator {
-  - component
+  -component: Component
 }
 
-Component <|-- ConcreteComponent
-Component <|-- Decorator
-
+ConcreteComponent --|> Component
+Decorator --|> Component
 @enduml

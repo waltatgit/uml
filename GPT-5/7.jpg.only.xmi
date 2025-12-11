@@ -12,13 +12,15 @@
                 <UML:Class name="Box" xmi.id="cl0002">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Class name="BoxMaximumWeight" xmi.id="cl0003">
-                    <UML:Classifier.feature/>
+                <UML:Class name="Box Maximum weight" xmi.id="cl0003">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="maximum weight" xmi.id="att7"/>
+                    </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Item" xmi.id="cl0004">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Generalization name="" xmi.id="ass7">
+                <UML:Generalization name="" xmi.id="ass8">
                     <UML:Generalization.child>
                         <UML:Class xmi.idref="cl0003"/>
                     </UML:Generalization.child>
@@ -26,12 +28,12 @@
                         <UML:Class xmi.idref="cl0002"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
-                <UML:Association xmi.id="ass8">
+                <UML:Association xmi.id="ass9">
                     <UML:Association.connection>
-                        <UML:AssociationEnd aggregation="aggregate" association="ass8" name="1" type="cl0003" xmi.id="end9">
+                        <UML:AssociationEnd association="ass9" name="1" type="cl0003" xmi.id="end10">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass8" name="*" type="cl0004" xmi.id="end10">
+                        <UML:AssociationEnd association="ass9" name="*" type="cl0004" xmi.id="end11">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

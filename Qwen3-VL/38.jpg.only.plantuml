@@ -1,63 +1,68 @@
 @startuml
+' TODO: Assumed "UserState" is a type/enum; not defined in diagram.
+' TODO: Assumed "Phone" is a type; not defined in diagram.
+' TODO: "openDate" and "closedDate" in Account are assumed to be Date types.
+' TODO: "shippedDate" in Order is assumed to be Date type.
 
 class WebUser {
-    - id: string
-    - password: string
-    - state: UserState
+  -id: string
+  -password: string
+  -state: UserState
 }
 
 class Customer {
-    - id: string
-    - address: string
-    - phone: Phone
-    - email: string
+  -id: string
+  -address: string
+  -phone: Phone
+  -email: string
 }
 
 class ShoppingCart {
-    - date: string
+  -date: string
 }
 
 class Account {
-    - id: string
-    - address
-    - isClosed: boolean
-    - openDate
-    - closedDate
+  -id: string
+  -address
+  -isClosed: boolean
+  -openDate
+  -closedDate
 }
 
 class Payment {
-    - id: string
-    - paidDate
-    - total
-    - details
+  -id: string
+  -paidDate
+  -total
+  -details
 }
 
 class LineItem {
-    - quantity
-    - price
-}
-
-class Order {
-    - number
-    - date
-    - shippedDate
-    - address
-    - status
-    - total
+  -quantity
+  -price
 }
 
 class Product {
-    - id
-    - name
-    - supplier
+  -id
+  -name
+  -Supplier
 }
 
+class Order {
+  -number
+  -date
+  -shippedDate
+  -address
+  -status
+  -total
+}
+
+WebUser "0..1" -- "1" Customer
 WebUser "0..1" -- "1" ShoppingCart
-ShoppingCart "*" -- "*" LineItem
-LineItem "*" -- "1" Product
-ShoppingCart "0..1" -- "*" Order
-Order "*" -- "0..1" Payment
-Order "*" -- "0..1" Account
-Account "1" -- "0..1" Customer
+ShoppingCart "1" -- "*" LineItem
+LineItem "1" -- "*" Product
+ShoppingCart "1" -- "1" Account
+Account "1" -- "*" Order
+Order "1" -- "*" Payment
+Account "1" -- "0..1" Payment
 
 @enduml

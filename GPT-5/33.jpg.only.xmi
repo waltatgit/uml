@@ -11,34 +11,32 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Student" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="id : String" xmi.id="att9"/>
-                        <UML:Attribute name="name : String" xmi.id="att10"/>
-                        <UML:Attribute name="year : int" xmi.id="att11"/>
+                        <UML:Attribute name="id: String" xmi.id="att9"/>
+                        <UML:Attribute name="name: String" xmi.id="att10"/>
+                        <UML:Attribute name="year: int" xmi.id="att11"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Course" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="code : String" xmi.id="att12"/>
-                        <UML:Attribute name="credits : int" xmi.id="att13"/>
+                        <UML:Attribute name="code: String" xmi.id="att12"/>
+                        <UML:Attribute name="credits: int" xmi.id="att13"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Class name="BScStudent" xmi.id="cl0005">
+                <UML:Class name="BSc Student" xmi.id="cl0004">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Class name="MScStudent" xmi.id="cl0007">
+                <UML:Class name="MSc Student" xmi.id="cl0005">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Association name="attends" xmi.id="ass14">
-                    <UML:Association.connection>
-                        <UML:AssociationEnd association="ass14" name="1" type="cl0002" xmi.id="end15">
-                            <UML:AssociationEnd.participant/>
-                        </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass14" name="*" type="cl0003" xmi.id="end16">
-                            <UML:AssociationEnd.participant/>
-                        </UML:AssociationEnd>
-                    </UML:Association.connection>
-                </UML:Association>
-                <UML:Generalization name="" xmi.id="ass17">
+                <UML:Generalization name="" xmi.id="ass14">
+                    <UML:Generalization.child>
+                        <UML:Class xmi.idref="cl0004"/>
+                    </UML:Generalization.child>
+                    <UML:Generalization.parent>
+                        <UML:Class xmi.idref="cl0002"/>
+                    </UML:Generalization.parent>
+                </UML:Generalization>
+                <UML:Generalization name="" xmi.id="ass15">
                     <UML:Generalization.child>
                         <UML:Class xmi.idref="cl0005"/>
                     </UML:Generalization.child>
@@ -46,14 +44,16 @@
                         <UML:Class xmi.idref="cl0002"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
-                <UML:Generalization name="" xmi.id="ass18">
-                    <UML:Generalization.child>
-                        <UML:Class xmi.idref="cl0007"/>
-                    </UML:Generalization.child>
-                    <UML:Generalization.parent>
-                        <UML:Class xmi.idref="cl0002"/>
-                    </UML:Generalization.parent>
-                </UML:Generalization>
+                <UML:Association name="attends" xmi.id="ass16">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd association="ass16" name="*" type="cl0002" xmi.id="end17">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass16" name="*" type="cl0003" xmi.id="end18">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
             </UML:Namespace.ownedElement>
         </UML:Model>
     </XMI.content>

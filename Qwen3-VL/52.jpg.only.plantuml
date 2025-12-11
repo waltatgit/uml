@@ -1,17 +1,16 @@
 @startuml
+' TODO: Assuming "Component" is an abstract base class for the Composite pattern.
+' TODO: No attributes or operations shown for any class; none added.
+' TODO: The association from Composite to Component is recursive, modeling children.
 
-class Component {
-}
+abstract class Component
 
-class Leaf {
-}
-
-class Composite {
-}
+class Leaf
+class Composite
 
 Component <|-- Leaf
 Component <|-- Composite
 
-Component "0..*" --o "parent" Composite : child
+Composite "1" -- "0..*" Component : parent / child
 
 @enduml

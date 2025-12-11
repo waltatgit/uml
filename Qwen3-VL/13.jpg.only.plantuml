@@ -1,11 +1,7 @@
 @startuml
+abstract class Product
 
-class Product {
-}
-
-class ConcreteProduct {
-}
+class ConcreteProduct
 
 Product <|-- ConcreteProduct
-
 @enduml

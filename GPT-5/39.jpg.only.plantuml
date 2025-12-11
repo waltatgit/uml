@@ -1,20 +1,22 @@
 @startuml
+' Assumptions: visibility not specified in the sketch; attributes use the shown type casing ("string").
+' Document is not indicated as abstract; if intended, change to "abstract class Document".
+left to right direction
 
 class Document {
-    authors: string
-    date: string
+  authors: string
+  date: string
 }
 
 class Book {
-    title: string
+  title: string
 }
 
 class Email {
-    subject: string
-    to: string
+  subject: string
+  to: string
 }
 
-Document <|-- Book
-Document <|-- Email
-
+Book --|> Document
+Email --|> Document
 @enduml

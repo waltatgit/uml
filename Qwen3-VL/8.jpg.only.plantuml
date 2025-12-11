@@ -1,0 +1,28 @@
+@startuml
+' TODO: Assuming all attributes are public; no visibility indicators shown.
+' TODO: Assuming all associations are bidirectional unless arrowheads are drawn (none are).
+' TODO: Assuming "adres" is a typo for "address" but preserving as written per requirement.
+
+class Customer {
+  name
+  adres
+}
+
+class Order {
+  date
+  status
+}
+
+class Detail {
+  quality
+}
+
+class Item {
+  description
+}
+
+Customer "1" -- "*" Order
+Order "1" -- "*" Detail
+Detail "0..1" -- "1" Item
+
+@enduml

@@ -1,15 +1,17 @@
 @startuml
+' TODO: Assuming all classes are concrete unless marked otherwise; no operations shown.
+' TODO: Assuming "-attrA", "-attrB", "-component" are private attributes.
 
 class Component {
-    - attrA
+  -attrA
 }
 
 class ConcreteComponent {
-    - attrB
+  -attrB
 }
 
 class Decorator {
-    - component
+  -component
 }
 
 Component <|-- ConcreteComponent

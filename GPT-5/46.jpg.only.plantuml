@@ -1,6 +1,10 @@
 @startuml
+' TODO: "Living Being" might be abstract; not indicated, so modeled as a regular class.
+' TODO: Multiplicities between Human–Address and Human–Car are not shown; modeled as undirected associations without multiplicities.
+' TODO: Human–Dog association has multiplicities 1 and *; direction not shown, so kept undirected.
+left to right direction
 
-class LivingBeing
+class "Living Being"
 class Mammal
 class Plant
 class Tiger
@@ -9,13 +13,14 @@ class Dog
 class Address
 class Car
 
-LivingBeing <|-- Mammal
-LivingBeing <|-- Plant
-Mammal <|-- Tiger
-Mammal <|-- Human
-Mammal <|-- Dog
-Human --> Address
-Human --> Car
-Human --* Dog
+Mammal --|> "Living Being"
+Plant --|> "Living Being"
+Tiger --|> Mammal
+Human --|> Mammal
+Dog --|> Mammal
+
+Human "1" -- "*" Dog
+Human -- Address
+Human -- Car
 
 @enduml

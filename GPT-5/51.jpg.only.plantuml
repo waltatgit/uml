@@ -1,39 +1,42 @@
 @startuml
+' TODO: Attribute types not indicated; left untyped.
+' Assumption: Each Customer has 0..* Orders; each Order belongs to exactly 1 Customer.
+' Assumption: Each Order has 1..* Payments; each Payment is for exactly 1 Order.
+left to right direction
 
 class Customer {
-    name
-    address
+  name
+  address
 }
 
 class Order {
-    date
-    status
+  date
+  status
 }
 
 class Payment {
-    amount
+  amount
 }
 
 class Credit {
-    number
-    type
-    expDate
+  number
+  type
+  expDate
 }
 
 class Cash {
-    cashTendered
+  cashTender
 }
 
 class Check {
-    name
-    bank
+  name
+  bank
 }
 
 Customer "1" -- "0..*" Order
-Customer "1" -- "1..*" Payment
-Payment <|-- Credit
-Payment <|-- Cash
-Payment <|-- Check
 Order "1" -- "1..*" Payment
 
+Credit --|> Payment
+Cash --|> Payment
+Check --|> Payment
 @enduml

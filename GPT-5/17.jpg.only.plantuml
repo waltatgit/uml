@@ -1,18 +1,18 @@
 @startuml
+left to right direction
 
 class Language {
-    name: String
-    numberOfSpeakers: int
+  name: String
+  numberOfSpeakers: int
 }
 
 class UKEnglish
 class USEnglish
 class French {
-    dialect: String
+  dialect: String
 }
 
-Language <|-- UKEnglish
-Language <|-- USEnglish
-Language <|-- French
-
+UKEnglish --|> Language
+USEnglish --|> Language
+French --|> Language
 @enduml

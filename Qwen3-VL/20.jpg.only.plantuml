@@ -1,6 +1,6 @@
 @startuml
-class Doctor
 class GP
+class Doctor
 
-Doctor <|-- GP
+Doctor --|> GP
 @enduml

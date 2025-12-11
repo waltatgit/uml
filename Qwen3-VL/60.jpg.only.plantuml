@@ -1,22 +1,23 @@
 @startuml
+' TODO: Assuming all associations are bidirectional as no arrows are shown.
+' TODO: Assuming "sells" and "venders" are role names for the Property-Vendor association.
+' TODO: Assuming "listings" and "agent" are role names for the Property-EstateAgent association.
 
 class Property {
-    price: double
-    postcode: String
+  -price : double
+  -postcode : String
 }
 
 class Vendor {
-    name: String
+  -name : String
 }
 
 class EstateAgent {
-    name: String
-    email: String
+  -name : String
+  -email : String
 }
 
-Property "1" -> "*" Vendor : sells
-Vendor "1" -> "*" Property : vendors
-Property "*" -> "0..1" EstateAgent : listings
-EstateAgent "*" -> "0..1" Property : agent
+Property "1" -- "*" Vendor : sells / venders
+Property "0..1" -- "*" EstateAgent : agent / listings
 
 @enduml

@@ -1,32 +1,37 @@
 @startuml
+' TODO: Multiplicity "n" is interpreted as "*" on both ends of relationships.
+' TODO: The diagram shows two "Compilation" and two "Sweeping" boxes (left/right) with identical names; assuming a single class for each that specializes both Paperback and Hardcover (multiple inheritance), since no packages are indicated.
+' TODO: Right-side "Compilation.id:number" conflicts with left-side "id:int"; using int for consistency.
+
+left to right direction
 
 class Publication {
-    title: string
+  title: string
 }
 
 class Paperback {
-    id: int
+  id: int
 }
 
 class Hardcover {
-    id: int
+  id: int
 }
 
 class Compilation {
-    id: int
-    pages: int
+  id: int
+  pages: int
 }
 
 class Sweeping {
-    id: int
-    pages: int
+  id: int
+  pages: int
 }
 
-Publication "1" -- "n" Paperback
-Publication "1" -- "n" Hardcover
-Paperback <|-- Compilation
-Paperback <|-- Sweeping
-Hardcover <|-- Compilation
-Hardcover <|-- Sweeping
+Publication "*" -- "*" Paperback
+Publication "*" -- "*" Hardcover
 
+Compilation --|> Paperback
+Sweeping --|> Paperback
+Compilation --|> Hardcover
+Sweeping --|> Hardcover
 @enduml

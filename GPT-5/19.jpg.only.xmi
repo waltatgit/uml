@@ -12,10 +12,10 @@
                 <UML:Class name="Student" xmi.id="cl0002">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Class name="MScStudent" xmi.id="cl0003">
+                <UML:Class name="MSc Student" xmi.id="cl0003">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Class name="BScStudent" xmi.id="cl0005">
+                <UML:Class name="BSc Student" xmi.id="cl0004">
                     <UML:Classifier.feature/>
                 </UML:Class>
                 <UML:Generalization name="" xmi.id="ass7">
@@ -28,7 +28,7 @@
                 </UML:Generalization>
                 <UML:Generalization name="" xmi.id="ass8">
                     <UML:Generalization.child>
-                        <UML:Class xmi.idref="cl0005"/>
+                        <UML:Class xmi.idref="cl0004"/>
                     </UML:Generalization.child>
                     <UML:Generalization.parent>
                         <UML:Class xmi.idref="cl0002"/>

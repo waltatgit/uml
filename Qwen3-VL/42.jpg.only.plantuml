@@ -1,12 +1,25 @@
 @startuml
-class Tenant
-class House
-class Landlord
-class RealEstateAgency
-class MaintenanceAgency
+' TODO: No attributes or operations shown; assuming empty classes.
+' TODO: All associations are undirected; multiplicities and roles inferred from labels and positions.
 
-Tenant "0..1" -- "1" House : lease
-Landlord "1" -- "1" House : *
-RealEstateAgency "1" -- "*" House : *
-MaintenanceAgency "0..1" -- "1" House : maintains
+class Tenant {
+}
+
+class House {
+}
+
+class Landlord {
+}
+
+class MaintenanceAgency {
+}
+
+class RealEstateAgency {
+}
+
+Tenant "0..1" -- "*" House : lease
+House "*" -- "*" Landlord
+House "*" -- "0..1" MaintenanceAgency : maintain
+House "*" -- "*" RealEstateAgency
+
 @enduml

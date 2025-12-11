@@ -1,10 +1,13 @@
 @startuml
+' Assumptions: No attributes or operations were shown. Interpreting arrows as generalization (inheritance).
+' TODO: The superclass "Habitante" might be abstract, but this is not indicated; leaving it as a regular class.
+
+left to right direction
 
 class Habitante
 class Aldeano
 class Guerrero
 
-Habitante <|-- Aldeano
-Habitante <|-- Guerrero
-
+Aldeano --|> Habitante
+Guerrero --|> Habitante
 @enduml

@@ -1,0 +1,26 @@
+@startuml
+' TODO: Assuming all attributes are public since no visibility is shown
+' TODO: Assuming association is bidirectional since no arrowhead is shown
+' TODO: Assuming "humber" in Person is a typo for "number"
+
+class Person {
+  name
+  humber
+  email
+}
+
+class Student {
+  number
+  mark
+}
+
+class Address {
+  street
+  city
+  state
+  postcode
+}
+
+Person <|-- Student
+Person "0..1" -- "1" Address
+@enduml

@@ -1,41 +1,44 @@
 @startuml
+' TODO: Multiplicities and navigability are not indicated in the sketch; associations are modeled without them.
+' TODO: Interpreted the arrow from Admin to User as inheritance (Admin is a subtype of User).
+' TODO: Attribute types are kept as shown (str, int, bool); unspecified types (e.g., in User) are left untyped.
+left to right direction
 
-class City {
-    name: str
+class User {
+  Id
+  name
+  surname
+  phone
+  email
+  paswd
+}
+
+class Admin
+
+class Reservation {
+  id: int
+  payment: int
+  seat: int
 }
 
 class Airport {
-    name: str
-    phone: str
-    address: str
+  name: str
+  phone: str
+  address: str
 }
 
-class User {
-    Id
-    name
-    surname
-    phone
-    email
-    paswd
+class City {
+  name: str
 }
 
-class Reservation {
-    Id: int
-    payment: int
-    seat: int
+class "Ticket List" {
+  time: str
+  isActive: bool
 }
 
-class TicketList {
-    time: str
-    isActive: bool
-}
-
-class Admin {
-}
-
-City --> Airport
-User "1" --> "0..*" Reservation
-Reservation --> TicketList
-User <|-- Admin
-
+Admin --|> User
+User -- Reservation
+Reservation -- "Ticket List"
+Airport -- "Ticket List"
+City -- Airport
 @enduml

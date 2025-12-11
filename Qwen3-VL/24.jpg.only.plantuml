@@ -1,27 +1,27 @@
 @startuml
 
 class Conference {
-    +location: String
-    +name: String
-    +date: Date
+  - location: String
+  - name: String
+  - date: Date
 }
 
 class Session {
-    +time: int
-    +title: String
+  - time: int
+  - title: String
 }
 
 class Talk {
-    +title: String
-    +length: int
+  - title: String
+  - length: int
 }
 
 class Speaker {
-    +name: String
+  - name: String
 }
 
 Conference "1" -- "*" Session : sessions
 Session "1" -- "*" Talk : talks
-Talk "*" -- "1" Speaker : presenter
+Speaker "1" -- "*" Talk : presenter
 
 @enduml

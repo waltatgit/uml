@@ -20,7 +20,7 @@
                 <UML:Class name="Aisle" xmi.id="cl0004">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Class name="Choir" xmi.id="cl0005">
+                <UML:Class name="Chair" xmi.id="cl0005">
                     <UML:Classifier.feature/>
                 </UML:Class>
                 <UML:Association xmi.id="ass10">

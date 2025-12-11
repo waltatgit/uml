@@ -1,21 +1,21 @@
 @startuml
-
-class StockManager
+class StockManager {}
 
 class Part {
-    name
+  name
 }
 
 class BasicPart {
-    unitPrice
+  unitPrice
 }
 
 class CompoundPart {
-    cost
+  cost
 }
 
+Part <|-- BasicPart
+Part <|-- CompoundPart
+
 StockManager "0..1" -- "*" Part
-BasicPart --|> Part
-CompoundPart --|> Part
 
 @enduml

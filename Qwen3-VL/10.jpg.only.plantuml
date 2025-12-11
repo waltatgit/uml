@@ -1,7 +1,8 @@
 @startuml
+' No attributes or operations shown; assuming empty classes.
+' Generalization relationships: Lecturer and Student inherit from Member.
 
 class Member
-
 class Lecturer
 class Student
 

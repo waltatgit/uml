@@ -11,23 +11,23 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="SecuritySystem" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="location: String" visibility="private" xmi.id="att9"/>
+                        <UML:Attribute name="location: string" xmi.id="att9"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Monitor" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="location: int" visibility="private" xmi.id="att10"/>
-                        <UML:Attribute name="mode: int" visibility="private" xmi.id="att11"/>
+                        <UML:Attribute name="location: int" xmi.id="att10"/>
+                        <UML:Attribute name="mode: int" xmi.id="att11"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Alarm" xmi.id="cl0004">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="on: Boolean" visibility="private" xmi.id="att12"/>
+                        <UML:Attribute name="on: Boolean" xmi.id="att12"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Controller" xmi.id="cl0005">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="active: Boolean" visibility="private" xmi.id="att13"/>
+                        <UML:Attribute name="active: Boolean" xmi.id="att13"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Association name="monitors" xmi.id="ass14">

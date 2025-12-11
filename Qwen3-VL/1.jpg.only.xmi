@@ -26,9 +26,9 @@
                 </UML:Class>
                 <UML:Class name="OrderLine" xmi.id="cl0004">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="Product" xmi.id="att18"/>
-                        <UML:Attribute name="Price" xmi.id="att19"/>
-                        <UML:Attribute name="Quantity" xmi.id="att20"/>
+                        <UML:Attribute name="product" xmi.id="att18"/>
+                        <UML:Attribute name="price" xmi.id="att19"/>
+                        <UML:Attribute name="quantity" xmi.id="att20"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Corporate" xmi.id="cl0005">

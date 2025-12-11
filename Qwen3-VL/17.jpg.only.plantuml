@@ -1,22 +1,17 @@
 @startuml
-
-class Language {
-    +name: String
-    +numberOfSpeakers: int
+' Assuming "Language" is an abstract class since it has subclasses and italicized name.
+abstract class Language {
+  -name: String
+  -numberOfSpeakers: int
 }
 
-class UKEnglish {
-}
-
-class USEnglish {
-}
-
+class UKEnglish
+class USEnglish
 class French {
-    +dialect: String
+  -dialect: String
 }
 
 Language <|-- UKEnglish
 Language <|-- USEnglish
 Language <|-- French
-
 @enduml

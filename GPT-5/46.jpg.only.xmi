@@ -9,7 +9,7 @@
     <XMI.content>
         <UML:Model name="PlantUML" xmi.id="model1">
             <UML:Namespace.ownedElement>
-                <UML:Class name="LivingBeing" xmi.id="cl0002">
+                <UML:Class name="Living Being" xmi.id="cl0002">
                     <UML:Classifier.feature/>
                 </UML:Class>
                 <UML:Class name="Mammal" xmi.id="cl0003">
@@ -75,10 +75,10 @@
                 </UML:Generalization>
                 <UML:Association xmi.id="ass23">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass23" type="cl0006" xmi.id="end24">
+                        <UML:AssociationEnd association="ass23" name="1" type="cl0006" xmi.id="end24">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass23" type="cl0008" xmi.id="end25">
+                        <UML:AssociationEnd association="ass23" name="*" type="cl0007" xmi.id="end25">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
@@ -88,7 +88,7 @@
                         <UML:AssociationEnd association="ass26" type="cl0006" xmi.id="end27">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass26" type="cl0009" xmi.id="end28">
+                        <UML:AssociationEnd association="ass26" type="cl0008" xmi.id="end28">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
@@ -98,7 +98,7 @@
                         <UML:AssociationEnd association="ass29" type="cl0006" xmi.id="end30">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd aggregation="composite" association="ass29" type="cl0007" xmi.id="end31">
+                        <UML:AssociationEnd association="ass29" type="cl0009" xmi.id="end31">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

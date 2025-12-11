@@ -1,19 +1,26 @@
 @startuml
+' Assumptions:
+' - Visibility is not indicated in the diagram; attributes are modeled without visibility prefixes.
+' - Class names with spaces are preserved and quoted.
+
+left to right direction
 
 class Student {
-  id : String
-  name : String
-  year : int
+  id: String
+  name: String
+  year: int
 }
 
 class Course {
-  code : String
-  credits : int
+  code: String
+  credits: int
 }
 
-Student "1" -- "*" Course : attends
+class "BSc Student"
+class "MSc Student"
 
-class BScStudent extends Student
-class MScStudent extends Student
+"BSc Student" --|> Student
+"MSc Student" --|> Student
 
+Student "*" -- "*" Course : attends
 @enduml

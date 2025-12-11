@@ -18,7 +18,7 @@
                 <UML:Class name="Composite" xmi.id="cl0004">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Generalization name="" xmi.id="ass9">
+                <UML:Generalization name="" xmi.id="ass8">
                     <UML:Generalization.child>
                         <UML:Class xmi.idref="cl0003"/>
                     </UML:Generalization.child>
@@ -26,7 +26,7 @@
                         <UML:Class xmi.idref="cl0002"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
-                <UML:Generalization name="" xmi.id="ass10">
+                <UML:Generalization name="" xmi.id="ass9">
                     <UML:Generalization.child>
                         <UML:Class xmi.idref="cl0004"/>
                     </UML:Generalization.child>
@@ -34,22 +34,12 @@
                         <UML:Class xmi.idref="cl0002"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
-                <UML:Association name="parent" xmi.id="ass11">
+                <UML:Association name="parent/child" xmi.id="ass10">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass11" name="1" type="cl0004" xmi.id="end12">
+                        <UML:AssociationEnd association="ass10" name="1" type="cl0004" xmi.id="end11">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass11" name="0..*" type="cl0002" xmi.id="end13">
-                            <UML:AssociationEnd.participant/>
-                        </UML:AssociationEnd>
-                    </UML:Association.connection>
-                </UML:Association>
-                <UML:Association name="child" xmi.id="ass14">
-                    <UML:Association.connection>
-                        <UML:AssociationEnd association="ass14" name="0..*" type="cl0002" xmi.id="end15">
-                            <UML:AssociationEnd.participant/>
-                        </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass14" name="1" type="cl0004" xmi.id="end16">
+                        <UML:AssociationEnd association="ass10" name="0..*" type="cl0002" xmi.id="end12">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

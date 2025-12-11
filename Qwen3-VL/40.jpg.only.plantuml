@@ -1,49 +1,56 @@
 @startuml
+' TODO: Assuming all associations are bidirectional unless arrowheads are shown.
+' TODO: Assuming "Bank" and "ATM" are connected via an undirected association (no arrowhead shown).
+' TODO: Assuming "Customer" to "Account" is a 1-to-many relationship (1 customer has many accounts).
+' TODO: Assuming "Account" to "Transactions" is a 1-to-many relationship (1 account has many transactions).
+' TODO: Assuming "CurrentAccount" and "SavingsAccount" inherit from "Account" (generalization).
+' TODO: Assuming "SavingsAccount" has an attribute "account n" which likely means "account number" — kept as-is.
 
 class Bank {
-    code
-    address
+  code
+  address
 }
 
 class ATM {
-    location
-    manager
+  location
+  manager
 }
 
 class Customer {
-    name
-    address
-    dob
-    card_number
-    pin
+  name
+  address
+  dob
+  card number
+  pin
 }
 
 class Account {
-    number
-    balance
-}
-
-class Transactions {
-    id
-    date
-    type
-    amount
-    balance
+  number
+  balance
 }
 
 class CurrentAccount {
-    number
-    balance
+  number
+  balance
 }
 
 class SavingsAccount {
-    account_number
-    balance
+  account n
+  balance
 }
 
-Bank --> ATM
-Customer --> Account
-Account o-- Transactions
+class Transactions {
+  id
+  date
+  type
+  amount
+  balance
+}
+
+Bank -- ATM
+Bank -- Account
+Customer "1" -- "*" Account
+Account "1" -- "*" Transactions
 Account <|-- CurrentAccount
 Account <|-- SavingsAccount
 

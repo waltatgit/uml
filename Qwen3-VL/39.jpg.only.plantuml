@@ -1,20 +1,19 @@
 @startuml
-
+' Assuming "string" should be "String" for type consistency in PlantUML
 class Document {
-    authors: String
-    date: String
+  authors: String
+  date: String
 }
 
 class Book {
-    title: String
+  title: String
 }
 
 class Email {
-    subject: String
-    to: String
+  subject: String
+  to: String
 }
 
 Document <|-- Book
 Document <|-- Email
-
 @enduml

@@ -1,51 +1,55 @@
 @startuml
+' TODO: Multiplicity between Person and Restaurant appears as * on both ends; assumed many-to-many.
+' TODO: Staff seems to be a specialization of Person; inferred from inheritance arrow.
+' TODO: Restaurant-to-Staff multiplicity not fully clear; assumed 1 restaurant employs many staff (1..*).
+' TODO: Customer-to-Waiting Staff association shows * near Customer; assumed many-to-many overall.
+
+left to right direction
 
 class Person {
-    name: string
-    address: string
-    phone: string
+  name: string
+  address: string
+  phone: string
 }
 
 class Restaurant {
-    name: string
-    address: string
-    phone: string
-    website: string
+  name: string
+  address: string
+  phone: string
+  website: string
 }
 
 class Customer {
-    name: string
-    reservation: string
-    allergies: string
+  name: string
+  reservation: string
+  allergies: string
 }
 
 class Staff {
-    name: string
-    address: string
-    phone: string
+  name: str
+  address: str
+  phone: str
 }
 
-class WaitingStaff
-class CleaningStaff
-class CookingStaff
-
+class "Waiting Staff"
+class "Cleaning Staff"
+class "Cooking Staff"
 class Waiter
 class Sommelier
 class Cleaner
-class Sous-chef
+class "Sous-chef"
 
-Person <|-- Customer
-Person "1" -- "0..*" Restaurant
-Restaurant "1" *-- "0..*" Staff
-Customer "1" *-- "0..*" Restaurant
+Customer --|> Person
+Staff --|> Person
+"Waiting Staff" --|> Staff
+"Cleaning Staff" --|> Staff
+"Cooking Staff" --|> Staff
+Waiter --|> "Waiting Staff"
+Sommelier --|> "Waiting Staff"
+Cleaner --|> "Cleaning Staff"
+"Sous-chef" --|> "Cooking Staff"
 
-Staff <|-- WaitingStaff
-Staff <|-- CleaningStaff
-Staff <|-- CookingStaff
-
-WaitingStaff <|-- Waiter
-WaitingStaff <|-- Sommelier
-CleaningStaff <|-- Cleaner
-CookingStaff <|-- Sous-chef
-
+Person "*" -- "*" Restaurant
+Restaurant "1" -- "*" Staff
+Customer "*" -- "*" "Waiting Staff"
 @enduml

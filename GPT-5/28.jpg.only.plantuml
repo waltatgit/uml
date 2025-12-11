@@ -1,0 +1,14 @@
+@startuml
+' Assumption: The top unlabeled box is another instance of Location, indicating a self-association.
+' Assumption: Both ends show multiplicity *, meaning a many-to-many undirected relationship with role "neighbour".
+left to right direction
+
+class Location {
+  x: double
+  y: double
+  label: String
+}
+
+Location "*" -- "*" Location : neighbour
+
+@enduml

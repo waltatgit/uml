@@ -1,24 +1,28 @@
 @startuml
+' Assumptions:
+' - Diagram shows multiplicities but no explicit diamonds/arrows, so modeled as undirected associations (not aggregation/composition).
+' - Types are transcribed exactly as shown: string, int, Boolean.
+' - The SecuritySystem–Controller relationship appears to be 1-to-1.
+left to right direction
 
 class SecuritySystem {
-    -location: String
+  location: string
 }
 
 class Monitor {
-    -location: int
-    -mode: int
+  location: int
+  mode: int
 }
 
 class Alarm {
-    -on: Boolean
+  on: Boolean
 }
 
 class Controller {
-    -active: Boolean
+  active: Boolean
 }
 
-SecuritySystem "1" --> "*" Monitor : monitors
-SecuritySystem "1" --> "*" Alarm : alarms
-SecuritySystem "1" --> "1" Controller 
-
+SecuritySystem "1" -- "*" Monitor : monitors
+SecuritySystem "1" -- "*" Alarm : alarms
+SecuritySystem "1" -- "1" Controller
 @enduml

@@ -1,0 +1,18 @@
+@startuml
+' Assuming "source" and "target" are role names for the association from Transition to State.
+' Assuming "outgoing" is a role name for the association from State to Transition.
+' Multiplicity "1" and "*" are preserved as shown; no directionality change.
+
+class State {
+  name : String
+}
+
+class Transition {
+  trigger : String
+}
+
+State "1" --> "*" Transition : source
+State "1" <-- "*" Transition : target
+State "1" --> "*" Transition : outgoing
+
+@enduml

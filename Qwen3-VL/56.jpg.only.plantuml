@@ -1,43 +1,47 @@
 @startuml
+' TODO: Assumed all attributes are private; no visibility indicators shown.
+' TODO: Assumed "price" in OrderLine is the unit price; no type specified.
+' TODO: Assumed "number" in Order is an identifier; no type specified.
+' TODO: Assumed "isPrepaid" in Order is boolean; no type specified.
 
 class Order {
-    dateReceived
-    isPrepaid
-    number
-    price
+  -dateReceived
+  -isPrepaid
+  -number
+  -price
+}
+
+class Customer {
+  -name
+  -address
+}
+
+class CorporateCustomer {
+  -contact
+  -creditRate
+  -creditLimit
+}
+
+class PersonalCustomer {
+  -creditCard
 }
 
 class OrderLine {
-    quantity
-    price
+  -quantity
+  -price
 }
 
 class Product {
 }
 
-class Customer {
-    name
-    address
-}
-
-class CorporateCustomer {
-    contact
-    creditRate
-    creditLimit
-}
-
-class PersonalCustomer {
-    creditCard
-}
-
 class Employee {
 }
 
-Order "1" -- "*" OrderLine
-Order "1" --> "*" Customer
-OrderLine "1" --> "*" Product
+Order "1" *-- "*" OrderLine
+OrderLine "1" -- "*" Product
+Order "1" -- "*" Customer
 Customer <|-- CorporateCustomer
 Customer <|-- PersonalCustomer
-CorporateCustomer "0..1" --> "*" Employee
+CorporateCustomer "1" *-- "0..1" Employee
 
 @enduml

@@ -1,63 +1,79 @@
 @startuml
+' TODO: Multiplicities and directions are unclear on several associations due to the hand-drawn nature.
+' TODO: Assumptions made:
+'   - Manager manages many Guest(s): Manager "1" -- "*" Guest.
+'   - Manager is associated to Inventory (quantity not specified).
+'   - Guest is assigned to a Room (assumed 1-to-1 for simplicity).
+'   - Receptionist handles many Bill(s): Receptionist "1" -- "0..*" Bill.
+'   - Receptionist serves many Guest(s) (assumed): Receptionist "1" -- "*" Guest.
+'   - Chef prepares many Food items and each Food can be prepared by many Chefs: many-to-many.
+'   - Food associated with Housekeeping (purpose/multiplicity not specified).
+
+left to right direction
 
 class Manager {
-    - name: string
-    - id: int
-    - phone: int
-    - location: string
+  name: string
+  id: int
+  phone: int
+  location: string
 }
 
 class Guest {
-    - name: string
-    - id: int
-    - phone: string
-    - address: string
-    - room: int
+  name: string
+  id: int
+  phone: string
+  address: string
+  room: int
 }
 
 class Inventory {
-    - type: string
-    - status: string
+  type: str
+  status: str
 }
 
 class Rooms {
-    - number: int
-    - location: string
-}
-
-class Food {
-    - id
-    - name
+  number: int
+  location: string
 }
 
 class Receptionist {
-    - name: string
-    - id: int
-    - number: string
-    - location: string
+  name: string
+  id: int
+  number: string
+  location: string
+}
+
+class Food {
+  id
+  name
 }
 
 class Chef {
-    - name: string
-    - id: int
-    - location: string
+  name: str
+  id: int
+  location: str
 }
 
 class Housekeeping {
-    - name: string
-    - id: int
+  name: string
+  id: int
 }
 
 class Bill {
-    - number: int
-    - guestName: string
+  number: int
+  guestName: str
 }
 
-Manager "1" -- "0..*" Guest
-Manager "1" -- "1..*" Inventory
-Guest "0..*" -- "1" Rooms
+' Relationships (with noted assumptions where multiplicities were unclear)
+Manager "1" -- "*" Guest
+Manager -- Inventory
+
+Guest -- Rooms
+
 Receptionist "1" -- "0..*" Bill
-Chef "1..*" -- "1..*" Food
-Housekeeping "1" -- "1" Rooms
+Receptionist "1" -- "*" Guest
+
+Food "*" -- "*" Chef
+Food -- Housekeeping
 
 @enduml

@@ -12,7 +12,7 @@
                 <UML:Class name="Product" xmi.id="cl0002">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Class name="ConcreteProduct" xmi.id="cl0003">
+                <UML:Class name="Concrete Product" xmi.id="cl0003">
                     <UML:Classifier.feature/>
                 </UML:Class>
                 <UML:Generalization name="" xmi.id="ass5">

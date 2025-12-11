@@ -1,46 +1,49 @@
 @startuml
+' TODO: Assumed all associations are undirected unless explicitly shown with arrowheads.
+' TODO: Assumed "str" in Vote and Voting classes means String.
+' TODO: Assumed "percShares" in Assembly is a percentage value (type not specified, kept as is).
 
 class Firm {
-    name: string
-}
-
-class Admin {
-    name: string
-    address: string
+  name: String
 }
 
 class Shareholder {
-    shares: int
-    id: string
-    name: string
+  shares: int
+  id: string
+  name: string
+}
+
+class Admin {
+  name: string
+  address: string
 }
 
 class Assembly {
-    startTime
-    endTime
-    percShares
-    maxNoDeleg
+  startTime
+  endTime
+  percShares
+  maxNoDeleg
 }
 
 class Delegation {
-
 }
 
 class Voting {
-    name: string
-    choiceA: string
-    choiceB: string
+  name: str
+  choiceA: str
+  choiceB: str
 }
 
 class Vote {
-    choice: string
+  choice: str
 }
 
-Firm "1" -- "0..*" Shareholder
-Firm "1" -- "0..1" Admin
-Assembly "1" -- "0..*" Shareholder
-Assembly "0..*" -- "0..*" Delegation
+Firm "1" -- "1..*" Shareholder
+Firm "1" -- "0..*" Admin
+Shareholder "1" -- "0..*" Assembly
+Assembly "1" -- "0..*" Delegation
 Assembly "1" -- "0..*" Voting
 Voting "1" -- "0..1" Vote
+Shareholder "1" -- "0..*" Vote
 
 @enduml

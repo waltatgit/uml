@@ -20,13 +20,13 @@
                         <UML:Attribute name="loyaltyCard: Boolean" xmi.id="att11"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Class name="Administrator" xmi.id="cl0004">
-                    <UML:Classifier.feature/>
-                </UML:Class>
-                <UML:Class name="Staff" xmi.id="cl0005">
+                <UML:Class name="Staff" xmi.id="cl0004">
                     <UML:Classifier.feature>
                         <UML:Attribute name="staffId: String" xmi.id="att12"/>
                     </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Administrator" xmi.id="cl0005">
+                    <UML:Classifier.feature/>
                 </UML:Class>
                 <UML:Generalization name="" xmi.id="ass13">
                     <UML:Generalization.child>

@@ -11,26 +11,26 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Journey" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="id: String" visibility="public" xmi.id="att10"/>
+                        <UML:Attribute name="jId: String" xmi.id="att10"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Route" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="id: String" visibility="public" xmi.id="att11"/>
+                        <UML:Attribute name="rId: String" xmi.id="att11"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Place" xmi.id="cl0004">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="id: String" visibility="public" xmi.id="att12"/>
-                        <UML:Attribute name="name: String" visibility="public" xmi.id="att13"/>
-                        <UML:Attribute name="x: double" visibility="public" xmi.id="att14"/>
-                        <UML:Attribute name="y: double" visibility="public" xmi.id="att15"/>
+                        <UML:Attribute name="pId: String" xmi.id="att12"/>
+                        <UML:Attribute name="name: String" xmi.id="att13"/>
+                        <UML:Attribute name="x: double" xmi.id="att14"/>
+                        <UML:Attribute name="y: double" xmi.id="att15"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="TransportMode" xmi.id="cl0005">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name: String" visibility="public" xmi.id="att16"/>
-                        <UML:Attribute name="emissions: double" visibility="public" xmi.id="att17"/>
+                        <UML:Attribute name="name: String" xmi.id="att16"/>
+                        <UML:Attribute name="emission: double" xmi.id="att17"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Association name="possibleRoutes" xmi.id="ass18">
@@ -43,29 +43,29 @@
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
-                <UML:Association name="from" xmi.id="ass21">
+                <UML:Association name="locations" xmi.id="ass21">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass21" name="*" type="cl0003" xmi.id="end22">
+                        <UML:AssociationEnd association="ass21" name="1" type="cl0003" xmi.id="end22">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass21" name="1" type="cl0004" xmi.id="end23">
+                        <UML:AssociationEnd association="ass21" name="*" type="cl0004" xmi.id="end23">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
-                <UML:Association name="to" xmi.id="ass24">
+                <UML:Association name="from" xmi.id="ass24">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass24" name="*" type="cl0003" xmi.id="end25">
+                        <UML:AssociationEnd association="ass24" name="1" type="cl0004" xmi.id="end25">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass24" name="1" type="cl0004" xmi.id="end26">
+                        <UML:AssociationEnd association="ass24" name="*" type="cl0005" xmi.id="end26">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
-                <UML:Association xmi.id="ass27">
+                <UML:Association name="to" xmi.id="ass27">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass27" name="*" type="cl0003" xmi.id="end28">
+                        <UML:AssociationEnd association="ass27" name="1" type="cl0004" xmi.id="end28">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                         <UML:AssociationEnd association="ass27" name="*" type="cl0005" xmi.id="end29">

@@ -1,16 +1,16 @@
 @startuml
 
 class BankAccount {
-    owner: string
-    balance: float
+  -owner: string
+  -balance: float
 }
 
 class CheckingAccount {
-    fee: double
+  -fee: double
 }
 
 class SavingsAccount {
-    rate: float
+  -rate: float
 }
 
 BankAccount <|-- CheckingAccount

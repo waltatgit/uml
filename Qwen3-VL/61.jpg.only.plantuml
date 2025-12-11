@@ -1,22 +1,24 @@
 @startuml
+' TODO: Assuming "String" and "double" are the intended types for attributes; no visibility specified, so using default (public).
+' TODO: Assuming "manages" and "owner" are association roles; multiplicities are inferred from diagram.
 
 class Cattery {
-    - name: String
-    - address: String
+  name : String
+  address : String
 }
 
 class Cat {
-    - breed: String
-    - age: double
-    - id: String
+  breed : String
+  age : double
+  id : String
 }
 
 class Person {
-    - name: String
+  name : String
 }
 
-Cattery "0..1" -- "*" Cat : resides
-Cattery "1" -- "*" Person : manages
-Person "1" -- "*" Cat : owner
+Cattery "0..1" *-- "*" Cat : residents
+Cattery "1" *-- "*" Person : manages
+Cat "1" -- "*" Person : owner
 
 @enduml

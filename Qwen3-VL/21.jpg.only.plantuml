@@ -1,12 +1,13 @@
 @startuml
+' TODO: Assuming all attributes are public since no visibility is shown.
 class Person {
-    name: String
+  name : String
 }
 
 class User {
-    userName: String
-    password: String
+  userName : String
+  password : String
 }
 
-Person <|-- User
+User --|> Person
 @enduml

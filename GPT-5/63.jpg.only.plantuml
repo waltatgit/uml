@@ -1,16 +1,21 @@
 @startuml
+' TODO: The diagram shows "0..1" near the top/right of Family; interpreted as the multiplicity on the Family Member end for father/mother.
+' Assumption: Each Family has exactly one father and one mother; a Family Member can be father/mother of at most one Family.
+' Assumption: Each Family has many sons and many daughters; a Family Member can be a son or daughter of at most one Family.
+
+left to right direction
 
 class Family {
-    familyName: String
+  +familyName: String
 }
 
-class FamilyMember {
-    memberName: String
+class "Family Member" {
+  +memberName: String
 }
 
-Family "1" -- "father" FamilyMember
-Family "1" -- "mother" FamilyMember
-Family "*" -- "sons" FamilyMember
-Family "0..1" -- "daughters" FamilyMember
+Family "1" -- "0..1" "Family Member" : father
+Family "1" -- "0..1" "Family Member" : mother
+Family "1" -- "*" "Family Member" : sons
+Family "1" -- "*" "Family Member" : daughters
 
 @enduml

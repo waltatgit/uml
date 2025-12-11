@@ -1,9 +1,17 @@
 @startuml
-class Habitante
+' TODO: No attributes or operations shown for any class; assumed empty.
+' TODO: Generalization arrows point from subclass to superclass as per UML standard.
 
-class Aldeano
-class Guerrero
+class Habitante {
+}
 
-Habitante <|-- Aldeano
-Habitante <|-- Guerrero
+class Aldeano {
+}
+
+class Guerrero {
+}
+
+Aldeano --|> Habitante
+Guerrero --|> Habitante
+
 @enduml

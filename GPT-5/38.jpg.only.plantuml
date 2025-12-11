@@ -1,64 +1,75 @@
 @startuml
+' TODO: Some multiplicities are ambiguous in the sketch; interpreted per common e-commerce domain patterns.
+' TODO: UserState and Phone are referenced as types but not depicted; minimal placeholders added.
+' TODO: Where only one multiplicity was visible, the other end was left unspecified.
 
-class WebUser {
-  - id: string
-  - password: string
-  - state: UserState
+left to right direction
+
+class "Web User" {
+  id: String
+  password: String
+  state: UserState
 }
 
 class Customer {
-  - id: string
-  - address: string
-  - phone: Phone
-  - email: string
+  id: String
+  address: String
+  phone: Phone
+  email: String
 }
 
-class ShoppingCart {
-  - date: string
+class "Shopping Cart" {
+  date: String
 }
 
 class Account {
-  - id: string
-  - address
-  - isClosed: boolean
-  - openDate
-  - closedDate
+  id: String
+  address
+  isClosed: boolean
+  openDate
+  closedDate
 }
 
 class Payment {
-  - id: string
-  - paidDate
-  - total
-  - details
+  id: String
+  paidDate
+  total
+  details
 }
 
-class LineItem {
-  - quantity
-  - price
+class "Line Item" {
+  quantity
+  price
 }
 
 class Order {
-  - number
-  - date
-  - shippedDate
-  - address
-  - status
-  - total
+  number
+  date
+  shippedDate
+  address
+  status
+  total
 }
 
 class Product {
-  - id
-  - name
-  - supplier
+  id
+  name
+  supplier
 }
 
-// Associations
-WebUser "0..1" --> "1" ShoppingCart
-WebUser "0..1" --> "1" Account
-Customer "1" --> "0..1" Account
-Account "0..1" --> "1" Order
-Order "1" --> "0..*" LineItem
-Order "1" --> "*" Payment
-LineItem "1" --> "1" Product
+' Placeholder types referenced by attributes
+class Phone
+enum UserState { }
+
+' Relationships
+"Web User" "0..1" -- Customer
+Customer -- Account
+Account -- "Shopping Cart"
+Account -- "*" Order
+Account "0..1" -- Payment
+Order -- "*" Payment
+Order -- "*" "Line Item"
+"Shopping Cart" -- "*" "Line Item"
+Product "1" -- "*" "Line Item"
 
 @enduml

@@ -1,17 +1,22 @@
 @startuml
+' TODO: LibMaterial is not explicitly marked abstract in the sketch; modeled as a concrete class.
+' Attributes show "-" indicating private visibility; types copied as written (string/boolean).
+' No associations are depicted; only generalization from Text/Audio/Video to LibMaterial.
+
+left to right direction
 
 class LibMaterial {
-    - id: string
-    - available: boolean
-    - author: string
+  - id: string
+  - available: boolean
+  - author: string
 }
 
 class Text
 class Audio
 class Video
 
-LibMaterial <|-- Text
-LibMaterial <|-- Audio
-LibMaterial <|-- Video
+Text --|> LibMaterial
+Audio --|> LibMaterial
+Video --|> LibMaterial
 
 @enduml

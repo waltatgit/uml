@@ -1,4 +1,10 @@
 @startuml
+' Assumptions:
+' - The link between Order and Payment is a simple undirected association with multiplicities 1 (Order) and * (Payment); no diamond shown, so not aggregation/composition.
+' - Attribute types and visibilities are not indicated in the drawing; names are preserved as-is.
+' - Payment may be a generalization parent (superclass); no indication of abstract formatting, so it is kept as a regular class.
+
+left to right direction
 
 class Order {
   date
@@ -24,9 +30,10 @@ class Credit {
   date
 }
 
+' Relationships
 Order "1" -- "*" Payment
-Payment <|-- Cash
-Payment <|-- Check
-Payment <|-- Credit
+Cash --|> Payment
+Check --|> Payment
+Credit --|> Payment
 
 @enduml

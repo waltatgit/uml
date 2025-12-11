@@ -25,12 +25,12 @@
                         <UML:Attribute name="text: String" xmi.id="att11"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Association name="regions / regions" xmi.id="ass12">
+                <UML:Association name="regions" xmi.id="ass12">
                     <UML:Association.connection>
                         <UML:AssociationEnd association="ass12" name="1" type="cl0002" xmi.id="end13">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass12" name="0..*" type="cl0003" xmi.id="end14">
+                        <UML:AssociationEnd association="ass12" name="*" type="cl0003" xmi.id="end14">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
@@ -40,7 +40,7 @@
                         <UML:AssociationEnd association="ass15" name="1" type="cl0003" xmi.id="end16">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass15" name="0..*" type="cl0004" xmi.id="end17">
+                        <UML:AssociationEnd association="ass15" name="*" type="cl0004" xmi.id="end17">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

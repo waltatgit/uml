@@ -1,15 +1,20 @@
 @startuml
+' Assumptions: both associations show "1" at each end (interpreted as 1..1).
+' Roles: Temperature Sensor end labeled "sensor"; Engine ends labeled "owner".
+' No aggregation/composition diamonds visible; using undirected associations.
+left to right direction
 
 class Engine {
-    rpm: int
+  rpm: int
 }
 
-class TemperatureSensor
+class "Temperature Sensor" {
+}
 
-class Display
+class Display {
+}
 
-Engine "1" -- "1" TemperatureSensor : sensor
+"Temperature Sensor" "1" -- "1" Engine : sensor/owner
 Engine "1" -- "1" Display : owner
-Display "1" -- "1" TemperatureSensor : sensor
 
 @enduml

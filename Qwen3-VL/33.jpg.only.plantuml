@@ -1,25 +1,24 @@
 @startuml
+' TODO: Assuming all attributes are public as no visibility indicators are shown.
+' TODO: Assuming "attends" is an undirected association with many-to-many multiplicity.
 
 class Student {
-    id : String
-    name : String
-    year : int
+  +id: String
+  +name: String
+  +year: int
 }
 
 class Course {
-    code : String
-    credits : int
+  +code: String
+  +credits: int
 }
 
-Student "1" -- "*" Course : attends
-
-class BScStudent {
-}
-
-class MScStudent {
-}
+class BScStudent
+class MScStudent
 
 Student <|-- BScStudent
 Student <|-- MScStudent
+
+Student " *" -- " *" Course : attends
 
 @enduml

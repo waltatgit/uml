@@ -1,19 +1,21 @@
 @startuml
+' Assumption: Handwriting suggests owner: string and balance: float; using these types.
+' TODO: If "Checking Account" or "Savings Account" were intended without spaces, adjust names accordingly.
+left to right direction
 
 class BankAccount {
-    owner : string
-    balance : float
+  owner: string
+  balance: float
 }
 
-class CheckingAccount {
-    fee : double
+class "Checking Account" {
+  fee: double
 }
 
-class SavingsAccount {
-    rate : float
+class "Savings Account" {
+  rate: float
 }
 
-BankAccount <|-- CheckingAccount
-BankAccount <|-- SavingsAccount
-
+"Checking Account" --|> BankAccount
+"Savings Account" --|> BankAccount
 @enduml

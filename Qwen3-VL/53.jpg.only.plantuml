@@ -1,34 +1,37 @@
 @startuml
+' TODO: Assuming all attributes are public; no visibility indicators shown.
+' TODO: Assuming "marks" in Enrollment is an attribute, not a method.
+' TODO: Assuming "on waiting list" and "instructs" are association roles, not operations.
 
 class Student {
-    name
-    address
-    phone
-    id
-    mark
+  name
+  address
+  phone
+  id
+  mark
 }
 
 class Enrollment {
-    marks
+  marks
 }
 
 class Seminar {
-    name
-    id
-    fees
+  name
+  id
+  fees
 }
 
 class Professor {
-    name
-    address
-    phone
-    email
-    salary
+  name
+  address
+  phone
+  email
+  salary
 }
 
-Student "1" -left-> "1..*" Enrollment : enrolled
-Student "0..*" --> "1..*" Seminar : on waiting list
-Enrollment "1..*" --> "1" Seminar : in
-Professor "0..*" --> Seminar : instructs
+Student "1" -- "1..*" Enrollment : enrolled
+Enrollment "1..*" -- "1" Seminar : in
+Seminar "0..*" -- "1" Professor : instructs
+Student "0..*" -- "0..*" Seminar : on waiting list
 
 @enduml

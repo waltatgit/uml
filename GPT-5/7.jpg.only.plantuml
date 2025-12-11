@@ -1,13 +1,16 @@
 @startuml
+' Assumption: The lower-left class labeled "Box Maximum weight" is a specialization of "Box" and includes an attribute named "maximum weight".
+' TODO: No types are shown in the diagram; attributes are left without types.
+left to right direction
 
-class Box
+class "Box"
 
-class BoxMaximumWeight {
+class "Box Maximum weight" {
+  maximum weight
 }
 
 class Item
 
-BoxMaximumWeight --|> Box
-BoxMaximumWeight "1" o-- "*" Item
-
+"Box Maximum weight" --|> "Box"
+"Box Maximum weight" "1" -- "*" Item
 @enduml

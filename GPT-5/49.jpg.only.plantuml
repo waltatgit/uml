@@ -1,47 +1,58 @@
 @startuml
+' TODO: The class name "Adminin" is taken verbatim from the diagram; if it was intended to be "Admin", rename accordingly.
+' TODO: Types for Assembly attributes are not shown; kept untyped.
+' TODO: Some multiplicities are hard to read; best-effort assumptions noted on each association.
+
+left to right direction
 
 class Firm {
-    - name: string
+  name: string
 }
 
-class Admin {
-    - name: string
-    - address: string
+class Adminin {
+  name: string
+  address: string
 }
 
 class Shareholder {
-    - shares: int
-    - id: string
-    - name: string
+  shares: int
+  id: string
+  name: string
 }
 
 class Assembly {
-    - startTime
-    - endTime
-    - percShares
-    - maxNoDeleg
+  startTime
+  endTime
+  percShares
+  maxNoDeleg
 }
 
 class Delegation {
 }
 
 class Voting {
-    - name: string
-    - choiceA: string
-    - choiceB: string
+  name: str
+  choiceA: str
+  choiceB: str
 }
 
 class Vote {
-    - choice: string
+  choice: str
 }
 
-Firm "1" -- "0..*" Admin
-Admin "0..*" -- "0..1" Assembly
-Firm "1..*" -- "0..*" Shareholder
-Shareholder "0..*" -- "0..*" Assembly
-Shareholder "0..*" -- "0..*" Delegation
-Delegation "0..*" -- "0..*" Assembly
-Assembly "0..1" -- "1" Voting
-Voting "0..1" -- "0..1" Vote
+' Relationships
+Firm "1" -- "1" Adminin
+Firm "1" -- "*" Shareholder
 
+Adminin "0..*" -- "1" Assembly
+
+Shareholder "0..*" -- "1" Assembly
+
+Shareholder "0..*" -- "1" Delegation
+Assembly  "0..*" -- "1" Delegation
+
+Assembly "0..*" -- "1" Voting
+Voting  "1" -- "0..1" Vote
+
+Shareholder -- Vote
 @enduml

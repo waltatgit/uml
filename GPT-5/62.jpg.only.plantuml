@@ -1,22 +1,18 @@
 @startuml
+left to right direction
 
-class Game {
-}
-
-class Board {
-}
-
+class Game
+class Board
 class Square {
-  +x: int
-  +y: int
+  x: int
+  y: int
 }
-
 class Piece {
-  +label: String
+  label: String
 }
 
 Game "1" -- "1" Board
-Board "1" -- "squares" "*" Square
-Square "0..1" -- "0..1" Piece
+Board "1" -- "*" Square : squares
+Piece -- "0..1" Square
 
 @enduml

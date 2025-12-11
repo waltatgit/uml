@@ -11,26 +11,26 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Bank" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name: String" visibility="private" xmi.id="att10"/>
+                        <UML:Attribute name="name: String" xmi.id="att10"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Class name="Customer" xmi.id="cl0003">
+                <UML:Class name="Bank Branch" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name: String" visibility="private" xmi.id="att11"/>
-                        <UML:Attribute name="cId: int" visibility="private" xmi.id="att12"/>
+                        <UML:Attribute name="sortCode: int" xmi.id="att11"/>
+                        <UML:Attribute name="address: String" xmi.id="att12"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Class name="Account" xmi.id="cl0004">
+                <UML:Class name="Customer" xmi.id="cl0004">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="number: int" visibility="private" xmi.id="att13"/>
-                        <UML:Attribute name="balance: double" visibility="private" xmi.id="att14"/>
-                        <UML:Attribute name="overdrawn: boolean" visibility="private" xmi.id="att15"/>
+                        <UML:Attribute name="name: String" xmi.id="att13"/>
+                        <UML:Attribute name="cId: int" xmi.id="att14"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Class name="BankBranch" xmi.id="cl0005">
+                <UML:Class name="Account" xmi.id="cl0005">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="sortCode: int" visibility="private" xmi.id="att16"/>
-                        <UML:Attribute name="address: String" visibility="private" xmi.id="att17"/>
+                        <UML:Attribute name="number: int" xmi.id="att15"/>
+                        <UML:Attribute name="balance: double" xmi.id="att16"/>
+                        <UML:Attribute name="overdrawn: boolean" xmi.id="att17"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Association name="branches" xmi.id="ass18">
@@ -38,7 +38,7 @@
                         <UML:AssociationEnd association="ass18" name="1" type="cl0002" xmi.id="end19">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass18" name="*" type="cl0005" xmi.id="end20">
+                        <UML:AssociationEnd association="ass18" name="*" type="cl0003" xmi.id="end20">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
@@ -48,27 +48,27 @@
                         <UML:AssociationEnd association="ass21" name="*" type="cl0002" xmi.id="end22">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass21" name="*" type="cl0003" xmi.id="end23">
+                        <UML:AssociationEnd association="ass21" name="*" type="cl0004" xmi.id="end23">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
-                <UML:Association name="owners" xmi.id="ass24">
+                <UML:Association name="owners/accounts" xmi.id="ass24">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass24" name="1..*" type="cl0003" xmi.id="end25">
+                        <UML:AssociationEnd association="ass24" name="1..*" type="cl0004" xmi.id="end25">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass24" name="*" type="cl0004" xmi.id="end26">
+                        <UML:AssociationEnd association="ass24" name="*" type="cl0005" xmi.id="end26">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
-                <UML:Association name="atBranch" xmi.id="ass27">
+                <UML:Association name="atBranch/hosted" xmi.id="ass27">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass27" name="*" type="cl0004" xmi.id="end28">
+                        <UML:AssociationEnd association="ass27" name="1" type="cl0003" xmi.id="end28">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass27" name="1" type="cl0005" xmi.id="end29">
+                        <UML:AssociationEnd association="ass27" name="*" type="cl0005" xmi.id="end29">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

@@ -35,7 +35,7 @@
                 </UML:Class>
                 <UML:Class name="Cash" xmi.id="cl0006">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="cashTendered" xmi.id="att21"/>
+                        <UML:Attribute name="cashTender" xmi.id="att21"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Check" xmi.id="cl0007">

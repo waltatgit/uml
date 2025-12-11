@@ -1,8 +1,12 @@
 @startuml
+' TODO: Assuming all attributes are private as indicated by minus sign
+' TODO: Assuming Text, Audio, Video are concrete classes inheriting from LibMaterial
+' TODO: No operations shown, so none included
+
 class LibMaterial {
-    - id: string
-    - available: boolean
-    - author: string
+  -id: string
+  -available: boolean
+  -author: string
 }
 
 class Text

@@ -1,25 +1,35 @@
 @startuml
+' TODO: Role.name type was not specified; assumed String.
+' TODO: Multiplicities and navigability were not shown; associations are modeled undirected.
+' NOTE: Class names "object" and "operation" are quoted to avoid keyword conflicts and to preserve lowercase naming.
+
+left to right direction
 
 class User {
   id: str
 }
 
 class Role {
-  name
+  name: String
 }
 
-class Permission
+class Permission {
+}
 
-class Session
+class Session {
+}
 
-class Object
+class "object" {
+}
 
-class Operation
+class "operation" {
+}
 
 User -- Role
 Role -- Permission
-Permission -- Object
-Permission -- Operation
-User -- Session
+Session -- Role
+Permission -- "object"
+Permission -- "operation"
+"object" -- "operation"
 
 @enduml

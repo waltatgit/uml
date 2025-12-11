@@ -11,23 +11,23 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Investor" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name : String" visibility="private" xmi.id="att9"/>
+                        <UML:Attribute name="name: String" visibility="private" xmi.id="att9"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Investment" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="price : double" visibility="private" xmi.id="att10"/>
-                        <UML:Attribute name="term : double" visibility="private" xmi.id="att11"/>
+                        <UML:Attribute name="price: double" visibility="private" xmi.id="att10"/>
+                        <UML:Attribute name="term: double" visibility="private" xmi.id="att11"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Equity" xmi.id="cl0004">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="symbol : String" visibility="private" xmi.id="att12"/>
+                        <UML:Attribute name="symbol: String" visibility="private" xmi.id="att12"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Bond" xmi.id="cl0005">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="issuer : String" visibility="private" xmi.id="att13"/>
+                        <UML:Attribute name="issuer: String" visibility="private" xmi.id="att13"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Association name="investment" xmi.id="ass14">
@@ -35,7 +35,7 @@
                         <UML:AssociationEnd association="ass14" name="1" type="cl0002" xmi.id="end15">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass14" name="0..*" type="cl0003" xmi.id="end16">
+                        <UML:AssociationEnd association="ass14" name="*" type="cl0003" xmi.id="end16">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

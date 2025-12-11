@@ -11,12 +11,12 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="User" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="id: str" visibility="private" xmi.id="att14"/>
+                        <UML:Attribute name="id: str" xmi.id="att14"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Role" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name" visibility="private" xmi.id="att15"/>
+                        <UML:Attribute name="name" xmi.id="att15"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Permission" xmi.id="cl0004">
@@ -43,20 +43,20 @@
                 </UML:Association>
                 <UML:Association xmi.id="ass19">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass19" type="cl0003" xmi.id="end20">
+                        <UML:AssociationEnd association="ass19" type="cl0002" xmi.id="end20">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass19" type="cl0004" xmi.id="end21">
+                        <UML:AssociationEnd association="ass19" type="cl0005" xmi.id="end21">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
                 <UML:Association xmi.id="ass22">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass22" type="cl0002" xmi.id="end23">
+                        <UML:AssociationEnd association="ass22" type="cl0003" xmi.id="end23">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass22" type="cl0005" xmi.id="end24">
+                        <UML:AssociationEnd association="ass22" type="cl0004" xmi.id="end24">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
@@ -66,7 +66,7 @@
                         <UML:AssociationEnd association="ass25" type="cl0005" xmi.id="end26">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass25" type="cl0006" xmi.id="end27">
+                        <UML:AssociationEnd association="ass25" type="cl0003" xmi.id="end27">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
@@ -83,7 +83,7 @@
                 </UML:Association>
                 <UML:Association xmi.id="ass31">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass31" type="cl0004" xmi.id="end32">
+                        <UML:AssociationEnd association="ass31" type="cl0006" xmi.id="end32">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                         <UML:AssociationEnd association="ass31" type="cl0007" xmi.id="end33">

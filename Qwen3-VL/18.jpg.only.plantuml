@@ -1,8 +1,8 @@
 @startuml
-
-class GUILayout {
-    +width : double
-    +height : double
+' TODO: Assuming GUI Layout is an abstract class since it has subclasses and no operations shown.
+abstract class GUILayout {
+  - width: double
+  - height: double
 }
 
 class PortraitLayout
@@ -10,5 +10,4 @@ class LandscapeLayout
 
 GUILayout <|-- PortraitLayout
 GUILayout <|-- LandscapeLayout
-
 @enduml

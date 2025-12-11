@@ -11,24 +11,24 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Interaction" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="processId : String" xmi.id="att10"/>
+                        <UML:Attribute name="processId: String" xmi.id="att10"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="LifeLine" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="terminates : boolean" xmi.id="att11"/>
+                        <UML:Attribute name="terminates: boolean" xmi.id="att11"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Object" xmi.id="cl0004">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name : String" xmi.id="att12"/>
-                        <UML:Attribute name="class : String" xmi.id="att13"/>
+                        <UML:Attribute name="name: String" xmi.id="att12"/>
+                        <UML:Attribute name="class: String" xmi.id="att13"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Message" xmi.id="cl0005">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="operation : String" xmi.id="att14"/>
-                        <UML:Attribute name="sequenceNumber : String" xmi.id="att15"/>
+                        <UML:Attribute name="operation: String" xmi.id="att14"/>
+                        <UML:Attribute name="sequenceNumber: String" xmi.id="att15"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Association name="instances" xmi.id="ass16">
@@ -53,20 +53,20 @@
                 </UML:Association>
                 <UML:Association name="from" xmi.id="ass22">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass22" name="1" type="cl0003" xmi.id="end23">
+                        <UML:AssociationEnd association="ass22" name="*" type="cl0005" xmi.id="end23">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass22" name="*" type="cl0005" xmi.id="end24">
+                        <UML:AssociationEnd association="ass22" name="1" type="cl0003" xmi.id="end24">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
                 <UML:Association name="to" xmi.id="ass25">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass25" name="1" type="cl0003" xmi.id="end26">
+                        <UML:AssociationEnd association="ass25" name="*" type="cl0005" xmi.id="end26">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass25" name="*" type="cl0005" xmi.id="end27">
+                        <UML:AssociationEnd association="ass25" name="1" type="cl0003" xmi.id="end27">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

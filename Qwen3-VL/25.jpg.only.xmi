@@ -17,7 +17,7 @@
                 </UML:Class>
                 <UML:Association name="divisions" xmi.id="ass5">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass5" name="1" type="cl0002" xmi.id="end6">
+                        <UML:AssociationEnd aggregation="composite" association="ass5" name="1" type="cl0002" xmi.id="end6">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                         <UML:AssociationEnd association="ass5" name="*" type="cl0003" xmi.id="end7">

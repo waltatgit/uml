@@ -1,41 +1,44 @@
 @startuml
+' TODO: No multiplicities or association roles shown; assuming default 1-to-1 or 1-to-many as appropriate for context.
+' TODO: No visibility modifiers shown; assuming public for all attributes.
+' TODO: No operations shown; only attributes are included.
 
 class User {
-    +id
-    +name
-    +surname
-    +phone
-    +email
-    +passwd
+  id
+  name
+  surname
+  phone
+  email
+  passwd
 }
 
-class Admin {
-}
-
-class Reservation {
-    +id: int
-    +payment: int
-    +seat: int
-}
-
-class TicketList {
-    +time: str
-    +isActive: bool
-}
+class Admin
 
 class City {
-    +name: str
+  name: str
 }
 
 class Airport {
-    +name: str
-    +phone: str
-    +address: str
+  name: str
+  phone: str
+  address: str
 }
 
-User "1" -- "0..*" Reservation
-Reservation "1" -- "0..*" TicketList
-Airport "1" -- "0..*" City
-Admin --|> User
+class Reservation {
+  id: int
+  payment: int
+  seat: int
+}
+
+class TicketList {
+  time: str
+  isActive: bool
+}
+
+User <|-- Admin
+City -- Airport
+Airport -- TicketList
+Reservation -- TicketList
+User -- Reservation
 
 @enduml

@@ -16,12 +16,12 @@
                         <UML:Attribute name="label: String" xmi.id="att6"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Association name="neighbours" xmi.id="ass7">
+                <UML:Association name="neighbor" xmi.id="ass7">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass7" name="1" type="cl0002" xmi.id="end8">
+                        <UML:AssociationEnd association="ass7" name=" *" type="cl0002" xmi.id="end8">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass7" name="*" type="cl0002" xmi.id="end9">
+                        <UML:AssociationEnd association="ass7" name=" * " type="cl0002" xmi.id="end9">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

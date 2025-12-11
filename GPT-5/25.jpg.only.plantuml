@@ -1,9 +1,10 @@
 @startuml
-class Company {
-}
+' Company has many ("*") Divisions. The relationship is named "divisions".
+left to right direction
 
-class Division {
-}
+class Company
+class Division
 
 Company "1" -- "*" Division : divisions
+
 @enduml

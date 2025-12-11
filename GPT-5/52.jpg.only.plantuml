@@ -1,16 +1,19 @@
 @startuml
-class Component {
-}
+' Assumptions:
+' - Component is the superclass; Leaf and Composite generalize from it.
+' - The association between Composite and Component is undirected,
+'   with multiplicities "1" at Composite (role: parent) and "0..*" at Component (role: child).
+' - No attributes or operations were shown in the diagram.
 
-class Leaf {
-}
+left to right direction
 
-class Composite {
-}
+class Component
+class Leaf
+class Composite
 
-Component <|-- Leaf
-Component <|-- Composite
+Leaf --|> Component
+Composite --|> Component
 
-Composite "1" -- "0..*" Component : parent
-Component "0..*" --> "1" Composite : child
+Composite "1" -- "0..*" Component : parent/child
+
 @enduml

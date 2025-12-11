@@ -1,11 +1,7 @@
 @startuml
+class Citizen
+class Foreigner
 class Person
-
-class Citizen {
-}
-
-class Foreigner {
-}
 
 Citizen --|> Person
 Foreigner --|> Person

@@ -11,7 +11,7 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Customer" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="customerId : String" visibility="private" xmi.id="att7"/>
+                        <UML:Attribute name="custmorId : String" visibility="private" xmi.id="att7"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Order" xmi.id="cl0003">
@@ -28,12 +28,12 @@
                         <UML:Attribute name="quantity : int" visibility="private" xmi.id="att13"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Association name="orders" xmi.id="ass14">
+                <UML:Association name="purchaser / orders" xmi.id="ass14">
                     <UML:Association.connection>
                         <UML:AssociationEnd association="ass14" name="1" type="cl0002" xmi.id="end15">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass14" name="0..*" type="cl0003" xmi.id="end16">
+                        <UML:AssociationEnd association="ass14" name="*" type="cl0003" xmi.id="end16">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
@@ -43,7 +43,7 @@
                         <UML:AssociationEnd association="ass17" name="1" type="cl0003" xmi.id="end18">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass17" name="0..*" type="cl0004" xmi.id="end19">
+                        <UML:AssociationEnd association="ass17" name="*" type="cl0004" xmi.id="end19">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

@@ -1,26 +1,30 @@
 @startuml
+' TODO: The diagram's directions are undirected; labels such as "from/to" are treated as association names, not arrow directions.
+' TODO: Lifeline-to-Object multiplicities are interpreted as LifeLine "0..1" -- "1" Object (a lifeline may optionally refer to one object); adjust if different.
+
+left to right direction
 
 class Interaction {
-    processId : String
+  processId: String
 }
 
 class LifeLine {
-    terminates : boolean
+  terminates: boolean
 }
 
 class Object {
-    name : String
-    class : String
+  name: String
+  class: String
 }
 
 class Message {
-    operation : String
-    sequenceNumber : String
+  operation: String
+  sequenceNumber: String
 }
 
 Interaction "1" -- "*" LifeLine : instances
 LifeLine "0..1" -- "1" Object : object
-LifeLine "1" --> "*" Message : from
-LifeLine "1" --> "*" Message : to
+Message "*" -- "1" LifeLine : from
+Message "*" -- "1" LifeLine : to
 
 @enduml

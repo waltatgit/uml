@@ -11,94 +11,94 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Order" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="dateReceived" xmi.id="att15"/>
-                        <UML:Attribute name="isPrepaid" xmi.id="att16"/>
-                        <UML:Attribute name="number" xmi.id="att17"/>
-                        <UML:Attribute name="price" xmi.id="att18"/>
+                        <UML:Attribute name="dateReceived" visibility="private" xmi.id="att15"/>
+                        <UML:Attribute name="isPrepaid" visibility="private" xmi.id="att16"/>
+                        <UML:Attribute name="number" visibility="private" xmi.id="att17"/>
+                        <UML:Attribute name="price" visibility="private" xmi.id="att18"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Class name="OrderLine" xmi.id="cl0003">
+                <UML:Class name="Customer" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="quantity" xmi.id="att19"/>
-                        <UML:Attribute name="price" xmi.id="att20"/>
+                        <UML:Attribute name="name" visibility="private" xmi.id="att19"/>
+                        <UML:Attribute name="address" visibility="private" xmi.id="att20"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Class name="Product" xmi.id="cl0004">
+                <UML:Class name="CorporateCustomer" xmi.id="cl0004">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="contact" visibility="private" xmi.id="att21"/>
+                        <UML:Attribute name="creditRate" visibility="private" xmi.id="att22"/>
+                        <UML:Attribute name="creditLimit" visibility="private" xmi.id="att23"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="PersonalCustomer" xmi.id="cl0005">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="creditCard" visibility="private" xmi.id="att24"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="OrderLine" xmi.id="cl0006">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="quantity" visibility="private" xmi.id="att25"/>
+                        <UML:Attribute name="price" visibility="private" xmi.id="att26"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Product" xmi.id="cl0007">
                     <UML:Classifier.feature/>
-                </UML:Class>
-                <UML:Class name="Customer" xmi.id="cl0005">
-                    <UML:Classifier.feature>
-                        <UML:Attribute name="name" xmi.id="att21"/>
-                        <UML:Attribute name="address" xmi.id="att22"/>
-                    </UML:Classifier.feature>
-                </UML:Class>
-                <UML:Class name="CorporateCustomer" xmi.id="cl0006">
-                    <UML:Classifier.feature>
-                        <UML:Attribute name="contact" xmi.id="att23"/>
-                        <UML:Attribute name="creditRate" xmi.id="att24"/>
-                        <UML:Attribute name="creditLimit" xmi.id="att25"/>
-                    </UML:Classifier.feature>
-                </UML:Class>
-                <UML:Class name="PersonalCustomer" xmi.id="cl0007">
-                    <UML:Classifier.feature>
-                        <UML:Attribute name="creditCard" xmi.id="att26"/>
-                    </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Employee" xmi.id="cl0008">
                     <UML:Classifier.feature/>
                 </UML:Class>
                 <UML:Association xmi.id="ass27">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass27" name="1" type="cl0002" xmi.id="end28">
+                        <UML:AssociationEnd aggregation="composite" association="ass27" name="1" type="cl0002" xmi.id="end28">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass27" name="*" type="cl0003" xmi.id="end29">
+                        <UML:AssociationEnd association="ass27" name="*" type="cl0006" xmi.id="end29">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
                 <UML:Association xmi.id="ass30">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass30" name="1" type="cl0002" xmi.id="end31">
+                        <UML:AssociationEnd association="ass30" name="1" type="cl0006" xmi.id="end31">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass30" name="*" type="cl0005" xmi.id="end32">
+                        <UML:AssociationEnd association="ass30" name="*" type="cl0007" xmi.id="end32">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
                 <UML:Association xmi.id="ass33">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass33" name="1" type="cl0003" xmi.id="end34">
+                        <UML:AssociationEnd association="ass33" name="1" type="cl0002" xmi.id="end34">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass33" name="*" type="cl0004" xmi.id="end35">
+                        <UML:AssociationEnd association="ass33" name="*" type="cl0003" xmi.id="end35">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>
                 </UML:Association>
                 <UML:Generalization name="" xmi.id="ass36">
                     <UML:Generalization.child>
-                        <UML:Class xmi.idref="cl0006"/>
+                        <UML:Class xmi.idref="cl0004"/>
                     </UML:Generalization.child>
                     <UML:Generalization.parent>
-                        <UML:Class xmi.idref="cl0005"/>
+                        <UML:Class xmi.idref="cl0003"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
                 <UML:Generalization name="" xmi.id="ass37">
                     <UML:Generalization.child>
-                        <UML:Class xmi.idref="cl0007"/>
+                        <UML:Class xmi.idref="cl0005"/>
                     </UML:Generalization.child>
                     <UML:Generalization.parent>
-                        <UML:Class xmi.idref="cl0005"/>
+                        <UML:Class xmi.idref="cl0003"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
                 <UML:Association xmi.id="ass38">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass38" name="0..1" type="cl0006" xmi.id="end39">
+                        <UML:AssociationEnd aggregation="composite" association="ass38" name="1" type="cl0004" xmi.id="end39">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass38" name="*" type="cl0008" xmi.id="end40">
+                        <UML:AssociationEnd association="ass38" name="0..1" type="cl0008" xmi.id="end40">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

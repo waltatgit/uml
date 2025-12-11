@@ -1,12 +1,16 @@
 @startuml
+' Assumptions: No visibility modifiers shown; attributes are added without visibility.
+' The upward arrow indicates generalization: User inherits from Person.
+' No operations or stereotypes are depicted in the diagram.
+
 class Person {
-    name: String
+  name: String
 }
 
 class User {
-    userName: String
-    password: String
+  userName: String
+  password: String
 }
 
-Person <|-- User
+User --|> Person
 @enduml

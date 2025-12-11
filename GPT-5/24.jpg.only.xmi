@@ -11,26 +11,26 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Conference" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="location: String" visibility="private" xmi.id="att9"/>
-                        <UML:Attribute name="name: String" visibility="private" xmi.id="att10"/>
-                        <UML:Attribute name="date: Date" visibility="private" xmi.id="att11"/>
+                        <UML:Attribute name="location: String" xmi.id="att9"/>
+                        <UML:Attribute name="name: String" xmi.id="att10"/>
+                        <UML:Attribute name="date: Date" xmi.id="att11"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Session" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="time: int" visibility="private" xmi.id="att12"/>
-                        <UML:Attribute name="title: String" visibility="private" xmi.id="att13"/>
+                        <UML:Attribute name="time: int" xmi.id="att12"/>
+                        <UML:Attribute name="title: String" xmi.id="att13"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Talk" xmi.id="cl0004">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="title: String" visibility="private" xmi.id="att14"/>
-                        <UML:Attribute name="length: int" visibility="private" xmi.id="att15"/>
+                        <UML:Attribute name="title: String" xmi.id="att14"/>
+                        <UML:Attribute name="length: int" xmi.id="att15"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Speaker" xmi.id="cl0005">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name: String" visibility="private" xmi.id="att16"/>
+                        <UML:Attribute name="name: String" xmi.id="att16"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Association name="sessions" xmi.id="ass17">
@@ -55,10 +55,10 @@
                 </UML:Association>
                 <UML:Association name="presenter" xmi.id="ass23">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass23" name="*" type="cl0004" xmi.id="end24">
+                        <UML:AssociationEnd association="ass23" name="1" type="cl0005" xmi.id="end24">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass23" name="1" type="cl0005" xmi.id="end25">
+                        <UML:AssociationEnd association="ass23" name="*" type="cl0004" xmi.id="end25">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

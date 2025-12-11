@@ -1,23 +1,33 @@
 @startuml
+' TODO: No multiplicities or association roles shown; assumed as simple associations.
+' TODO: No visibility specified for attributes; assumed public.
+' TODO: No inheritance or composition indicated; all relationships are simple associations.
 
 class User {
-  - id: str
+  id: str
 }
 
 class Role {
-  - name
+  name
 }
 
-class Permission
-class Session
-class Object
-class Operation
+class Permission {
+}
 
-User --> Role
-Role --> Permission
-User --> Session
-Session --> Object
-Permission --> Object
-Permission --> Operation
+class Session {
+}
+
+class Object {
+}
+
+class Operation {
+}
+
+User -- Role
+User -- Session
+Role -- Permission
+Session -- Role
+Permission -- Object
+Object -- Operation
 
 @enduml

@@ -11,26 +11,16 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Person" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name: String" xmi.id="att5"/>
-                        <UML:Attribute name="age: double" xmi.id="att6"/>
+                        <UML:Attribute name="name: String" xmi.id="att4"/>
+                        <UML:Attribute name="age: double" xmi.id="att5"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Association name="parents" xmi.id="ass7">
+                <UML:Association name="parents/children" xmi.id="ass6">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass7" name="1" type="cl0002" xmi.id="end8">
+                        <UML:AssociationEnd association="ass6" name="*" type="cl0002" xmi.id="end7">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass7" name="*" type="cl0002" xmi.id="end9">
-                            <UML:AssociationEnd.participant/>
-                        </UML:AssociationEnd>
-                    </UML:Association.connection>
-                </UML:Association>
-                <UML:Association name="children" xmi.id="ass10">
-                    <UML:Association.connection>
-                        <UML:AssociationEnd association="ass10" name="1" type="cl0002" xmi.id="end11">
-                            <UML:AssociationEnd.participant/>
-                        </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass10" name="*" type="cl0002" xmi.id="end12">
+                        <UML:AssociationEnd association="ass6" name="*" type="cl0002" xmi.id="end8">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

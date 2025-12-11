@@ -1,34 +1,40 @@
 @startuml
+' Assumptions are made based on the drawing:
+' - Each Enrollment is linked to exactly one Seminar; a Seminar has 1..* Enrollments.
+' - Each Student has 1..* Enrollments.
+' - The waiting list is many-to-many between Student and Seminar (0..* on both ends).
+' - Each Seminar is instructed by exactly one Professor; a Professor instructs 0..* Seminars.
+left to right direction
 
 class Student {
-    name
-    address
-    phone
-    id
-    mark
+  name
+  address
+  phone
+  id
+  mark
 }
 
 class Enrollment {
-    marks
+  marks
 }
 
 class Seminar {
-    name
-    id
-    fees
+  name
+  id
+  fees
 }
 
 class Professor {
-    name
-    address
-    phone
-    email
-    salary
+  name
+  address
+  phone
+  email
+  salary
 }
 
-Student "1" -- "0..*" Enrollment : enrolled
+Student "1" -- "1..*" Enrollment : enrolled
 Enrollment "1..*" -- "1" Seminar : in
-Seminar "0..*" -- "0..*" Student : on waiting list
-Professor "1" -- "0..*" Seminar : instructs
+Student "0..*" -- "0..*" Seminar : on waiting list
+Seminar "0..*" -- "1" Professor : instructs
 
 @enduml

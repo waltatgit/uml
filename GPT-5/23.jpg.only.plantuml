@@ -1,11 +1,15 @@
 @startuml
+' Assumptions: The diagram shows a self-association on Person with roles "parents" and "children".
+' No visibility is indicated for attributes, so none is added.
+' TODO: Real-world parent multiplicity is often 0..2, but the sketch shows *, so it is modeled as *.
+
+left to right direction
 
 class Person {
-    name: String
-    age: double
+  name: String
+  age: double
 }
 
-Person "1" -- "*" Person : parents
-Person "1" -- "*" Person : children
+Person "*" -- "*" Person : parents/children
 
 @enduml

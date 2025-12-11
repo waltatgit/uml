@@ -1,15 +1,20 @@
 @startuml
+' Assumptions:
+' - Lines have no diamonds/arrows, so modeled as undirected associations (not aggregation/composition).
+' - Multiplicities shown near Church: 1 nave, * aisles, 1 chair. The opposite ends were not marked; assumed each Nave/Aisle/Chair belongs to one Church.
+' - Role name "aisles" is attached to the Church–Aisle association.
+
+left to right direction
 
 class Church {
-    denomination: String
+  denomination: String
 }
-
 class Nave
 class Aisle
-class Choir
+class Chair
 
-Church "1" --> "1" Nave
-Church "1" --> "*" Aisle : aisles
-Church "1" --> "1" Choir
+Church "1" -- "1" Nave
+Church "1" -- "*" Aisle : aisles
+Church "1" -- "1" Chair
 
 @enduml

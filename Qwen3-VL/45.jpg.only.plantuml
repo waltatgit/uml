@@ -1,50 +1,53 @@
 @startuml
+' TODO: Assuming all attributes are public; no visibility specified in diagram.
+' TODO: Assuming "str" is shorthand for "string"; normalized to "string".
+' TODO: Association multiplicities marked with * are interpreted as "0..*" (many).
 
 class Person {
-  - name: string
-  - address: string
-  - phone: string
-}
-
-class Restaurant {
-  - name: string
-  - address: string
-  - phone: string
-  - website: string
+  name: string
+  address: string
+  phone: string
 }
 
 class Customer {
-  - name: string
-  - reservation: string
-  - allergies: string
+  name: string
+  reservation: string
+  allergies: string
+}
+
+class Restaurant {
+  name: string
+  address: string
+  phone: string
+  website: string
 }
 
 class Staff {
-  - name: str
-  - address: str
-  - phone: str
+  name: string
+  address: string
+  phone: string
 }
 
 class WaitingStaff
 class CleaningStaff
 class CookingStaff
-
 class Waiter
 class Sommelier
 class Cleaner
 class SousChef
 
 Person <|-- Customer
-Person "1" o-- "*" Restaurant
-Restaurant "1" o-- "*" Staff
-
+Person <|-- Staff
 Staff <|-- WaitingStaff
 Staff <|-- CleaningStaff
 Staff <|-- CookingStaff
-
 WaitingStaff <|-- Waiter
 WaitingStaff <|-- Sommelier
 CleaningStaff <|-- Cleaner
 CookingStaff <|-- SousChef
+
+Person "1" -- "*" Restaurant : works at / owns
+Customer "1" -- "*" Restaurant : visits / reserves
+Staff "1" -- "*" Restaurant : employed by
 
 @enduml

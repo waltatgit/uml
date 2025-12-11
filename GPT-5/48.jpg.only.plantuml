@@ -1,25 +1,31 @@
 @startuml
+' Assumptions:
+' - Types normalized: "str" -> String.
+' - The association between Account and Account Holder shows roles "holder" and "accounts" with multiplicities 1 (holder) to 1..* (accounts).
+' - Class names include spaces as drawn.
 
-class AccountHolder {
-    +id: int
-    +address: str
+left to right direction
+
+class "Account Holder" {
+  id: int
+  address: String
 }
 
 class Account {
-    +balance: float
+  balance: float
 }
 
-class IndividualHolder {
-    +name: string
-    +SSN: string
+class "Individual Holder" {
+  name: String
+  SSN: String
 }
 
-class CorporateHolder {
-    +contact: string
+class "Corporate Holder" {
+  contact: String
 }
 
-AccountHolder "1" -- "1..*" Account : accounts
-AccountHolder <|-- IndividualHolder
-AccountHolder <|-- CorporateHolder
+"Individual Holder" --|> "Account Holder"
+"Corporate Holder" --|> "Account Holder"
 
+"Account Holder" "1" -- "1..*" Account : holder/accounts
 @enduml

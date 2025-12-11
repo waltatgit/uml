@@ -1,18 +1,16 @@
 @startuml
 
 class Family {
-    familyName : String
+  familyName : String
 }
 
 class FamilyMember {
-    memberName : String
+  memberName : String
 }
 
-Family "1" -- "father" FamilyMember
-Family "1" -- "mother" FamilyMember
-Family "*" -- "sons" FamilyMember
-Family "*" -- "daughters" FamilyMember
-
-Family "0..1" -- "*" FamilyMember
+Family "0..1" -- "*" FamilyMember : father
+Family "0..1" -- "*" FamilyMember : mother
+Family "0..1" -- "*" FamilyMember : sons
+Family "0..1" -- "*" FamilyMember : daughters
 
 @enduml

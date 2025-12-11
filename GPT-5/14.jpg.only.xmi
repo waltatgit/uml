@@ -14,9 +14,9 @@
                         <UML:Attribute name="name: String" xmi.id="att5"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Class name="PeriodicTask" xmi.id="cl0003">
+                <UML:Class name="Periodic Task" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="periodicity: String" xmi.id="att6"/>
+                        <UML:Attribute name="periodicity: String" visibility="private" xmi.id="att6"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Generalization name="" xmi.id="ass7">

@@ -1,28 +1,40 @@
 @startuml
+' Assumptions based on the sketch:
+' - Journey has many possibleRoutes to Route: Journey "1" -- "*" Route.
+' - Route is related to Place in three ways:
+'   * locations: many-to-many between Route and Place.
+'   * from: many Routes can start from one Place (Route "*" -- "1" Place).
+'   * to: many Routes can end at one Place (Route "*" -- "1" Place).
+' - Route is associated with Transport Mode in a many-to-many relationship; label not shown.
+' TODO: If any additional labels or directions were intended on the Route–Transport Mode link, please clarify.
+
+left to right direction
 
 class Journey {
-    +jId : String
+  jId: String
 }
 
 class Route {
-    +rId : String
+  rId: String
 }
 
 class Place {
-    +pId : String
-    +name : String
-    +x : double
-    +y : double
+  pId: String
+  name: String
+  x: double
+  y: double
 }
 
-class TransportMode {
-    +name : String
-    +emissions : double
+class "Transport Mode" {
+  name: String
+  emissions: double
 }
 
-Journey "1" -- "0..*" Route : possibleRoutes
-Route "0..*" -- "1" Place : from
-Route "0..*" -- "1" Place : to
-Route "0..*" -- "0..*" TransportMode
+Journey "1" -- "*" Route : possibleRoutes
 
+Route "*" -- "*" Place : locations
+Route "*" -- "1" Place : from
+Route "*" -- "1" Place : to
+
+Route "*" -- "*" "Transport Mode"
 @enduml

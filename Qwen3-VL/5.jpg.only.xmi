@@ -9,29 +9,29 @@
     <XMI.content>
         <UML:Model name="PlantUML" xmi.id="model1">
             <UML:Namespace.ownedElement>
-                <UML:Class name="Person" xmi.id="cl0002">
+                <UML:Class name="Citizen" xmi.id="cl0002">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Class name="Citizen" xmi.id="cl0003">
+                <UML:Class name="Foreigner" xmi.id="cl0003">
                     <UML:Classifier.feature/>
                 </UML:Class>
-                <UML:Class name="Foreigner" xmi.id="cl0004">
+                <UML:Class name="Person" xmi.id="cl0004">
                     <UML:Classifier.feature/>
                 </UML:Class>
                 <UML:Generalization name="" xmi.id="ass7">
                     <UML:Generalization.child>
-                        <UML:Class xmi.idref="cl0003"/>
+                        <UML:Class xmi.idref="cl0002"/>
                     </UML:Generalization.child>
                     <UML:Generalization.parent>
-                        <UML:Class xmi.idref="cl0002"/>
+                        <UML:Class xmi.idref="cl0004"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
                 <UML:Generalization name="" xmi.id="ass8">
                     <UML:Generalization.child>
-                        <UML:Class xmi.idref="cl0004"/>
+                        <UML:Class xmi.idref="cl0003"/>
                     </UML:Generalization.child>
                     <UML:Generalization.parent>
-                        <UML:Class xmi.idref="cl0002"/>
+                        <UML:Class xmi.idref="cl0004"/>
                     </UML:Generalization.parent>
                 </UML:Generalization>
             </UML:Namespace.ownedElement>

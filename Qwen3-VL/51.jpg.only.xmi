@@ -11,37 +11,37 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Customer" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name" visibility="public" xmi.id="att13"/>
-                        <UML:Attribute name="address" visibility="public" xmi.id="att14"/>
+                        <UML:Attribute name="name" xmi.id="att13"/>
+                        <UML:Attribute name="address" xmi.id="att14"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Order" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="date" visibility="public" xmi.id="att15"/>
-                        <UML:Attribute name="status" visibility="public" xmi.id="att16"/>
+                        <UML:Attribute name="date" xmi.id="att15"/>
+                        <UML:Attribute name="status" xmi.id="att16"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Payment" xmi.id="cl0004">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="amount" visibility="public" xmi.id="att17"/>
+                        <UML:Attribute name="amount" xmi.id="att17"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Credit" xmi.id="cl0005">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="number" visibility="public" xmi.id="att18"/>
-                        <UML:Attribute name="type" visibility="public" xmi.id="att19"/>
-                        <UML:Attribute name="expDate" visibility="public" xmi.id="att20"/>
+                        <UML:Attribute name="number" xmi.id="att18"/>
+                        <UML:Attribute name="type" xmi.id="att19"/>
+                        <UML:Attribute name="ExpDate" xmi.id="att20"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Cash" xmi.id="cl0006">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="cashTendered" visibility="public" xmi.id="att21"/>
+                        <UML:Attribute name="coshtender" xmi.id="att21"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Check" xmi.id="cl0007">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name" visibility="public" xmi.id="att22"/>
-                        <UML:Attribute name="bank" visibility="public" xmi.id="att23"/>
+                        <UML:Attribute name="name" xmi.id="att22"/>
+                        <UML:Attribute name="bank" xmi.id="att23"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Association xmi.id="ass24">

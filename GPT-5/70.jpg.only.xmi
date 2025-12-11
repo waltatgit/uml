@@ -11,32 +11,32 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Document" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="title: String" xmi.id="att11"/>
-                        <UML:Attribute name="author: String" xmi.id="att12"/>
-                        <UML:Attribute name="url: String" xmi.id="att13"/>
+                        <UML:Attribute name="title: String" visibility="public" xmi.id="att11"/>
+                        <UML:Attribute name="author: String" visibility="public" xmi.id="att12"/>
+                        <UML:Attribute name="url: String" visibility="public" xmi.id="att13"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Part" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name: String" xmi.id="att14"/>
-                        <UML:Attribute name="number: String" xmi.id="att15"/>
+                        <UML:Attribute name="name: String" visibility="public" xmi.id="att14"/>
+                        <UML:Attribute name="number: String" visibility="public" xmi.id="att15"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Chapter" xmi.id="cl0004">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name: String" xmi.id="att16"/>
-                        <UML:Attribute name="number: int" xmi.id="att17"/>
+                        <UML:Attribute name="name: String" visibility="public" xmi.id="att16"/>
+                        <UML:Attribute name="number: int" visibility="public" xmi.id="att17"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Section" xmi.id="cl0005">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="title: String" xmi.id="att18"/>
-                        <UML:Attribute name="number: String" xmi.id="att19"/>
+                        <UML:Attribute name="title: String" visibility="public" xmi.id="att18"/>
+                        <UML:Attribute name="number: String" visibility="public" xmi.id="att19"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Paragraph" xmi.id="cl0006">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="text: String" xmi.id="att20"/>
+                        <UML:Attribute name="text: String" visibility="public" xmi.id="att20"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Association name="parts" xmi.id="ass21">
@@ -51,7 +51,7 @@
                 </UML:Association>
                 <UML:Association name="chapters" xmi.id="ass24">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass24" name="1" type="cl0002" xmi.id="end25">
+                        <UML:AssociationEnd association="ass24" name="1" type="cl0003" xmi.id="end25">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                         <UML:AssociationEnd association="ass24" name="*" type="cl0004" xmi.id="end26">

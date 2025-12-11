@@ -11,25 +11,25 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Cattery" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name: String" visibility="private" xmi.id="att8"/>
-                        <UML:Attribute name="address: String" visibility="private" xmi.id="att9"/>
+                        <UML:Attribute name="name : String" xmi.id="att8"/>
+                        <UML:Attribute name="address : String" xmi.id="att9"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Cat" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="breed: String" visibility="private" xmi.id="att10"/>
-                        <UML:Attribute name="age: double" visibility="private" xmi.id="att11"/>
-                        <UML:Attribute name="id: String" visibility="private" xmi.id="att12"/>
+                        <UML:Attribute name="breed : String" xmi.id="att10"/>
+                        <UML:Attribute name="age : double" xmi.id="att11"/>
+                        <UML:Attribute name="id : String" xmi.id="att12"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="Person" xmi.id="cl0004">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name: String" visibility="private" xmi.id="att13"/>
+                        <UML:Attribute name="name : String" xmi.id="att13"/>
                     </UML:Classifier.feature>
                 </UML:Class>
-                <UML:Association name="resides" xmi.id="ass14">
+                <UML:Association name="residents" xmi.id="ass14">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass14" name="0..1" type="cl0002" xmi.id="end15">
+                        <UML:AssociationEnd aggregation="composite" association="ass14" name="0..1" type="cl0002" xmi.id="end15">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                         <UML:AssociationEnd association="ass14" name="*" type="cl0003" xmi.id="end16">
@@ -39,7 +39,7 @@
                 </UML:Association>
                 <UML:Association name="manages" xmi.id="ass17">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass17" name="1" type="cl0002" xmi.id="end18">
+                        <UML:AssociationEnd aggregation="composite" association="ass17" name="1" type="cl0002" xmi.id="end18">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                         <UML:AssociationEnd association="ass17" name="*" type="cl0004" xmi.id="end19">
@@ -49,10 +49,10 @@
                 </UML:Association>
                 <UML:Association name="owner" xmi.id="ass20">
                     <UML:Association.connection>
-                        <UML:AssociationEnd association="ass20" name="1" type="cl0004" xmi.id="end21">
+                        <UML:AssociationEnd association="ass20" name="1" type="cl0003" xmi.id="end21">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
-                        <UML:AssociationEnd association="ass20" name="*" type="cl0003" xmi.id="end22">
+                        <UML:AssociationEnd association="ass20" name="*" type="cl0004" xmi.id="end22">
                             <UML:AssociationEnd.participant/>
                         </UML:AssociationEnd>
                     </UML:Association.connection>

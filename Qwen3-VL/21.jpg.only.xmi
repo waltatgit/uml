@@ -11,13 +11,13 @@
             <UML:Namespace.ownedElement>
                 <UML:Class name="Person" xmi.id="cl0002">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="name: String" xmi.id="att5"/>
+                        <UML:Attribute name="name : String" xmi.id="att5"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Class name="User" xmi.id="cl0003">
                     <UML:Classifier.feature>
-                        <UML:Attribute name="userName: String" xmi.id="att6"/>
-                        <UML:Attribute name="password: String" xmi.id="att7"/>
+                        <UML:Attribute name="userName : String" xmi.id="att6"/>
+                        <UML:Attribute name="password : String" xmi.id="att7"/>
                     </UML:Classifier.feature>
                 </UML:Class>
                 <UML:Generalization name="" xmi.id="ass8">
